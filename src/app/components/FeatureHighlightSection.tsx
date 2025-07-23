@@ -22,10 +22,10 @@ const FeatureHighlightSection = () => {
               />
             </div>
             <div className="flex-1 flex flex-col items-start max-w-xl ">
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 text-left lg:px-24" style={{ fontFamily: 'inherit' }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 text-left lg:px-20" style={{ fontFamily: 'inherit' }}>
                 {feature.title}
               </h2>
-              <p className="text-gray-700 text-base md:text-sm font-normal whitespace-pre-line text-left lg:px-24">
+              <p className="text-gray-700 text-base md:text-lg font-normal whitespace-pre-line text-left lg:px-20">
                 {feature.description}
               </p>
             </div>

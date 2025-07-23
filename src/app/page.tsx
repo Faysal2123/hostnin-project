@@ -14,12 +14,17 @@ import ReviewSection from "./components/ReviewSection";
 import FAQSection from "./components/FAQSection";
 import MigrationPromoSection from "./components/MigrationPromoSection";
 import Footer from "./components/Footer";
+import DiscountBanner from "./components/DiscountBanner";
+
+
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <DiscountBanner></DiscountBanner>
       <Navbar />
       <HeroSection />
+      
       <PricingCards />
       <TestimonialSection />
       <DomainSearchSection />

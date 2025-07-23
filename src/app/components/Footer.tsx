@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer className="bg-[#001158] text-white pt-16 pb-4 px-4 sm:pt-24 md:px-0">
-      <div className="max-w-7xl mx-auto flex flex-col gap-6 px-5" >
+      <div className="max-w-7xl mx-auto flex flex-col gap-6 md:px-5" >
         {/* Main Row: Logo/desc left, Newsletter right */}
         <div className="w-full flex flex-col md:flex-row justify-between items-start gap-6 md:gap-10">
           {/* Left: Logo and description */}

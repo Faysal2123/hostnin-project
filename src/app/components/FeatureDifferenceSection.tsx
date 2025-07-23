@@ -1,28 +1,34 @@
 import React from 'react';
-import { featureDifferenceData } from '../data/featureDifferenceData';
 import Image from 'next/image';
-import manAttendingOnlineMeeting from '../assets/cd-man.webp';
+import { featureDifferenceData } from '@/app/data/featureDifferenceData';
 
-const FeatureDifferenceSection = () => {
+const CloudFeatureDifference = () => {
   return (
-    <section className="relative w-full bg-[#eaf4fd] overflow-hidden" style={{ minHeight: '750px' }}>
-      {/* Decorative background shape (angled top) */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10" style={{ background: '#eaf4fd', clipPath: 'polygon(0 5%, 100% 0, 100% 95%, 0 100%)' }} />
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center px-4 pt-12 pb-20" style={{ minHeight: '900px' }}>
+    <section
+      className="relative w-full overflow-hidden bg-no-repeat bg-cover"
+      style={{
+        minHeight: '750px',
+        backgroundImage: 'url("https://hostnin.com/wp-content/uploads/2022/09/shape.png")',
+        backgroundPosition: 'top center',
+      }}
+    >
+
+      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center px-4 pt-64 pb-32 relative z-10" style={{ minHeight: '900px' }}>
         {/* Left: Image */}
-        <div className="flex-[1.2] justify-center items-center h-full hidden lg:block">
+        <div className="flex-[1.2] justify-center items-center hidden lg:block w-[700px] h-[700px]">
           <Image
-            src={manAttendingOnlineMeeting}
+            src="https://hostnin.com/wp-content/uploads/2022/09/cd-man.png"
             alt="Man with tablet"
-            width={610}
-            height={720}
+            width={650}
+            height={600}
             className="object-contain rounded-xl drop-shadow-lg"
             priority
           />
         </div>
+
         {/* Right: Content */}
-        <div className="flex-1 flex flex-col items-start justify-center w-full md:pl-2 md:mt-10 ">
-          <h2 className=" text-3xl md:text-[2.8rem] leading-[1.1] font-semibold text-black mb-4 text-left" style={{ fontFamily: 'inherit' }}>
+        <div className="flex-1 flex flex-col items-start justify-center w-full md:pl-2 md:mt-10">
+          <h2 className="text-3xl md:text-[2.8rem] leading-[1.1] font-semibold text-black mb-4 text-left">
             What makes Hostnin <br />
             different from others?
           </h2>
@@ -50,4 +56,4 @@ const FeatureDifferenceSection = () => {
   );
 };
 
-export default FeatureDifferenceSection; 
+export default CloudFeatureDifference;

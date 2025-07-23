@@ -30,7 +30,8 @@ const TestimonialSection = () => (
     {/* Left Side */}
     <div className="relative w-full lg:flex-1 max-w-lg flex flex-col items-start">
       {/* Background Circle */}
-      <div className="absolute block z-10 left-10 top-40 sm:top-48 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[360px] h-96 sm:h-[360px] bg-gray-100 rounded-full" />
+      <div className="absolute block z-10 left-10 top-40 sm:top-48 -translate-x-1/2 -translate-y-1/2 w-96 sm:w-[360px] lg:w-[450px] lg:h-[450px] h-96 sm:h-[360px] bg-gray-100 rounded-full" />
+
       <div className="z-20">
         <div className="flex items-center mb-2 mt-6 sm:mt-10">
           <Image src={googleLogo} alt="Google" width={100} height={50} />

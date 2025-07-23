@@ -88,7 +88,7 @@ const pricingPlans: PricingPlan[] = [
     icon: "ultimate",
     description: "Great for businesses with high traffic and focused on advertising",
   },
-  // Yearly Plans
+ 
   {
     title: "Basic",
     price: 1995,

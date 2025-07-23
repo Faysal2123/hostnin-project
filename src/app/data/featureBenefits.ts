@@ -1,6 +1,6 @@
 import { FeatureBenefit } from '../types/FeatureBenefit';
-import { FaCpanel, FaCloud, FaLock, FaRocket, FaLinux, FaTerminal, FaShieldAlt, FaDatabase, FaPhp } from 'react-icons/fa';
-import { ReactNode } from 'react';
+import { FaCpanel,  FaLock, FaRocket, FaLinux, FaTerminal, FaShieldAlt, FaDatabase, FaPhp } from 'react-icons/fa';
+
 
 export const featureBenefits: FeatureBenefit[] = [
   {
