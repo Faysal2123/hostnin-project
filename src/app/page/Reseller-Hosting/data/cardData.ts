@@ -1,5 +1,5 @@
 // app/data/cardData.ts
-import { PricingPlan } from "../../../types/PricingPlan";
+import { PricingPlan } from "../../web-hosting/types/PricingPlan";
 
 const resellerPricingPlans: PricingPlan[] = [
   {

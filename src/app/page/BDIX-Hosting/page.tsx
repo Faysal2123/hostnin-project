@@ -1,10 +1,10 @@
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/app/layout/Navbar";
 import React from "react";
 
-import Footer from "@/app/components/Footer";
+import Footer from "@/app/layout/Footer";
 import HeroSection from "./component/HeroSection";
 import PricingSection from "./component/PricingSection";
-import TestimonialSection from "@/app/components/TestimonialSection";
+import TestimonialSection from "@/app/page/web-hosting/component/TestimonialSection";
 import DomainSearchSection from "./component/DomainSearchSection";
 import FAQComponent from "../cloud-hosting/components/FAQComponent";
 import BDIXHeroSection from "./component/BDIXHeroSection";

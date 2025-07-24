@@ -186,7 +186,7 @@ const FAQComponent: React.FC = () => {
 
   return (
     <div className="bg-[#f8f8f9]">
-      <div className="w-full max-w-7xl mx-auto py-20">
+      <div className="w-full max-w-7xl mx-auto py-10">
         <h2 className="text-4xl font-bold text-center mb-2 text-blue-700">
           FAQs: Your questions, our answers
         </h2>

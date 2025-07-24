@@ -1,13 +1,13 @@
 // app/components/card/FeatureCards.tsx
 import React from "react";
-import { PricingPlan } from "../../../types/PricingPlan";
+import { PricingPlan } from "../../web-hosting/types/PricingPlan";
 
 interface FeatureCardsProps {
   cards: PricingPlan[];
 }
 
 const FeatureCards: React.FC<FeatureCardsProps> = ({ cards }) => (
-  <div className="w-full flex flex-col lg:flex-row gap-6 justify-center items-stretch mt-10">
+  <div className="w-full flex flex-col lg:flex-row gap-6 justify-center items-stretch">
     {cards.map((plan) => (
       <div
         key={plan.title}

@@ -1,4 +1,4 @@
-import { featureBenefits } from '@/app/data/featureBenefits';
+import { featureBenefits } from '@/app/page/web-hosting/data/featureBenefits';
 import React from 'react';
 
 const FeatureBenefitSection: React.FC = () => {

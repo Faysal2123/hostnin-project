@@ -1,14 +1,14 @@
 
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/app/layout/Navbar";
 import React from "react";
 import PricingSection from "./components/PricingSection";
-import TestimonialSection from "@/app/components/TestimonialSection";
+import TestimonialSection from "@/app/page/web-hosting/component/TestimonialSection";
 import { comparisonTableData } from "./data/comparisonTableData";
 import ComparisonTable from "./components/ComparisonTable";
 import CloudFeatureSection from "./components/CloudFeatureSection";
 import FeatureCards from './components/FeatureCards';
 import FAQComponent from "./components/FAQComponent";
-import Footer from "@/app/components/Footer";
+import Footer from "@/app/layout/Footer";
 import MoneyBack from "./components/MoneyBack";
 import CloudFeatureDifference from "./components/CloudFeatureDifference";
 import FeatureListSection from "./components/FeatureListSection";

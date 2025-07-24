@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { reviews } from "@/app/data/reviews";
+import { reviews } from "@/app/page/web-hosting/data/reviews";
 import googleLogo from "@/app/assets/google.png.webp";
 
 const sliderSettings = {

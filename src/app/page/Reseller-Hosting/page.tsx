@@ -1,15 +1,15 @@
 
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/app/layout/Navbar";
 import React from "react";
 
-import Footer from "@/app/components/Footer";
+import Footer from "@/app/layout/Footer";
 import PlanCarouselSection from "../BDIX-Hosting/component/PlanCarouselSection";
 
-import ReviewSection from "@/app/components/ReviewSection";
 import PerformanceAndSupportSection from "./component/PerformanceAndSupportSection";
 import WebAppHostingSection from "./component/WebAppHostingSection";
 import ResellerBenefitsSection from "./component/ResellerBenefitsSection";
 import HeroSection from "./component/HeroSection";
+import ReviewSection from "../web-hosting/component/ReviewSection";
 
 
 

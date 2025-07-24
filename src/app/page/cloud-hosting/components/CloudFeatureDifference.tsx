@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { featureDifferenceData } from '@/app/data/featureDifferenceData';
+import { featureDifferenceData } from '@/app/page/web-hosting/data/featureDifferenceData';
 
 const CloudFeatureDifference = () => {
   return (

@@ -16,7 +16,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="pt-8 pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative bg-cover bg-center bg-no-repeat text-white"
+      className="relative bg-cover bg-center bg-no-repeat text-white min-h-[750px] md:min-h-[850px] flex items-center justify-center"
       style={{
         backgroundImage:
           "url('https://hostnin.com/wp-content/uploads/2022/09/hero-bg-scaled-1.jpg')",
@@ -24,52 +24,35 @@ const HeroSection = () => {
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true"></div>
-      <div className="relative w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between z-10">
-        {/* Left Side */}
-        <div className=" text-center flex  mb-8 lg:mb-0 justify-center">
-         
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6">
+      <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center justify-center text-center py-16">
+        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6">
           KickStart Your Business
-            <br className="hidden sm:block" />
-            with Our Hosting Plans!
-          </h1>
-
-          <ul className="mb-6 my-5 sm:mb-8 space-y-2 text-sm sm:text-base flex">
-            <li className="flex items-center gap-2 justify-center ">
-              <span className="text-lg sm:text-xl">
-                <MdDone />
-              </span>
-              <span>Free .COM Domain on Trinnially</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center lg:justify-start">
-              <span className="text-lg sm:text-xl">
-                <MdDone />
-              </span>
-              <span>Genuine & Latest Control Panel</span>
-            </li>
-            <li className="flex items-center gap-2 justify-center lg:justify-start">
-              <span className="text-lg sm:text-xl">
-                <MdDone />
-              </span>
-              <span>Free WildCard SSL for Lifetime</span>
-            </li>
-          </ul>
-
-         
-          
-
-          <button className="bg-yellow-400 hover:bg-blue-500 hover:text-white text-[#03206B] font-semibold px-4 sm:px-8 lg:px-10 py-2 sm:py-3 rounded transition text-base sm:text-lg shadow w-full sm:w-auto mb-6 sm:mb-10">
-            Claim Offer
-          </button>
-        </div>
-
-        
-        
+          <br className="hidden sm:block" />
+          with Our Hosting Plans!
+        </h1>
+        <ul className="flex flex-row items-center justify-center gap-8 mb-8 text-base sm:text-lg font-semibold">
+          <li className="flex items-center gap-2">
+            <span className="text-xl text-blue-400"><MdDone /></span>
+            <span>Blazing Performance</span>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-xl text-blue-400"><MdDone /></span>
+            <span>24/7 Support</span>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-xl text-blue-400"><MdDone /></span>
+            <span>Unlimited Features</span>
+          </li>
+        </ul>
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded transition text-base sm:text-lg shadow mb-6 flex items-center justify-center">
+          View Pricing <span className="ml-2">→</span>
+        </button>
       </div>
-
       {/* Feature Cards at Bottom */}
-      <div className="relative z-10">
-        <FeatureCards cards={resellerPricingPlans}  bottom="-80px sm:-120px lg:-180px" />
+      <div className="absolute left-0 right-0 bottom-[-180px] md:bottom-[-240px] lg:bottom-[-300px] z-10 flex justify-center ">
+        <div className="w-full max-w-7xl mx-auto ">
+          <FeatureCards cards={resellerPricingPlans} />
+        </div>
       </div>
     </section>
   );

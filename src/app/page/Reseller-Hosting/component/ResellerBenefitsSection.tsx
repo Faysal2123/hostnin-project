@@ -29,7 +29,7 @@ const benefits = [
 
 const ResellerBenefitsSection = () => {
   return (
-    <section className="bg-[#f8f8f8] py-16 pt-60">
+    <section className="bg-[#f8f8f8] py-16 pt-[400px]">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left: Heading and left card */}
         <div>

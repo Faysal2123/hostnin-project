@@ -1,13 +1,13 @@
 
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/app/layout/Navbar";
 import React from "react";
 
-import Footer from "@/app/components/Footer";
+import Footer from "@/app/layout/Footer";
 import HeroSection from "./component/HeroSection";
 import PricingSection from "./component/PricingSection";
-import TestimonialSection from "@/app/components/TestimonialSection";
+import TestimonialSection from "@/app/page/web-hosting/component/TestimonialSection";
 import WordpressHighlightsSection from "./component/WordpressHighlightsSection";
-import FAQSection from "@/app/components/FAQSection";
+import FAQSection from "@/app/page/web-hosting/component/FAQSection";
 import StatsSection from "./component/StatsSection";
 import PlanIncludesSection from "./component/PlanIncludesSection";
 import SignupHeroSection from "./component/SignupHeroSection";

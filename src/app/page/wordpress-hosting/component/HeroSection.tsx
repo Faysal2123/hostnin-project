@@ -1,6 +1,6 @@
 "use client";
-import FeatureCards from "@/app/components/card/FeatureCards";
-import cardData from "@/app/data/cardData";
+
+import cardData from "@/app/page/web-hosting/data/cardData";
 import Image from "next/image";
 
 import { useEffect, useState, useMemo } from "react";
