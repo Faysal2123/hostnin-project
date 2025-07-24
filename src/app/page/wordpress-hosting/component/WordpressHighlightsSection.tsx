@@ -1,14 +1,14 @@
+"use client";
 import React from "react";
+import Image from "next/image";
 
 const highlights = [
   {
     title: "Autoscaling WordPress Hosting",
     description:
       "The power of our WordPress network as a whole, not just one machine. Our patented cloud-based auto-scaling technology will automatically add more resources whenever more space is needed.",
-   
-    icon: "https://hostnin.com/wp-content/uploads/2022/07/settings-icon.svg", 
-   
-    sideIcon: "https://hostnin.com/wp-content/uploads/2022/07/settings-icon.svg", 
+    icon: "https://hostnin.com/wp-content/uploads/2022/07/settings-icon.svg",
+    sideIcon: "https://hostnin.com/wp-content/uploads/2022/07/settings-icon.svg",
   },
   {
     title: "WordPress dev tools",
@@ -42,8 +42,8 @@ const highlights = [
     title: "24/7 Expert Support",
     description:
       "Our expert support team is passionate about WordPress and is available 24 hours a day, 7 days a week. This shows in our amazing reviews and perfect Trustpilot score. Receive assistance with any WordPress-related issues caused by the server or hosting provider.",
-    icon: "	https://hostnin.com/wp-content/uploads/2022/07/server-icon.svg",
-    sideIcon: "	https://hostnin.com/wp-content/uploads/2022/07/server-icon.svg",
+    icon: "https://hostnin.com/wp-content/uploads/2022/07/server-icon.svg",
+    sideIcon: "https://hostnin.com/wp-content/uploads/2022/07/server-icon.svg",
   },
 ];
 
@@ -53,7 +53,9 @@ const WordpressHighlightsSection = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 gap-6">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#03206B] mb-2">Managed WordPress Hosting Highlights</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#03206B] mb-2">
+              Managed WordPress Hosting Highlights
+            </h2>
           </div>
           <div className="text-gray-500 max-w-2xl text-base font-normal">
             Keep your attention on running your company, and don&apos;t bother yourself with the intricacies of web hosting. Superior speed, uptime, and support are the hallmarks of our managed hosting.
@@ -65,28 +67,34 @@ const WordpressHighlightsSection = () => {
               key={idx}
               className="bg-white rounded-2xl shadow-lg p-8 flex flex-col min-h-[260px] relative overflow-hidden hover:shadow-xl transition"
             >
-           
-              <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 text-2xl shadow-sm">
+              <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 text-2xl shadow-sm relative">
                 {item.icon ? (
-                  <img src={item.icon} alt="icon" className="w-8 h-8" />
+                  <Image
+                    src={item.icon}
+                    alt={`${item.title} icon`}
+                    width={32}
+                    height={32}
+                    priority={idx < 3} // prioritize first few images
+                  />
                 ) : (
-                  <span>Icon</span> 
+                  <span>Icon</span>
                 )}
               </div>
-             
+
               {item.sideIcon && (
-                <img
-                  src={item.sideIcon}
-                  alt="side icon"
-                  className="absolute top-1 right-6 w-28 h-24 opacity-20 pointer-events-none select-none"
-                />
+                <div className="absolute top-1 right-6 w-28 h-24 opacity-20 pointer-events-none select-none">
+                  <Image
+                    src={item.sideIcon}
+                    alt={`${item.title} side icon`}
+                    fill
+                    style={{ objectFit: "contain" }}
+                    priority={idx < 3}
+                  />
+                </div>
               )}
-              <h3 className="text-xl font-semibold text-[#03206B] mb-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 text-base font-normal">
-                {item.description}
-              </p>
+
+              <h3 className="text-xl font-semibold text-[#03206B] mb-2">{item.title}</h3>
+              <p className="text-gray-600 text-base font-normal">{item.description}</p>
             </div>
           ))}
         </div>
@@ -95,4 +103,4 @@ const WordpressHighlightsSection = () => {
   );
 };
 
-export default WordpressHighlightsSection; 
+export default WordpressHighlightsSection;

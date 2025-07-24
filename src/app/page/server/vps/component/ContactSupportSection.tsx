@@ -1,10 +1,6 @@
 "use client";
-import FeatureCards from "@/app/components/card/FeatureCards";
-import cardData from "@/app/page/web-hosting/data/cardData";
 import Image from "next/image";
-import { useEffect, useState, useMemo } from "react";
-import { MdDone } from "react-icons/md";
-import FeatureCardsSection from "./FeatureCardsSection";
+
 import SupportedScriptsCarousel from "./SupportedScriptsCarousel";
 
 const ContactSupportSection = () => {
@@ -14,10 +10,10 @@ const ContactSupportSection = () => {
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
           <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold leading-tight mb-4 sm:mb-6">
-            Have a question?<br className="hidden sm:block" />We're here to help!
+            Have a question?<br className="hidden sm:block" />We&apos;re here to help!
           </h1>
           <p className="mb-2 my-2 sm:mb-3 text-base sm:text-lgs text-white/90">
-            We're always standing by to help you in any way we can. From sales to navigating your service, we've got you covered.
+            We&apos;re always standing by to help you in any way we can. From sales to navigating your service, we&apos;ve got you covered.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center lg:justify-start items-center mt-8">
             <div className="flex items-center gap-2 text-lg sm:text-xl font-semibold">
@@ -42,7 +38,7 @@ const ContactSupportSection = () => {
           />
         </div>
       </div>
-      {/* Overlapping Feature Cards Section */}
+     
       <div className="absolute left-1/2 transform -translate-x-1/2 w-full max-w-7xl -bottom-[19rem] z-20">
         <SupportedScriptsCarousel />
       </div>

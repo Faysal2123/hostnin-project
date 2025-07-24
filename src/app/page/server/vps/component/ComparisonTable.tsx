@@ -20,8 +20,8 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
           <table className="w-full table-fixed border-collapse bg-white shadow-sm">
             <colgroup>
               <col className="w-1/5" />
-              {data.plans.map((_, idx) => (
-                <col key={idx} className="w-1/5" />
+              {data.plans.map(() => (
+                <col key={crypto.randomUUID()} className="w-1/5" />
               ))}
             </colgroup>
             <thead>
@@ -29,16 +29,14 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
                 <th className="border border-gray-200 p-3 bg-[#06125a] text-white text-base font-semibold w-1/5">
                   Plan Features
                 </th>
-                {data.plans.map((plan, idx) => (
+                {data.plans.map(plan => (
                   <th
                     key={plan.name}
-                    className={
-                      // Apply gradient for plan headers
-                      `border border-blue-200 p-3 text-white w-1/5 font-semibold ` +
-                      `bg-gradient-to-r from-[#0d6efd] to-[#2563eb]`
-                    }
+                    className={`border border-blue-200 p-3 text-white w-1/5 font-semibold bg-gradient-to-r from-[#0d6efd] to-[#2563eb]`}
                   >
-                    <div className="font-semibold">{plan.name} <span className="text-xs font-normal">৳</span></div>
+                    <div className="font-semibold">
+                      {plan.name} <span className="text-xs font-normal">৳</span>
+                    </div>
                     <div className="text-2xl font-semibold my-2">
                       <span className="text-yellow-400">৳{plan.price}</span>
                       <span className="text-sm font-normal">{plan.priceUnit}</span>
@@ -50,17 +48,23 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
             <tbody>
               {section.features.map(feature => (
                 <tr key={feature.label} className="even:bg-gray-50">
-                  <td className="border border-blue-200 p-3 font-medium text-black w-1/5 ">{feature.label}</td>
-                  {feature.values.map((value, idx) => (
-                    <td key={idx} className="border border-blue-200 p-3 text-center w-1/5">
-                      {typeof value === "boolean" && value ? <MdDone className="inline text-blue-600  text-[1.5rem]" /> : value}
+                  <td className="border border-blue-200 p-3 font-medium text-black w-1/5">
+                    {feature.label}
+                  </td>
+                  {feature.values.map((value, i) => (
+                    <td key={i} className="border border-blue-200 p-3 text-center w-1/5">
+                      {typeof value === "boolean" && value ? (
+                        <MdDone className="inline text-blue-600 text-[1.5rem]" />
+                      ) : (
+                        value
+                      )}
                     </td>
                   ))}
                 </tr>
               ))}
               <tr>
                 <td className="border border-blue-200 p-3"></td>
-                {data.plans.map((plan, idx) => (
+                {data.plans.map(plan => (
                   <td key={plan.name} className="border border-blue-200 p-3 text-center">
                     <button className="mt-2 bg-white border border-blue-700 text-blue-700 px-6 py-2 rounded-full font-semibold hover:bg-blue-700 hover:text-white transition">
                       Order
@@ -76,4 +80,4 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
   </div>
 );
 
-export default ComparisonTable; 
+export default ComparisonTable;

@@ -1,5 +1,6 @@
+import { CardFeature } from "@/app/page/web-hosting/types/CardFeature";
 import Image from "next/image";
-import { CardFeature } from "../../types/CardFeature";
+
 
 interface FeatureCardsProps {
   cards: CardFeature[];

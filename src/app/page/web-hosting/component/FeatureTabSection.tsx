@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { featureTabs } from "../data/featureTabs";
 import { FeatureTab } from "../types/FeatureTab";
-import tabImg from "../../../assets/laptop-man.webp"
 import { MdDone } from "react-icons/md";
 const FeatureTabSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>(featureTabs[0].key);

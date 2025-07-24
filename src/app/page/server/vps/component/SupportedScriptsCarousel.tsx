@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const scripts = [
   {
@@ -30,12 +31,13 @@ const SupportedScriptsCarousel: React.FC = () => {
   const handlePrev = () => {
     setStartIdx((prev) => (prev - 1 + scripts.length) % scripts.length);
   };
+
   const handleNext = () => {
     setStartIdx((prev) => (prev + 1) % scripts.length);
   };
 
   return (
-    <section className=" bg-[#f8f8f8]">
+    <section className="bg-[#f8f8f8]">
       <div
         className="max-w-7xl mx-auto px-4 bg-no-repeat bg-center rounded-2xl"
         style={{
@@ -64,16 +66,18 @@ const SupportedScriptsCarousel: React.FC = () => {
             {visible.map((script) => (
               <div
                 key={script.name}
-                className="flex-1 bg-white rounded-xl py-8 px-10 flex flex-col items-center justify-center  border border-gray-200"
+                className="flex-1 bg-white rounded-xl py-8 px-10 flex flex-col items-center justify-center border border-gray-200"
               >
                 <div
                   className="w-16 h-16 flex items-center justify-center rounded-full mb-4"
                   style={{ background: "#f1f6ff" }}
                 >
-                  <img
+                  <Image
                     src={script.icon}
                     alt={script.name}
-                    className="w-12 h-12"
+                    width={48}
+                    height={48}
+                    className="object-contain"
                   />
                 </div>
                 <div className="font-bold text-lg text-[#06125a] mt-2">

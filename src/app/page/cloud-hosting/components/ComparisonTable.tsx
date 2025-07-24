@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ComparisonTableProps {
-  data: typeof import("../data/comparisonTableData").comparisonTableData;
+  data: typeof import("../../BDIX-Hosting/component/data/comparisonTableData").comparisonTableData;
 }
 
 const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (

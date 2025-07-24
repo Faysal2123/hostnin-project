@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
-import pricingPlans from "../../data/pricingPlans";
+
 import { MdDescription, MdStars, MdRocketLaunch, MdSecurity } from "react-icons/md";
 import { IoMdArrowDropdown } from "react-icons/io";
+import pricingPlans from "@/app/page/web-hosting/data/pricingPlans";
 
 const tabClass = (active: boolean) =>
   `px-4 sm:px-6 py-1 font-semibold text-sm sm:text-base focus:outline-none transition-colors duration-200 rounded-full ${

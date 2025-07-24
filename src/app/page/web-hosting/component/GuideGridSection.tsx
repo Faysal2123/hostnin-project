@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
+import Image from "next/image";
 
 const guides = [
   {
-    image: "/assets/temp-link.webp", // Placeholder, update with real path
+    image: "/assets/temp-link.webp", // Ensure this path is correct and public
     category: "Cloud Hosting Guide",
     title: "কিভাবে টেম্পোরারি লিংক থেকে লাইভ করবেন?",
     link: "#",
@@ -55,11 +57,16 @@ const GuideGridSection = () => {
               key={idx}
               className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col"
             >
-              <img
-                src={guide.image}
-                alt={guide.title}
-                className="h-40 w-full object-cover object-center rounded-t-xl"
-              />
+              <div className="relative h-40 w-full rounded-t-xl overflow-hidden">
+                <Image
+                  src={guide.image}
+                  alt={guide.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={idx < 3} // prioritize first 3 images
+                />
+              </div>
               <div className="p-5 flex flex-col flex-1">
                 <span className="text-xs text-orange-500 font-medium mb-2">
                   ● {guide.category}
@@ -82,4 +89,4 @@ const GuideGridSection = () => {
   );
 };
 
-export default GuideGridSection; 
+export default GuideGridSection;

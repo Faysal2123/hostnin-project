@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
+import Image from "next/image";
 
 const guides = [
   {
-    image: "https://hostnin.com/wp-content/uploads/2023/08/Green-Minimalist-Tips-Gradient-Blog-Banner.png", // Placeholder, update with real path
+    image: "https://hostnin.com/wp-content/uploads/2023/08/Green-Minimalist-Tips-Gradient-Blog-Banner.png",
     category: "Cloud Hosting Guide",
     title: "কিভাবে টেম্পোরারি লিংক থেকে লাইভ করবেন?",
     link: "#",
@@ -55,11 +58,14 @@ const GuideGridSection = () => {
               key={idx}
               className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col"
             >
-              <img
-                src={guide.image}
-                alt={guide.title}
-                className="h-40 w-full object-cover object-center rounded-t-xl"
-              />
+              <div className="relative w-full h-40">
+                <Image
+                  src={guide.image}
+                  alt={guide.title}
+                  fill
+                  className="object-cover object-center rounded-t-xl"
+                />
+              </div>
               <div className="p-5 flex flex-col flex-1">
                 <span className="text-xs text-orange-500 font-medium mb-2">
                   ● {guide.category}
@@ -82,4 +88,4 @@ const GuideGridSection = () => {
   );
 };
 
-export default GuideGridSection; 
+export default GuideGridSection;

@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Image from "next/image";
 import { vpsFeaturesData } from "../data/vpsFeaturesData";
 
 const VpsFeaturesSection: React.FC = () => {
@@ -19,11 +21,14 @@ const VpsFeaturesSection: React.FC = () => {
               key={idx}
               className="bg-white rounded-2xl shadow p-8 flex flex-col items-start border border-gray-100 min-h-[180px] hover:shadow-lg transition-shadow"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-[#f1f6ff] mb-4">
-                <img
+              <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-[#f1f6ff] mb-4 relative">
+                <Image
                   src={feature.icon}
                   alt={feature.title}
-                  className="w-8 h-8"
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                  priority={true}  // optional: if you want to preload
                 />
               </div>
               <span className="font-bold text-lg text-[#03206B] mb-2">
@@ -48,4 +53,4 @@ const VpsFeaturesSection: React.FC = () => {
   );
 };
 
-export default VpsFeaturesSection; 
+export default VpsFeaturesSection;

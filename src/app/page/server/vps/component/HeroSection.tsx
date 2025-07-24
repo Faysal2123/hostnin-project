@@ -1,8 +1,6 @@
 "use client";
-import FeatureCards from "@/app/components/card/FeatureCards";
-import cardData from "@/app/page/web-hosting/data/cardData";
 import Image from "next/image";
-import { useEffect, useState, useMemo } from "react";
+
 import { MdDone } from "react-icons/md";
 import FeatureCardsSection from "./FeatureCardsSection";
 

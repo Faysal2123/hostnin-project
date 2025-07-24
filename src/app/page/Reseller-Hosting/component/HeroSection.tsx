@@ -1,9 +1,6 @@
 "use client";
 import FeatureCards from "./FeatureCards";
 
-
-import Image from "next/image";
-import { useEffect, useState, useMemo } from "react";
 import { MdDone } from "react-icons/md";
 import resellerPricingPlans from "../data/cardData";
 

@@ -1,26 +1,9 @@
 "use client";
-import FeatureCards from "@/app/components/card/FeatureCards";
-import cardData from "@/app/page/web-hosting/data/cardData";
-import Image from "next/image";
 
-import { useEffect, useState, useMemo } from "react";
+import Image from "next/image";
 import { MdDone } from "react-icons/md";
 
-function getTimeLeft(targetDate: Date) {
-  const now = new Date();
-  const diff = Math.max(0, targetDate.getTime() - now.getTime());
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-  return { days, hours, minutes, seconds };
-}
-
 const HeroSection = () => {
-  
-  
-
-  
   return (
     <section className="bg-[#03206B] pt-8 pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative">
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
@@ -53,19 +36,18 @@ const HeroSection = () => {
             Custom Quote <span className="ml-2">→</span>
           </button>
         </div>
+
         {/* Right Side */}
         <div className="flex-1 flex justify-center items-center w-[400px] h-[400px] sm:w-[600px] sm:h-[500px] lg:w-[800px] lg:h-[600px]">
-          <Image 
+          <Image
             src="https://hostnin.com/wp-content/uploads/2022/07/Vps-slider-2.png"
-            alt="Server Illustration" 
-            width={800} 
-            height={600} 
-            className="object-contain w-full h-full" 
+            alt="Server Illustration"
+            width={800}
+            height={600}
+            className="object-contain w-full h-full"
           />
         </div>
       </div>
-
-    
     </section>
   );
 };

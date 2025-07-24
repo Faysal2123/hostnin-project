@@ -1,6 +1,6 @@
 import { CardFeature } from "../types/CardFeature";
 
-const cardData: Omit<CardFeature, "icon"> & { iconName: string }[] = [
+const cardData: (Omit<CardFeature, "icon"> & { iconName: string })[] = [
   {
     iconName: "MdCall",
     title: "Hotline",

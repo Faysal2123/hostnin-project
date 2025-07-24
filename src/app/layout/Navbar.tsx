@@ -1,11 +1,10 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import logo from "../assets/logo.webp";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Link from "next/link";
-
 import {
   FaServer,
   FaCloud,
@@ -19,18 +18,30 @@ import {
   FaPhone,
 } from "react-icons/fa";
 
+// ✅ Type Definitions
+type DropdownItem = {
+  title: string;
+  description?: string;
+  icon: React.ReactNode;
+  link: string;
+};
+
+type MenuItem = {
+  title: string;
+  hasDropdown: boolean;
+  megaMenu?: boolean;
+  link?: string;
+  dropdownItems?: DropdownItem[];
+};
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [theme, setTheme] = useState("light");
+ 
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    setTheme(savedTheme);
-    document.documentElement.setAttribute("data-bs-theme", savedTheme);
-  }, []);
+  
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     {
       title: "Hosting",
       hasDropdown: true,
@@ -155,7 +166,7 @@ const Navbar = () => {
                           {item.dropdownItems?.map((subItem, subIndex) => (
                             <Link
                               key={subIndex}
-                              href={subItem.link || "/"}
+                              href={subItem.link}
                               className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
                             >
                               <span className="flex items-center justify-center w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg text-blue-600 dark:text-blue-300 text-xl">
@@ -178,7 +189,7 @@ const Navbar = () => {
                     </>
                   ) : (
                     <Link
-                      href={item.link}
+                      href={item.link || "#"}
                       className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       {item.title}
@@ -230,25 +241,25 @@ const Navbar = () => {
                     {activeDropdown === item.title && (
                       <div className="pl-4 mt-2 flex flex-col gap-2">
                         {item.dropdownItems?.map((subItem, subIndex) => (
-                          <a
+                          <Link
                             key={subIndex}
-                            href={subItem.link || "#"}
+                            href={subItem.link}
                             className="flex items-center gap-2 py-1 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
                           >
                             <span className="text-lg">{subItem.icon}</span>
                             <span className="text-sm">{subItem.title}</span>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     )}
                   </div>
                 ) : (
-                  <a
-                    href={item.link}
+                  <Link
+                    href={item.link || "#"}
                     className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition"
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 )}
               </li>
             ))}

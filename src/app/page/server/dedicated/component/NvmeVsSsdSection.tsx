@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Image from "next/image";
 
 const NvmeVsSsdSection = () => {
   return (
@@ -14,11 +16,19 @@ const NvmeVsSsdSection = () => {
         </div>
         {/* Right Illustration - Image only */}
         <div className="flex-1 min-w-[320px] flex justify-center">
-          <img src="https://hostnin.com/wp-content/uploads/2022/09/enterprise.png" alt="NVMe vs SSD Comparison" className="max-w-[400px] w-full h-auto rounded-xl " />
+          <div className="relative w-full max-w-[400px] h-[auto] aspect-[4/3] rounded-xl overflow-hidden">
+            <Image
+              src="https://hostnin.com/wp-content/uploads/2022/09/enterprise.png"
+              alt="NVMe vs SSD Comparison"
+              fill
+              style={{ objectFit: "contain" }}
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default NvmeVsSsdSection; 
+export default NvmeVsSsdSection;

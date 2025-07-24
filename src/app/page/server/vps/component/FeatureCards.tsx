@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { featureCardsData } from "../data/featureCardsData";
 
 const FeatureCards: React.FC = () => {
@@ -24,10 +25,12 @@ const FeatureCards: React.FC = () => {
               className="bg-white rounded-2xl shadow p-8 flex flex-row items-center border border-gray-100 min-h-[160px]"
             >
               <div className="flex-shrink-0 w-20 h-20 rounded-full flex items-center justify-center bg-[#f1f6ff] mr-8">
-                <img
+                <Image
                   src={card.icon}
                   alt={card.title}
-                  className="w-10 h-10"
+                  width={40}
+                  height={40}
+                  className="object-contain"
                 />
               </div>
               <div className="flex flex-col items-start justify-center">
@@ -46,4 +49,4 @@ const FeatureCards: React.FC = () => {
   );
 };
 
-export default FeatureCards; 
+export default FeatureCards;

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLock,  FaCloudUploadAlt, FaDatabase, FaRocket, FaFingerprint, FaPhp, FaDumpsterFire, FaFolderOpen } from "react-icons/fa";
-import { MdBackup, MdCloud } from "react-icons/md";
+import { MdCloud } from "react-icons/md";
 
 const features = [
   {
