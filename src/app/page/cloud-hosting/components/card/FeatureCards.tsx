@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CardFeature } from "../../types/CardFeature";
+import { CardFeature } from "../../../web-hosting/types/CardFeature";
 
 interface FeatureCardsProps {
   cards: CardFeature[];
@@ -25,9 +25,11 @@ const FeatureCards = ({ cards, bottom = "-180px" }: FeatureCardsProps) => (
           </div>
           <p className="text-gray-600 text-sm sm:text-base relative z-10">{card.desc}</p>
           {/* Faded Icon */}
-          <span className="absolute right-2 sm:right-4 top-2 sm:top-4 opacity-10 z-0 select-none pointer-events-none">
-            <Image src={card.fadedIcon} alt="" width={48} height={48} className="sm:w-16 sm:h-16" />
-          </span>
+          {card.fadedIcon && (
+            <span className="absolute right-2 sm:right-4 top-2 sm:top-4 opacity-10 z-0 select-none pointer-events-none">
+              <Image src={card.fadedIcon} alt="" width={48} height={48} className="sm:w-16 sm:h-16" />
+            </span>
+          )}
         </div>
       ))}
     </div>
