@@ -1,45 +1,71 @@
 "use client";
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 
+const getTimeLeft = (targetDate: Date) => {
+  const now = new Date();
+  const diff = targetDate.getTime() - now.getTime();
+  const totalSeconds = Math.max(0, Math.floor(diff / 1000));
+  const hours = Math.floor((totalSeconds / 3600) % 24);
+  const minutes = Math.floor((totalSeconds / 60) % 60);
+  const seconds = totalSeconds % 60;
+  return { hours, minutes, seconds };
+};
 
 const DiscountBanner: React.FC = () => {
-  const [daysLeft, setDaysLeft] = useState(26);
+  // Set your countdown target date/time here
+  const targetDate = new Date();
+  targetDate.setHours(targetDate.getHours() + 12, targetDate.getMinutes() + 54, targetDate.getSeconds() + 32, 0);
+
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setDaysLeft((prevDays) => {
-        if (prevDays <= 1) {
-          clearInterval(timer);
-          return 0;
-        }
-        return prevDays - 1;
-      });
-    }, 86400000); // 1 day in milliseconds
-
+      setTimeLeft(getTimeLeft(targetDate));
+    }, 1000);
     return () => clearInterval(timer);
   }, []);
 
+  const [show, setShow] = useState(true);
+  if (!show) return null;
+
   return (
-   <div className="bg-blue-800 text-white">
-     <div className="max-w-7xl mx-auto py-4  ">
-      <div className="flex flex-col md:flex-row justify-between items-center ">
-        <p className="text-sm md:text-base mb-2 md:mb-0">
-          Get <span className="font-semibold text-red-600">50% Discount</span> Offer —{" "}
-          <mark className="bg-yellow-200 px-1 rounded">{daysLeft} Days</mark> left!
-        </p>
-        <div className="flex space-x-4">
-          <Link href="/login" className="text-white hover:underline">
-            Login
-          </Link>
-          
-          <Link href="/signup" className="text-white hover:underline">
-            Sign up
-          </Link>
+    <div className="w-full bg-gradient-to-r from-[#ED5565] to-[#3A1CFF] text-white">
+      <div className="max-w-7xl mx-auto py-2 px-4 flex items-center justify-between">
+        {/* Left: Black Friday Sale & Countdown */}
+        <div className="flex items-center space-x-4">
+          <span className="font-semibold text-lg md:text-xl whitespace-nowrap">Black Friday Sale</span>
+          <div className="flex space-x-2">
+            <div className="bg-white text-[#1a2340] rounded-md px-3 py-1 flex flex-col items-center min-w-[48px]">
+              <span className="font-bold text-lg md:text-xl">{String(timeLeft.hours).padStart(2, '0')}</span>
+              <span className="text-xs font-medium">Hour</span>
+            </div>
+            <div className="bg-white text-[#1a2340] rounded-md px-3 py-1 flex flex-col items-center min-w-[48px]">
+              <span className="font-bold text-lg md:text-xl">{String(timeLeft.minutes).padStart(2, '0')}</span>
+              <span className="text-xs font-medium">Minutes</span>
+            </div>
+            <div className="bg-white text-[#1a2340] rounded-md px-3 py-1 flex flex-col items-center min-w-[48px]">
+              <span className="font-bold text-lg md:text-xl">{String(timeLeft.seconds).padStart(2, '0')}</span>
+              <span className="text-xs font-medium">Sec</span>
+            </div>
+          </div>
+        </div>
+        {/* Center: Offer Text */}
+        <div className="flex-1 text-center hidden md:block">
+          <span className="font-semibold text-base md:text-lg">Get 80% off Hosting plans + free Domain & SSL!</span>
+        </div>
+        {/* Right: View Details & Close */}
+        <div className="flex items-center space-x-6 ml-4">
+          <button className="font-semibold flex items-center space-x-1 focus:outline-none">
+            <span>View Details</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+          <button className="text-xl font-bold focus:outline-none" onClick={() => setShow(false)} aria-label="Close banner">
+            <AiOutlineClose size={18} />
+          </button>
         </div>
       </div>
     </div>
-   </div>
   );
 };
 

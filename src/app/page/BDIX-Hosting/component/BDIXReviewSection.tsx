@@ -24,9 +24,15 @@ const reviewData = [
   }
 ];
 
+const reviewImages = [
+  "https://hostnin.com/wp-content/uploads/2022/07/unnamed-4.png",
+  "https://hostnin.com/wp-content/uploads/2022/07/unnamed-2.png",
+  "https://hostnin.com/wp-content/uploads/2022/07/unnamed-3.png"
+];
+
 const BDIXReviewSection = () => {
   return (
-    <section className="relative py-52 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#f8f8f8] ">
+    <section className="relative pt-52 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#f8f8f8] ">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"
@@ -52,10 +58,10 @@ const BDIXReviewSection = () => {
         {/* Review Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {reviewData.map((review, index) => (
-            <div key={index} className="bg-white rounded-lg p-6 shadow-lg">
+            <div key={index} className="bg-white rounded-lg p-6 py-10 px-8 shadow-lg">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-2xl font-bold text-gray-600">
-                  {review.name.charAt(0)}
+                <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-2xl font-bold text-gray-600 overflow-hidden">
+                  <img src={reviewImages[index]} alt={review.name} className="w-full h-full object-cover rounded-full" />
                 </div>
                 <div className="ml-4">
                   <h3 className="font-semibold text-lg">{review.name}</h3>

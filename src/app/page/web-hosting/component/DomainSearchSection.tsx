@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import domainOffer from '../../../assets/com-domain-offer.webp';
-import { domainPrices } from '../data/domainPrices';
-import { DomainPrice } from '../types/DomainPrice';
+
+import { DomainPrice } from '@/app/page/web-hosting/types/DomainPrice';
+import { domainPrices } from '@/app/page/web-hosting/data/domainPrices';
 
 export default function DomainSearchSection() {
   return (
-    <div className='bg-[#f8f8f8] md:py-20 '>
+    <div className='bg-[#fafbfc] py-12 md:py-20'>
       <div className="bg-white rounded-2xl shadow-lg md:px-8 py-5 px-4  flex items-center justify-between gap-8 max-w-7xl mx-auto p">
         {/* Left: Search and Prices */}
         <div className="flex-1">
@@ -29,9 +29,9 @@ export default function DomainSearchSection() {
           </form>
           <div className="flex gap-10 flex-wrap">
             {domainPrices.map(({ ext, price, color }: DomainPrice) => (
-              <div key={ext} className="text-center min-w-[90px]">
-                <span className={`font-bold text-lg ${color}`}>{ext}</span><br />
-                <span className="text-[#0A1440] font-medium">{price}/Year</span>
+              <div key={ext} className="text-start min-w-[90px]">
+                <span className={`font-bold text-2xl ${color}`}>{ext}</span><br />
+                <span className="text-gray-600 font-medium text-sm">{price}/Year</span>
               </div>
             ))}
           </div>
@@ -39,9 +39,10 @@ export default function DomainSearchSection() {
         {/* Right: Offer Card (now replaced with image) */}
         <div className="min-w-[320px] flex justify-center">
           <Image
-            src={domainOffer}
+            src="https://hostnin.com/wp-content/uploads/2025/04/com-domain-offer.png"
             alt="Domain Offer"
-            className="max-w-[260px] rounded-2xl "
+            height={200}
+            width={300}
           />
         </div>
       </div>

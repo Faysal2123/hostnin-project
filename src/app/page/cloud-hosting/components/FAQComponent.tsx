@@ -186,7 +186,7 @@ const FAQComponent: React.FC = () => {
 
   return (
     <div className="bg-[#f8f8f9]">
-      <div className="w-full max-w-7xl mx-auto py-10">
+      <div className="w-full max-w-7xl mx-auto py-10 pt-20">
         <h2 className="text-4xl font-bold text-center mb-2 text-blue-700">
           FAQs: Your questions, our answers
         </h2>
@@ -199,10 +199,10 @@ const FAQComponent: React.FC = () => {
           {faqData.map((tab, idx) => (
             <button
               key={tab.category}
-              className={`flex items-center gap-2 px-6 py-5 rounded-sm font-semibold transition-colors duration-200 focus:outline-none ${
+              className={`flex items-center gap-2 px-6 py-5 rounded-md font-semibold transition-colors duration-200 focus:outline-none ${
                 selectedTab === idx
-                  ? "bg-blue-600 text-white shadow-lg"
-                  : "bg-white text-black "
+                  ? "bg-blue-600 text-white shadow-[0_0_40px_16px_rgba(59,130,246,0.32)]"
+                  : "bg-white text-black"
               }`}
               onClick={() => handleTabClick(idx)}
             >

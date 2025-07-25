@@ -1,60 +1,61 @@
 import React from 'react';
+import { FaHeadset, FaCogs, FaChartBar, FaShieldAlt, FaHdd, FaFireAlt, FaPython, FaClock } from 'react-icons/fa';
 
 const features = [
   {
     title: '24x7 Pro Support',
     description: 'Having support is crucial for bdix, so we make sure to provide you with the quick support you need.',
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 24 24"><path d="M12 22c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9c0 1.64.44 3.18 1.21 4.5L3 21l4.5-1.21A8.96 8.96 0 0012 22z" stroke="#1a40c6" strokeWidth="2"/><circle cx="9" cy="10" r="1" fill="#1a40c6"/><circle cx="15" cy="10" r="1" fill="#1a40c6"/></svg>
+      <FaHeadset className="text-[#1a40c6]" size={40} />
     ),
   },
   {
     title: 'All Managed Includes',
     description: 'More options means more control of your hosting, we provides almost every option to manage.',
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#1a40c6" strokeWidth="2"/><path d="M8 2v4M16 2v4" stroke="#1a40c6" strokeWidth="2"/><rect x="9" y="10" width="6" height="6" rx="1" fill="#1a40c6"/></svg>
+      <FaCogs className="text-[#1a40c6]" size={40} />
     ),
   },
   {
     title: 'Awstats & Webalizer',
     description: 'AWStats is a powerful and feature-rich tool that generates advanced web statistics graphically.',
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#1a40c6" strokeWidth="2"/><path d="M7 13v-2m4 2V9m4 6v-4" stroke="#1a40c6" strokeWidth="2"/><circle cx="7" cy="15" r="1" fill="#1a40c6"/><circle cx="11" cy="11" r="1" fill="#1a40c6"/><circle cx="15" cy="15" r="1" fill="#1a40c6"/></svg>
+      <FaChartBar className="text-[#1a40c6]" size={40} />
     ),
   },
   {
     title: 'Anti-Virus Protection',
     description: 'To protect the websites you host, we use advanced antivirus protection, which prevents all kinds of malware.',
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="8" stroke="#1a40c6" strokeWidth="2"/><path d="M8 8l8 8M16 8l-8 8" stroke="#1a40c6" strokeWidth="2"/></svg>
+      <FaShieldAlt className="text-[#1a40c6]" size={40} />
     ),
   },
   {
     title: 'Lightning-Fast Storage',
     description: 'Website speed is an important ranking signal for both Google and the user experience.',
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="5" stroke="#1a40c6" strokeWidth="2"/><rect x="7" y="11" width="2" height="2" rx="1" fill="#1a40c6"/><rect x="15" y="11" width="2" height="2" rx="1" fill="#1a40c6"/></svg>
+      <FaHdd className="text-[#1a40c6]" size={40} />
     ),
   },
   {
     title: 'Next-gen Firewalls',
     description: 'The ability to manage and filter traffic by country is one of the most-requested features of cPanel servers.',
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#1a40c6" strokeWidth="2"/><path d="M8 8h8v8H8z" fill="#1a40c6"/></svg>
+      <FaFireAlt className="text-[#1a40c6]" size={40} />
     ),
   },
   {
     title: 'Ruby, Python, NodeJS',
     description: 'We provide Ruby, Python, and Node.js features with our bdix plans so users can use them.',
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#1a40c6" strokeWidth="2"/><path d="M12 8v4l3 3" stroke="#1a40c6" strokeWidth="2"/></svg>
+      <FaPython className="text-[#1a40c6]" size={40} />
     ),
   },
   {
     title: '99.9% Server Uptime',
     description: 'With our enterprise grade datacenter, we ensures almost 100% uptime to keep your websites always online.',
     icon: (
-      <svg width="40" height="40" fill="none" viewBox="0 0 24 24"><path d="M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" stroke="#1a40c6" strokeWidth="2"/><path d="M12 6v6l4 2" stroke="#1a40c6" strokeWidth="2"/></svg>
+      <FaClock className="text-[#1a40c6]" size={40} />
     ),
   },
 ];
@@ -71,9 +72,9 @@ const BDIXFeaturesSection = () => {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-xl transition-shadow min-h-[200px]"
+              className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-xl transition-shadow min-h-[200px] py-12"
             >
-              <div className="mb-4">{feature.icon}</div>
+              <div className="mb-4 text-4xl">{feature.icon}</div>
               <h3 className="font-bold text-lg mb-2 text-[#232946]">{feature.title}</h3>
               <p className="text-[#6b7280] text-sm">{feature.description}</p>
             </div>

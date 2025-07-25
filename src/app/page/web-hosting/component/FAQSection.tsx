@@ -25,7 +25,7 @@ const FAQSection: React.FC = () => {
   const category = faqData.find((cat) => cat.id === selectedCategory);
 
   return (
-    <section className="w-full pb-10 flex flex-col items-center bg-[#f8f8f8] py-8 px-4 sm:px-6">
+    <section className="w-full pb-40 flex flex-col items-center bg-[#f8f8f8] py-8 px-4 sm:px-6">
       <div className="pb-8 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#2d3ecb] mb-2">
           FAQs: Your questions, our answers
@@ -44,7 +44,7 @@ const FAQSection: React.FC = () => {
             return (
               <button
                 key={cat.id}
-                className={`flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-3 text-sm sm:text-base font-semibold transition-all duration-200 rounded-md
+                className={`flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-5 text-sm sm:text-base font-semibold transition-all duration-200 rounded-md
                   ${isActive ? "bg-[#2250F4] text-white" : "bg-white text-black hover:bg-[#f0f4ff]"}
                 `}
                 style={{

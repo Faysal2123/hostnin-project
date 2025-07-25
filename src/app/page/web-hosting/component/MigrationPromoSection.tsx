@@ -6,7 +6,7 @@ const MigrationPromoSection = () => {
     <section className="flex justify-center items-center bg-[#f8f8f8] pb-8 md:py-16">
       <div className="flex flex-col md:flex-row bg-white rounded-2xl shadow-xl w-full max-w-[1300px] px-6 sm:px-10 md:px-16 py-10 gap-10 md:gap-20 items-center">
         {/* Illustration */}
-        <div className="flex justify-center md:justify-start w-full md:w-[340px]">
+        <div className="flex-[0.6] justify-center md:justify-start w-full md:w-[340px]">
           <Image
             src={lock}
             alt="Migration Illustration"

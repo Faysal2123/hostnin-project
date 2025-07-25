@@ -6,7 +6,14 @@ import FeatureCardsSection from "./FeatureCardsSection";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[#03206B] pt-8 pb-32 px-2 sm:pt-12 sm:pb-36 sm:px-6 lg:pt-28 lg:pb-44 lg:px-10 relative overflow-visible">
+    <section className="bg-[#03206B] pt-8 pb-32 px-2 sm:pt-12 sm:pb-36 sm:px-6 lg:pt-28 lg:pb-44 lg:px-10 relative overflow-visible"
+      style={{
+        backgroundImage: "url('https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png')",
+        backgroundPosition: "left center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "contain"
+      }}
+    >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">

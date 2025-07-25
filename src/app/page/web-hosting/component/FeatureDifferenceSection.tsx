@@ -4,16 +4,17 @@ import { featureDifferenceData } from '@/app/page/web-hosting/data/featureDiffer
 
 const CloudFeatureDifference = () => {
   return (
-    <section
+    <div className='bg-[#f8f8f8]'>
+      <section
       className="relative w-full overflow-hidden bg-no-repeat bg-cover"
       style={{
-        minHeight: '750px',
+        minHeight: '600px',
         backgroundImage: 'url("https://hostnin.com/wp-content/uploads/2022/09/shape.png")',
         backgroundPosition: 'top center',
       }}
     >
 
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center px-4 pt-64 pb-32 relative z-10" style={{ minHeight: '900px' }}>
+      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center px-4 pt-36 pb-32 relative z-10" style={{ minHeight: '900px' }}>
         {/* Left: Image */}
         <div className="flex-[1.2] justify-center items-center hidden lg:block w-[700px] h-[700px]">
           <Image
@@ -53,6 +54,7 @@ const CloudFeatureDifference = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

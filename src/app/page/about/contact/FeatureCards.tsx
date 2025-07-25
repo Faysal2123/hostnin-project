@@ -24,17 +24,18 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({ cards, bottom = "-180px" })
         {cards.map((card) => (
           <div
             key={card.title}
-            className="relative bg-white rounded-xl shadow-xl p-6 sm:p-8 lg:p-10 flex-1 min-w-0 flex flex-col justify-between overflow-hidden"
+            className="relative bg-white rounded-lg shadow-xl pt-12 sm:pt-10 pb-6 sm:pb-8 px-4 sm:px-8 lg:px-10 flex-1 min-w-0 flex flex-col justify-between items-start overflow-visible"
           >
-            <div className="flex items-center mb-4 z-60">
-              <span className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-600 shadow mr-3 sm:mr-4 flex-shrink-0 text-white text-xl sm:text-2xl -top-14 relative">
-                {iconMap[card.iconName] || null}
-              </span>
-              <span className="font-bold text-lg sm:text-xl text-[#03206B]">
-                {card.title}
-              </span>
-            </div>
-            <p className="text-gray-600 text-sm sm:text-base relative z-10 whitespace-pre-line">
+            {/* Icon Overlapping Top Center */}
+            <span className="absolute left-6 sm:left-10 -top-7 sm:-top-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-blue-600 shadow-[0_0_30px_8px_rgba(37,99,235,0.4)] flex items-center justify-center text-white text-2xl sm:text-3xl z-20 ">
+              {iconMap[card.iconName] || null}
+            </span>
+            {/* Title */}
+            <span className="font-bold text-lg sm:text-xl text-[#03206B] mb-2 text-start">
+              {card.title}
+            </span>
+            {/* Description */}
+            <p className="text-gray-600 text-sm sm:text-base relative z-10 whitespace-pre-line text-start">
               {card.desc}
             </p>
           </div>

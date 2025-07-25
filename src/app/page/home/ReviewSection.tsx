@@ -6,9 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import googleLogo from "../../assets/google.png.webp";
-import user1 from "../../assets/man-looking-attractive.webp";
-import user2 from "../../assets/man-looking-attractive.webp";
-import user3 from "../../assets/man-looking-attractive.webp";
 import arrowDark from "../../assets/arrow-dark.webp";
 
 import { IoIosStar } from "react-icons/io";
@@ -58,21 +55,21 @@ const ReviewSection = () => (
         <div className="flex items-center gap-2 mt-2">
           <div className="flex -space-x-4">
             <Image
-              src={user1}
+              src="https://hostnin.com/wp-content/uploads/2022/12/unnamed-5.png"
               alt="User 1"
               width={44}
               height={44}
               className="rounded-full border-2 border-white z-10 object-cover aspect-square"
             />
             <Image
-              src={user2}
+              src="https://hostnin.com/wp-content/uploads/2022/07/unnamed-2.png"
               alt="User 2"
               width={44}
               height={44}
               className="rounded-full border-2 border-white z-9 object-cover aspect-square"
             />
             <Image
-              src={user3}
+              src="https://hostnin.com/wp-content/uploads/2022/12/unnamed-6.png"
               alt="User 3"
               width={44}
               height={44}
@@ -94,7 +91,7 @@ const ReviewSection = () => (
     </div>
 
     {/* Right Side - Slider */}
-    <div className="w-full lg:flex-1 bg-white rounded-xl shadow-lg max-w-3xl flex flex-col relative justify-center py-8 sm:py-10">
+    <div className="w-full lg:flex-1 bg-white rounded-xl shadow-lg max-w-3xl flex flex-col relative justify-center py-10 sm:py-6 px-5">
       <Slider {...sliderSettings}>
         {testimonials.map((testimonial, idx) => (
           <div key={idx}>
@@ -102,8 +99,8 @@ const ReviewSection = () => (
               <Image
                 src={testimonial.image}
                 alt={testimonial.name}
-                width={48}
-                height={48}
+                width={80}
+                height={80}
                 className="rounded-full"
               />
               <div className="ml-4 flex flex-col">
@@ -122,12 +119,15 @@ const ReviewSection = () => (
             <p className="text-gray-600 mt-4 mb-8 text-sm sm:text-base leading-relaxed max-w-3xl px-5">
               {testimonial.text}
             </p>
+            <Image src="https://hostnin.com/wp-content/uploads/2023/08/quote-icon.svg" alt={testimonial.name} width={70} height={70} className="text-start pl-4" />
+            
             <span
               className="absolute bottom-6 left-6 opacity-10 text-5xl sm:text-7xl select-none"
               style={{ fontWeight: 900 }}
             >
               &ldquo;&rdquo;
             </span>
+            
           </div>
         ))}
       </Slider>

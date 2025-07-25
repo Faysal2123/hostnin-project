@@ -60,7 +60,7 @@ const FeatureTabSection: React.FC = () => {
             ))}
           </ul>
          <div className="px-2">
-         <button className="btn bg-gradient-to-r from-blue-500 to-blue-800 text-white px-5 py-3 font-semibold  rounded-sm shadow cursor-pointer hover:bg-blue-900 transition-all duration-300">Explore More</button>
+         <button className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white py-3 px-6 rounded-lg shadow-lg transition-colors duration-200 text-base md:text-base">Explore More</button>
          </div>
         </div>
       

@@ -39,7 +39,7 @@ const ReviewSection: React.FC = () => {
             <div key={idx} className="px-2">
               <div className="bg-white rounded-lg shadow-sm p-8 flex flex-col justify-between min-h-[340px] h-full">
                 <div className="flex items-center mb-4">
-                  <div className="w-16 h-16 aspect-square rounded-full overflow-hidden mr-4 border-4 border-white shadow flex-shrink-0">
+                  <div className="w-20 h-20 aspect-square rounded-full overflow-hidden mr-4 border-4 border-white shadow flex-shrink-0">
                     <Image
                       src={review.image}
                       alt={review.name}

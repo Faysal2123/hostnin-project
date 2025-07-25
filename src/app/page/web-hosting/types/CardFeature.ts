@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image";
 
 export interface CardFeature {
-  icon: StaticImageData;
-  fadedIcon?: StaticImageData;
+  icon: StaticImageData | string;
+  fadedIcon?: StaticImageData | string;
   title: string;
   desc: string;
 } 

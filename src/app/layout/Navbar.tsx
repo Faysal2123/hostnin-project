@@ -18,12 +18,13 @@ import {
   FaPhone,
 } from "react-icons/fa";
 
-// ✅ Type Definitions
+
 type DropdownItem = {
   title: string;
   description?: string;
   icon: React.ReactNode;
   link: string;
+  bgColor?: string;
 };
 
 type MenuItem = {
@@ -52,36 +53,42 @@ const Navbar = () => {
           description: "NVMe SSD server",
           icon: <FaServer />,
           link: "/page/web-hosting",
+          bgColor: "bg-red-500",
         },
         {
           title: "Cloud Hosting",
           description: "Fast autoscaling server",
           icon: <FaCloud />,
           link: "/page/cloud-hosting",
+          bgColor: "bg-blue-700",
         },
         {
           title: "WordPress Hosting",
           description: "Fully Managed WordPress",
           icon: <FaWordpress />,
           link: "/page/wordpress-hosting",
+          bgColor: "bg-cyan-700",
         },
         {
           title: "Reseller Hosting",
           description: "Start your Business",
           icon: <FaBriefcase />,
           link: "/page/Reseller-Hosting",
+          bgColor: "bg-green-600",
         },
         {
           title: "BDIX Hosting",
           description: "Lowest Network Latency",
           icon: <FaNetworkWired />,
           link: "/page/BDIX-Hosting",
+          bgColor: "bg-teal-700",
         },
         {
           title: "Turbo Hosting",
           description: "Fast Speed Guaranteed",
           icon: <FaBolt />,
           link: "/page/Turbo-Hosting",
+          bgColor: "bg-purple-800",
         },
       ],
     },
@@ -94,8 +101,8 @@ const Navbar = () => {
       title: "Server",
       hasDropdown: true,
       dropdownItems: [
-        { title: "VPS", icon: <FaCloud />, link: "/page/server/vps" },
-        { title: "Dedicated", icon: <FaGamepad />, link: "/page/server/dedicated" },
+        { title: "VPS", icon: <FaCloud />, link: "/page/server/vps", bgColor: "bg-cyan-700" },
+        { title: "Dedicated", icon: <FaGamepad />, link: "/page/server/dedicated", bgColor: "bg-purple-700" },
       ],
     },
     {
@@ -107,18 +114,21 @@ const Navbar = () => {
           description: "Learn about us",
           icon: <FaBuilding />,
           link: "/page/about/privacy",
+          bgColor: "bg-pink-500",
         },
         {
           title: "Terms & Condition",
           description: "Our global infrastructure",
           icon: <FaDatabase />,
           link: "/page/about/condition",
+          bgColor: "bg-green-500",
         },
         {
           title: "Contact",
           description: "Get in touch",
           icon: <FaPhone />,
           link: "/page/about/contact",
+          bgColor: "bg-blue-600",
         },
       ],
     },
@@ -169,7 +179,7 @@ const Navbar = () => {
                               href={subItem.link}
                               className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors"
                             >
-                              <span className="flex items-center justify-center w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg text-blue-600 dark:text-blue-300 text-xl">
+                              <span className={`flex items-center justify-center w-10 h-10 ${subItem.bgColor} rounded-lg text-white text-xl`}>
                                 {subItem.icon}
                               </span>
                               <div className="flex flex-col justify-center">
@@ -246,7 +256,9 @@ const Navbar = () => {
                             href={subItem.link}
                             className="flex items-center gap-2 py-1 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
                           >
-                            <span className="text-lg">{subItem.icon}</span>
+                            <span className={`text-lg ${subItem.bgColor} rounded-lg w-8 h-8 flex items-center justify-center text-white`}>
+                              {subItem.icon}
+                            </span>
                             <span className="text-sm">{subItem.title}</span>
                           </Link>
                         ))}

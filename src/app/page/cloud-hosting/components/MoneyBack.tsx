@@ -31,7 +31,7 @@ const features = [
 
 const MoneyBack = () => {
   return (
-   <section className="bg-[#f8f8f8] md:py-20 py-5">
+   <section className="bg-[#f8f8f8] md:pt-20 py-5">
      <div className="guarantee-section max-w-7xl mx-auto">
       {/* Decorative background circles */}
       <div className="guarantee-bg guarantee-bg-left" />

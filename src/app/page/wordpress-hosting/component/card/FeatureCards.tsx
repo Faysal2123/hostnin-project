@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CardFeature } from "../../../web-hosting/types/CardFeature";
+import { CardFeature } from "../../types/CardFeature";
 
 interface FeatureCardsProps {
   cards: CardFeature[];
@@ -15,20 +15,20 @@ const FeatureCards = ({ cards, bottom = "-180px" }: FeatureCardsProps) => (
       {cards.map((card) => (
         <div
           key={card.title}
-          className="relative bg-white rounded-xl shadow-xl p-6 sm:p-8 lg:p-10 flex-1 min-w-0 flex flex-col justify-between overflow-hidden"
+          className="relative bg-white rounded-lg shadow-xl p-6 sm:p-8 lg:p-8 flex-1 min-w-0 flex flex-col justify-between overflow-hidden"
         >
-          <div className="flex items-center mb-4 relative z-10">
-            <span className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow mr-3 sm:mr-4 flex-shrink-0">
-              <Image src={card.icon} alt={card.title} width={24} height={24} className="sm:w-8 sm:h-8" />
+          <div className="flex items-center justify-between mb-4 relative z-10 w-full">
+            <span className="inline-flex items-center justify-center w-16 h-16 sm:w-14 sm:h-14 rounded-full bg-white shadow-lg flex-shrink-0">
+              <Image src={card.icon} alt={card.title} width={48} height={48} className="sm:w-16 sm:h-16" />
             </span>
-            <span className="font-bold text-lg sm:text-xl text-[#03206B]">{card.title}</span>
+            {card.fadedIcon && (
+              <span className="flex items-center justify-center select-none pointer-events-none" style={{ opacity: 0.13, marginTop: '-16px' }}>
+                <Image src={card.fadedIcon} alt="" width={70} height={70} className="sm:w-24 sm:h-24" />
+              </span>
+            )}
           </div>
-          <p className="text-gray-600 text-sm sm:text-base relative z-10">{card.desc}</p>
-          {card.fadedIcon && (
-            <span className="absolute right-2 sm:right-4 top-2 sm:top-4 opacity-10 z-0 select-none pointer-events-none">
-              <Image src={card.fadedIcon} alt="" width={48} height={48} className="sm:w-16 sm:h-16" />
-            </span>
-          )}
+          <span className="font-bold text-xl sm:text-2xl text-[#03206B] mb-2 block text-left">{card.title}</span>
+          <p className="text-gray-600 text-base sm:text-base relative z-10 text-left">{card.desc}</p>
         </div>
       ))}
     </div>
