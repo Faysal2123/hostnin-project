@@ -23,41 +23,41 @@ const ControlPanelSection = () => {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section className="relative w-full bg-[#03206B] overflow-hidden py-10 px-2 sm:py-24 sm:px-6 lg:py-10 lg:px-10 flex flex-col items-center ">
+    <section className="relative w-full bg-[#03206B] overflow-hidden py-6 sm:py-10 lg:py-24 px-3 sm:px-6 lg:px-10 flex flex-col items-center ">
       {/* Heading */}
-      <h2 className="text-white text-3xl sm:text-4xl md:text-4xl font-bold text-center mb-10 pt-10 z-10">
+      <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 lg:mb-10 pt-6 sm:pt-8 lg:pt-10 z-10 px-3 sm:px-4">
         Most Secured & Advanced<br />
         Control Panel around
       </h2>
 
       {/* Main Content (Tabs + Image) */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 min-h-[500px]">
+      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 min-h-[400px] sm:min-h-[500px]">
         {/* Left: Timeline and Features */}
         <div className="flex-1 flex flex-col justify-center w-full max-w-xl h-full">
           <div className="flex flex-row items-start w-full">
             {/* Timeline */}
-            <div className="flex flex-col items-center mr-4 mt-2">
-              <div className="w-4 h-4 rounded-full bg-blue-400 border-4 border-[#03206B] shadow-lg" />
-              <div className="flex-1 w-1 bg-blue-400 my-1" style={{ minHeight: '60px', maxHeight: '80px' }} />
-              <div className="w-4 h-4 rounded-full bg-blue-400 border-4 border-[#03206B] shadow-lg" />
-              <div className="flex-1 w-1 bg-blue-400 my-1" style={{ minHeight: '60px', maxHeight: '80px' }} />
-              <div className="w-4 h-4 rounded-full bg-blue-400 border-4 border-[#03206B] shadow-lg" />
+            <div className="flex flex-col items-center mr-3 sm:mr-4 mt-2">
+              <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-blue-400 border-2 sm:border-4 border-[#03206B] shadow-lg" />
+              <div className="flex-1 w-0.5 sm:w-1 bg-blue-400 my-1" style={{ minHeight: '50px', maxHeight: '60px' }} />
+              <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-blue-400 border-2 sm:border-4 border-[#03206B] shadow-lg" />
+              <div className="flex-1 w-0.5 sm:w-1 bg-blue-400 my-1" style={{ minHeight: '50px', maxHeight: '60px' }} />
+              <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-blue-400 border-2 sm:border-4 border-[#03206B] shadow-lg" />
             </div>
             {/* Feature Cards */}
-            <div className="flex flex-col gap-6 w-full">
+            <div className="flex flex-col gap-4 sm:gap-6 w-full">
               {features.map((feature, idx) => {
                 const isOpen = openIdx === idx;
                 return (
                   <div
                     key={idx}
-                    className={`bg-[#061B5B] border border-blue-400 rounded-lg px-6 py-5 text-white transition shadow-lg flex flex-col justify-center cursor-pointer select-none ${isOpen ? 'ring-2 ring-blue-300' : 'hover:bg-[#0a256b]/80'} min-h-[60px]`}
+                    className={`bg-[#061B5B] border border-blue-400 rounded-lg px-4 sm:px-6 py-3 sm:py-5 text-white transition shadow-lg flex flex-col justify-center cursor-pointer select-none ${isOpen ? 'ring-2 ring-blue-300' : 'hover:bg-[#0a256b]/80'} min-h-[50px] sm:min-h-[60px]`}
                     onClick={() => setOpenIdx(idx)}
                   >
-                    <div className="font-semibold text-lg mb-1">
+                    <div className="font-semibold text-sm sm:text-base lg:text-lg mb-1">
                       {feature.title}
                     </div>
                     {isOpen && feature.description && (
-                      <div className="text-sm text-blue-100 leading-relaxed animate-fade-in">
+                      <div className="text-xs sm:text-sm text-blue-100 leading-relaxed animate-fade-in">
                         {feature.description}
                       </div>
                     )}
@@ -69,7 +69,7 @@ const ControlPanelSection = () => {
         </div>
 
         {/* Right: Laptop Image */}
-        <div className="flex-1 flex justify-center items-center mt-12 lg:mt-0 w-full max-w-md xl:max-w-xl">
+        <div className="flex-1 flex justify-center items-center mt-8 sm:mt-12 lg:mt-0 w-full max-w-sm sm:max-w-md xl:max-w-xl">
           <Image
             src="https://hostnin.com/wp-content/uploads/2022/09/security-machine.png"
             alt="Control Panel Laptop"
@@ -82,7 +82,7 @@ const ControlPanelSection = () => {
       </div>
 
       {/* Decorative blob bottom right */}
-      <div className="absolute bottom-0 right-0 w-48 h-48 bg-blue-400 opacity-30 rounded-full blur-2xl z-0" />
+      <div className="absolute bottom-0 right-0 w-32 h-32 sm:w-48 sm:h-48 bg-blue-400 opacity-30 rounded-full blur-2xl z-0" />
     </section>
   );
 };

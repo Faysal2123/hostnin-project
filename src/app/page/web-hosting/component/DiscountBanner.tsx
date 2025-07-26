@@ -31,37 +31,37 @@ const DiscountBanner: React.FC = () => {
 
   return (
     <div className="w-full bg-gradient-to-r from-[#ED5565] to-[#3A1CFF] text-white">
-      <div className="max-w-7xl mx-auto py-2 px-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto py-2 px-4 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0">
         {/* Left: Black Friday Sale & Countdown */}
-        <div className="flex items-center space-x-4">
-          <span className="font-semibold text-lg md:text-xl whitespace-nowrap">Black Friday Sale</span>
-          <div className="flex space-x-2">
-            <div className="bg-white text-[#1a2340] rounded-md px-3 py-1 flex flex-col items-center min-w-[48px]">
-              <span className="font-bold text-lg md:text-xl">{String(timeLeft.hours).padStart(2, '0')}</span>
+        <div className="flex items-center space-x-2 sm:space-x-4">
+          <span className="font-semibold text-sm sm:text-base md:text-lg lg:text-xl whitespace-nowrap">Black Friday Sale</span>
+          <div className="flex space-x-1 sm:space-x-2">
+            <div className="bg-white text-[#1a2340] rounded-md px-2 sm:px-3 py-1 flex flex-col items-center min-w-[40px] sm:min-w-[48px]">
+              <span className="font-bold text-sm sm:text-base md:text-lg lg:text-xl">{String(timeLeft.hours).padStart(2, '0')}</span>
               <span className="text-xs font-medium">Hour</span>
             </div>
-            <div className="bg-white text-[#1a2340] rounded-md px-3 py-1 flex flex-col items-center min-w-[48px]">
-              <span className="font-bold text-lg md:text-xl">{String(timeLeft.minutes).padStart(2, '0')}</span>
-              <span className="text-xs font-medium">Minutes</span>
+            <div className="bg-white text-[#1a2340] rounded-md px-2 sm:px-3 py-1 flex flex-col items-center min-w-[40px] sm:min-w-[48px]">
+              <span className="font-bold text-sm sm:text-base md:text-lg lg:text-xl">{String(timeLeft.minutes).padStart(2, '0')}</span>
+              <span className="text-xs font-medium">Min</span>
             </div>
-            <div className="bg-white text-[#1a2340] rounded-md px-3 py-1 flex flex-col items-center min-w-[48px]">
-              <span className="font-bold text-lg md:text-xl">{String(timeLeft.seconds).padStart(2, '0')}</span>
+            <div className="bg-white text-[#1a2340] rounded-md px-2 sm:px-3 py-1 flex flex-col items-center min-w-[40px] sm:min-w-[48px]">
+              <span className="font-bold text-sm sm:text-base md:text-lg lg:text-xl">{String(timeLeft.seconds).padStart(2, '0')}</span>
               <span className="text-xs font-medium">Sec</span>
             </div>
           </div>
         </div>
         {/* Center: Offer Text */}
-        <div className="flex-1 text-center hidden md:block">
-          <span className="font-semibold text-base md:text-lg">Get 80% off Hosting plans + free Domain & SSL!</span>
+        <div className="flex-1 text-center hidden sm:block">
+          <span className="font-semibold text-sm sm:text-base md:text-lg">Get 80% off Hosting plans + free Domain & SSL!</span>
         </div>
         {/* Right: View Details & Close */}
-        <div className="flex items-center space-x-6 ml-4">
-          <button className="font-semibold flex items-center space-x-1 focus:outline-none">
+        <div className="flex items-center space-x-3 sm:space-x-6 ml-0 sm:ml-4">
+          <button className="font-semibold flex items-center space-x-1 focus:outline-none text-sm sm:text-base">
             <span>View Details</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <button className="text-xl font-bold focus:outline-none" onClick={() => setShow(false)} aria-label="Close banner">
-            <AiOutlineClose size={18} />
+          <button className="text-lg sm:text-xl font-bold focus:outline-none" onClick={() => setShow(false)} aria-label="Close banner">
+            <AiOutlineClose size={16} className="sm:w-[18px] sm:h-[18px]" />
           </button>
         </div>
       </div>

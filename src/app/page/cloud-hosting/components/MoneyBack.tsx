@@ -31,21 +31,21 @@ const features = [
 
 const MoneyBack = () => {
   return (
-   <section className="bg-[#f8f8f8] md:pt-20 py-5">
-     <div className="guarantee-section max-w-7xl mx-auto">
+   <section className="bg-[#f8f8f8] pt-8 sm:pt-12 lg:pt-20  lg:py-8">
+     <div className="guarantee-section max-w-7xl mx-auto px-3 sm:px-4">
       {/* Decorative background circles */}
       <div className="guarantee-bg guarantee-bg-left" />
       <div className="guarantee-bg guarantee-bg-right" />
       <div className="guarantee-content">
-        <h2 className="guarantee-title">30 day <span>Money-back Guarantee</span></h2>
-        <p className="guarantee-subtitle">
+        <h2 className="guarantee-title text-2xl sm:text-3xl lg:text-4xl">30 day <span>Money-back Guarantee</span></h2>
+        <p className="guarantee-subtitle text-sm sm:text-base lg:text-lg">
           There is no risk with our 30-day money back guarantee. Stay safe with assurance of refund.
         </p>
         <div className="guarantee-features">
           {features.map((feature, idx) => (
             <div className="guarantee-feature" key={idx}>
               <div className="guarantee-feature-icon">{feature.icon}</div>
-              <span className="guarantee-feature-text">{feature.text}</span>
+              <span className="guarantee-feature-text text-sm sm:text-base">{feature.text}</span>
             </div>
           ))}
         </div>

@@ -209,7 +209,7 @@ const Navbar = () => {
               ))}
             </ul>
 
-            <button className="bg-gradient-to-r from-blue-500 to-blue-400 dark:from-blue-600 dark:to-blue-500 text-white px-5 py-2 rounded font-semibold text-sm hover:from-blue-600 hover:to-blue-500 transition">
+            <button className="bg-gradient-to-r from-blue-700 to-blue-600 dark:from-blue-600 dark:to-blue-500 text-white px-6 py-3 rounded font-semibold text-sm hover:from-blue-600 hover:to-blue-500 transition">
               Dashboard
             </button>
           </div>
@@ -228,60 +228,92 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Dropdown Panel */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-800 shadow-lg z-40 p-4">
-          <ul className="flex flex-col gap-2 text-sm font-medium text-gray-700 dark:text-gray-200">
+      <div className={`md:hidden fixed top-0 left-0 w-full h-full bg-white dark:bg-gray-800 z-50 flex flex-col transition-all duration-300 ease-in-out transform ${
+        isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
+      }`}>
+        {/* Header with Logo and Close Button */}
+        <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+          <Link href="/" className="flex items-center">
+            <Image
+              src={logo}
+              alt="Hostnin Logo"
+              width={150}
+              height={30}
+              className="object-contain dark:filter dark:brightness-0 dark:invert"
+            />
+          </Link>
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2 transition-colors duration-200"
+          >
+            <FiX className="text-2xl" />
+          </button>
+        </div>
+
+        {/* Mobile Menu Items */}
+        <div className="flex-1 p-4 overflow-y-auto">
+          <ul className="flex flex-col gap-0 text-sm font-medium text-gray-700 dark:text-gray-200">
             {menuItems.map((item, index) => (
-              <li key={index} className="border-b border-gray-200 dark:border-gray-700 pb-2">
+              <li key={index} className="border-b border-gray-100 dark:border-gray-700">
                 {item.hasDropdown ? (
                   <div>
                     <button
-                      className="w-full flex justify-between items-center py-2 text-left hover:text-blue-600 dark:hover:text-blue-400"
+                      className="w-full flex justify-between items-center py-4 text-left hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                       onClick={() =>
                         setActiveDropdown(activeDropdown === item.title ? null : item.title)
                       }
                     >
-                      <span className="flex items-center gap-2">{item.title}</span>
+                      <span>{item.title}</span>
                       <IoMdArrowDropdown
-                        className={`transition-transform duration-200 ${
+                        className={`transition-transform duration-300 ease-in-out ${
                           activeDropdown === item.title ? "rotate-180" : ""
                         }`}
                       />
                     </button>
-                    {activeDropdown === item.title && (
-                      <div className="pl-4 mt-2 flex flex-col gap-2">
+                    <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      activeDropdown === item.title ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}>
+                      <div className="pl-4 pb-4 flex flex-col gap-2">
                         {item.dropdownItems?.map((subItem, subIndex) => (
                           <Link
                             key={subIndex}
                             href={subItem.link}
-                            className="flex items-center gap-2 py-1 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                            className="flex items-center gap-3 py-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 hover:translate-x-1"
                           >
-                            <span className={`text-lg ${subItem.bgColor} rounded-lg w-8 h-8 flex items-center justify-center text-white`}>
+                            <span className={`text-lg ${subItem.bgColor} rounded-lg w-8 h-8 flex items-center justify-center text-white transition-transform duration-200 hover:scale-110`}>
                               {subItem.icon}
                             </span>
-                            <span className="text-sm">{subItem.title}</span>
+                            <div className="flex flex-col">
+                              <span className="text-sm font-medium">{subItem.title}</span>
+                              {subItem.description && (
+                                <span className="text-xs text-gray-500 dark:text-gray-400">{subItem.description}</span>
+                              )}
+                            </div>
                           </Link>
                         ))}
                       </div>
-                    )}
+                    </div>
                   </div>
                 ) : (
                   <Link
                     href={item.link || "#"}
-                    className="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition"
+                    className="block py-4 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 hover:translate-x-1"
                   >
                     {item.title}
                   </Link>
                 )}
               </li>
             ))}
-
-            <button className="mt-3 w-full bg-gradient-to-r from-blue-500 to-blue-400 dark:from-blue-600 dark:to-blue-500 text-white py-2 rounded font-semibold text-sm hover:from-blue-600 hover:to-blue-500 transition">
-              Dashboard
-            </button>
           </ul>
         </div>
-      )}
+
+        {/* Dashboard Button - Fixed at Bottom */}
+        <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+          <button className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]">
+            Dashboard
+          </button>
+        </div>
+      </div>
     </>
   );
 };

@@ -59,7 +59,7 @@ const ReviewSection: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-[#6b6b6b] text-base mb-8">{review.review}</p>
+                <p className="text-[#6b6b6b] text-sm md:text-base mb-8">{review.review}</p>
                 <FaQuoteLeft className="text-4xl text-[#f3f3f3]" />
               </div>
             </div>

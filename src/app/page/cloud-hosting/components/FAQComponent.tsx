@@ -186,52 +186,53 @@ const FAQComponent: React.FC = () => {
 
   return (
     <div className="bg-[#f8f8f9]">
-      <div className="w-full max-w-7xl mx-auto py-10 pt-20">
-        <h2 className="text-4xl font-bold text-center mb-2 text-blue-700">
+      <div className="w-full max-w-7xl mx-auto py-6 sm:py-8 lg:py-10 pt-12 sm:pt-16 lg:pt-20 px-3 sm:px-4">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-2 text-blue-700">
           FAQs: Your questions, our answers
         </h2>
-        <p className="text-center text-gray-500 mb-8 w-[800px] mx-auto">
+        <p className="text-center text-gray-500 mb-6 sm:mb-8 w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto text-sm sm:text-base px-3 sm:px-4">
         Here you will find answers to the most frequently asked questions. If you still need assistance, feel free to ask our live support team. 
         </p>
 
         {/* Tab Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8 px-2 sm:px-4">
           {faqData.map((tab, idx) => (
             <button
               key={tab.category}
-              className={`flex items-center gap-2 px-6 py-5 rounded-md font-semibold transition-colors duration-200 focus:outline-none ${
+              className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 rounded-md font-semibold transition-colors duration-200 focus:outline-none text-xs sm:text-sm lg:text-base ${
                 selectedTab === idx
                   ? "bg-blue-600 text-white shadow-[0_0_40px_16px_rgba(59,130,246,0.32)]"
                   : "bg-white text-black"
               }`}
               onClick={() => handleTabClick(idx)}
             >
-              <span>{tab.icon}</span>
-              {tab.category}
+              <span className="text-sm sm:text-base lg:text-xl">{tab.icon}</span>
+              <span className="hidden sm:inline">{tab.category}</span>
+              <span className="sm:hidden">{tab.category.split(' ')[0]}</span>
             </button>
           ))}
         </div>
 
         {/* Accordion Section */}
-        <div className="bg-white shadow-lg p-8">
+        <div className="bg-white shadow-lg p-4 sm:p-6 lg:p-8">
           {currentFaqs.map((faq, idx) => (
             <div
               key={faq.question}
               className="border-b last:border-b-0 border-gray-200"
             >
               <button
-                className="w-full flex justify-between items-center py-5 text-left focus:outline-none"
+                className="w-full flex justify-between items-center py-3 sm:py-4 lg:py-5 text-left focus:outline-none"
                 onClick={() => handleAccordionClick(idx)}
               >
-                <span className="font-semibold text-lg text-gray-900">
+                <span className="font-semibold text-sm sm:text-base lg:text-lg text-gray-900 pr-2 sm:pr-4">
                   {faq.question}
                 </span>
-                <span className="text-2xl text-blue-700">
+                <span className="text-xl sm:text-2xl text-blue-700 flex-shrink-0">
                   {openIndexes[selectedTab] === idx ? "−" : "+"}
                 </span>
               </button>
               {openIndexes[selectedTab] === idx && (
-                <div className="pb-5 text-gray-700 text-base animate-fade-in">
+                <div className="pb-3 sm:pb-4 lg:pb-5 text-gray-700 text-sm sm:text-base animate-fade-in">
                   {faq.answer}
                 </div>
               )}

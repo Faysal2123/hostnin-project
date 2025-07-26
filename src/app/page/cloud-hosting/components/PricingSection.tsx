@@ -39,7 +39,7 @@ const PricingSection = () => {
   const plans = pricingPlans.filter((plan) => plan.billingPeriod === billing);
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-10 sm:py-14 lg:py-20 bg-[#f8f8f8]   lg:pt-60 px-4">
+    <section className="w-full flex flex-col items-center justify-center py-10 sm:py-14 lg:py-20 bg-[#f8f8f8] pt-[700px]   lg:pt-60 px-4">
       <div className="w-full max-w-7xl">
         <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#232946] mb-6 sm:mb-10 text-center">
           Choose Your Perfect Plan
