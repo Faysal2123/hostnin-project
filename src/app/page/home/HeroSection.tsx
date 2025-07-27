@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FaBolt, FaMoneyBillWave } from "react-icons/fa";
-import DomainSearchSection from "./DomainSearchSection";
+
 
 const Arrow = () => (
   <span className="ml-2 text-lg align-middle">&rarr;</span>
@@ -39,7 +39,7 @@ const HeroSection = () => {
           </h1>
           {/* Subheadline */}
           <p className="text-white/90 text-base sm:text-base max-w-2xl mb-8">
-          At Hostnin, you'll discover top-notch web hosting solutions tailored for portfolios, e-commerce, and any type of website you can envision. Experience superior support, advanced features, and competitive pricing when you purchase web hosting from Bangladesh’s best hosting provider.
+          At Hostnin, you&apos;ll discover top-notch web hosting solutions tailored for portfolios, e-commerce, and any type of website you can envision. Experience superior support, advanced features, and competitive pricing when you purchase web hosting from Bangladesh’s best hosting provider.
           </p>
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 w-full sm:w-auto">

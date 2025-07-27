@@ -1,7 +1,5 @@
 import { CardFeature } from "../types/CardFeature";
-import ArrowDark from "../../../assets/arrow-dark.webp";
-import ManAttending from "../../../assets/man-attending-online-meeting.png";
-import SuccessDone from "../../../assets/successfully-done.png";
+
 
 const cardData: CardFeature[] = [
   {

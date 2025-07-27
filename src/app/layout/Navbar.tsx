@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState} from "react";
 import logo from "../assets/logo.webp";
-import { FiSearch, FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Link from "next/link";
 import {

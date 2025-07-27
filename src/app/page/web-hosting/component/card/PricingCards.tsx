@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import pricingPlans from "../../data/pricingPlans";
-import { MdDescription, MdStars, MdRocketLaunch, MdSecurity } from "react-icons/md";
+
 import { IoMdArrowDropdown } from "react-icons/io";
 
 const tabClass = (active: boolean) =>
@@ -102,7 +102,7 @@ const PricingCards = () => {
         </div>
 
         <div className="w-full flex flex-col lg:flex-row gap-8 sm:gap-10 justify-center items-stretch mt-12 sm:mt-16">
-          {plans.map((plan, index) => (
+          {plans.map((plan) => (
             <div
               key={plan.title}
               className={`relative w-full max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col items-center transition-all duration-300 border-2 ${

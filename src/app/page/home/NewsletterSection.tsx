@@ -19,7 +19,7 @@ const NewsletterSection = () => {
      
       {/* Title */}
       <h2 className="text-white text-3xl md:text-4xl font-bold text-center mb-6 z-10 relative">
-        Don't Want to Miss Anything?
+        Don&apos;t Want to Miss Anything?
       </h2>
       {/* Frequency Options */}
       <div className="flex gap-6 mb-8 text-white text-base font-medium z-10 relative">

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 
 const getTimeLeft = (targetDate: Date) => {
@@ -14,8 +14,11 @@ const getTimeLeft = (targetDate: Date) => {
 
 const DiscountBanner: React.FC = () => {
   // Set your countdown target date/time here
-  const targetDate = new Date();
-  targetDate.setHours(targetDate.getHours() + 12, targetDate.getMinutes() + 54, targetDate.getSeconds() + 32, 0);
+  const targetDate = useMemo(() => {
+    const date = new Date();
+    date.setHours(date.getHours() + 12, date.getMinutes() + 54, date.getSeconds() + 32, 0);
+    return date;
+  }, []);
 
   const [timeLeft, setTimeLeft] = useState(getTimeLeft(targetDate));
 
@@ -24,7 +27,7 @@ const DiscountBanner: React.FC = () => {
       setTimeLeft(getTimeLeft(targetDate));
     }, 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
 
   const [show, setShow] = useState(true);
   if (!show) return null;

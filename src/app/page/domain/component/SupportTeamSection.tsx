@@ -25,7 +25,7 @@ const SupportTeamSection = () => {
             <p className="text-lg leading-relaxed max-w-lg">
               Our team of experts is always available to assist you with registering
               your desired domains with Hostnin. For live 24/7 assistance, call us on
-              WhatsApp. We're here to help you every step of the way.
+              WhatsApp. We&apos;re here to help you every step of the way.
             </p>
 
             {/* Call to Action Buttons */}

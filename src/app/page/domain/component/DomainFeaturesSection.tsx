@@ -43,7 +43,7 @@ const DomainFeaturesSection = () => {
               <p>
                 By using the DNS Management option, you can add your domain records, 
                 such as A, TXT, and MX records. We simplified everything for you. 
-                When you're ready, place your order and we'll get you going!
+                When you&apos;re ready, place your order and we&apos;ll get you going!
               </p>
             </div>
           </div>

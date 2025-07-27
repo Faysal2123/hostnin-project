@@ -33,7 +33,7 @@ const CloudFeatureDifference = () => {
             different from others?
           </h2>
           <p className="mb-6 sm:mb-8 lg:mb-10 text-gray-700 max-w-2xl text-left text-sm sm:text-base lg:text-lg font-normal">
-            Using our incredible technology, we will help you improve your website's accessibility. With LiteSpeed Server and CloudLinux OS, you can speed up loading times, enhance security, and make your site faster and more reliable.
+            Using our incredible technology, we will help you improve your website&apos;s accessibility. With LiteSpeed Server and CloudLinux OS, you can speed up loading times, enhance security, and make your site faster and more reliable.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 w-full">
             {featureDifferenceData.map((feature, idx) => (
