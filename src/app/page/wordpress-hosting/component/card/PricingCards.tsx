@@ -149,7 +149,7 @@ const PricingCards = () => {
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="text-green-500 text-base sm:text-lg">&#10003;</span>
-                    <span className="text-slate-700">{feature}</span>
+                    <span className="text-slate-700">{feature.text}</span>
                   </li>
                 ))}
               </ul>

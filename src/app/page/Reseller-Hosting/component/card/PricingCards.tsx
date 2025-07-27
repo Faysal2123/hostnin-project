@@ -1,170 +1,76 @@
-"use client";
-import { useState } from "react";
-import pricingPlans from "../../data/pricingPlans";
-import { MdDescription, MdStars, MdRocketLaunch, MdSecurity } from "react-icons/md";
-import { IoMdArrowDropdown } from "react-icons/io";
+import React from "react";
+import { PricingPlan } from "../../../web-hosting/types/PricingPlan";
 
-const tabClass = (active: boolean) =>
-  `px-4 sm:px-6 py-1 font-semibold text-sm sm:text-base focus:outline-none transition-colors duration-200 rounded-full ${
-    active ? "bg-[#0070f3] text-white" : "bg-transparent text-white"
-  }`;
+interface PricingCardsProps {
+  cards: PricingPlan[];
+}
 
-const iconMap: Record<string, React.ReactNode> = {
-  basic: (
-    <span className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-100">
-      <MdDescription size={20} className="text-blue-600 sm:text-2xl" />
-    </span>
-  ),
-  starter: (
-    <span className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-yellow-100">
-      <MdStars size={20} className="text-yellow-500 sm:text-2xl" />
-    </span>
-  ),
-  pro: (
-    <span className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-50">
-      <MdRocketLaunch size={20} className="text-blue-500 sm:text-2xl" />
-    </span>
-  ),
-  ultimate: (
-    <span className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-purple-100">
-      <MdSecurity size={20} className="text-purple-600 sm:text-2xl" />
-    </span>
-  ),
-};
-
-const PricingCards = () => {
-  const [billing, setBilling] = useState<"monthly" | "yearly">("yearly");
-
-  const plans = pricingPlans.filter((plan) => plan.billingPeriod === billing);
-
+const PricingCards: React.FC<PricingCardsProps> = ({ cards }) => {
   return (
-    <section className="w-full flex flex-col items-center justify-center py-10 sm:py-14 lg:py-20 bg-[#f8f8f8]   lg:pt-44 px-4">
-      <div className="w-full max-w-7xl">
-        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#232946] mb-6 sm:mb-10 text-center">
-          Choose Your Perfect Plan
-        </h2>
-
-        <div className="flex flex-col sm:flex-row items-center gap-2 mb-4 justify-center">
-          <div className="flex bg-[#2a3553] rounded-full p-1">
-            <button className={tabClass(billing === "monthly")} onClick={() => setBilling("monthly")}>
-              Monthly
-            </button>
-            <button className={tabClass(billing === "yearly")} onClick={() => setBilling("yearly")}>
-              Yearly
-            </button>
-          </div>
-
-          {/* Updated: SVG Arrow + Text – visible on all devices */}
-          <div className="relative flex items-center -ml-3 mt-3 sm:mt-0" style={{ minWidth: 120 }}>
-            <svg
-              width="90"
-              height="40"
-              viewBox="0 0 90 40"
-              fill="none"
-              className="absolute -top-6 left-0 sm:-top-6 lg:-top-8 lg:left-0"
-              style={{ pointerEvents: "none" }}
-            >
-              <path
-                d="M10 30 C40 0, 70 0, 80 20"
-                stroke="#2563eb"
-                strokeWidth="2"
-                strokeDasharray="4,4"
-                fill="none"
-                markerEnd="url(#arrowhead)"
-              />
-              <defs>
-                <marker
-                  id="arrowhead"
-                  markerWidth="8"
-                  markerHeight="8"
-                  refX="4"
-                  refY="4"
-                  orient="auto"
-                >
-                  <path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#2563eb" />
-                </marker>
-              </defs>
-            </svg>
-            <span className="text-blue-400 font-medium text-sm inline ml-10">Upto 76% save</span>
-          </div>
-        </div>
-
-        <div className="w-full flex flex-col lg:flex-row gap-6 justify-center items-stretch mt-10">
-          {plans.map((plan) => (
-            <div
-              key={plan.title}
-              className={`relative w-full max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col items-center px-4 sm:px-6 py-6 sm:py-8 transition-all duration-300 border-2 ${
-                plan.highlight ? "border-blue-500 scale-[1.02] z-10 shadow-2xl" : "border-transparent"
-              }`}
-            >
-              {plan.badge && (
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-red-400 text-white text-xs font-bold px-4 py-1 rounded-full shadow">
-                  {plan.badge}
-                </div>
-              )}
-
-              <div className="flex flex-col items-center mb-4 mt-2">
-                <div className="flex items-center gap-2 mb-1">
-                  {iconMap[plan.icon as string]}
-                  <span className="text-[#232946] font-bold text-base sm:text-lg">{plan.title}</span>
-                </div>
-                {plan.description && (
-                  <div className="text-gray-500 text-xs sm:text-sm text-center mb-1 min-h-[38px]">
-                    {plan.description}
-                  </div>
-                )}
-                {plan.savingsText && (
-                  <span className="inline-block bg-blue-50 text-gray-700 text-sm font-semibold px-4 py-1 rounded-full mb-2 mt-4 shadow-sm border border-blue-100">
-                    {plan.savingsText}
-                  </span>
-                )}
-                <div className="flex items-start justify-center gap-1 mb-2 mt-5">
-                  <span className="text-xs sm:text-sm font-bold text-[#232946] relative -mt-1">
-                    {plan.currency}
-                  </span>
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#232946]">
-                    {plan.price.toLocaleString()}
-                  </span>
-                  <span className="text-xs sm:text-sm lg:text-base font-medium text-gray-500 ml-1">
-                    /Per {billing === "monthly" ? "Month" : "Year"}
-                  </span>
-                </div>
-              </div>
-
-              <button
-                className={`w-full mt-2 mb-2 py-2 sm:py-3 rounded font-semibold text-base sm:text-lg transition ${
-                  plan.highlight
-                    ? "bg-blue-600 text-white hover:bg-blue-700"
-                    : "bg-black text-white hover:bg-blue-600"
-                }`}
-              >
-                {plan.buttonText || "Add to Cart"}
-              </button>
-
-              {plan.infoText && (
-                <div className="text-xs text-gray-500 text-center mb-4">{plan.infoText}</div>
-              )}
-
-              <ul className="w-full flex-1 mb-4 space-y-2 text-xs sm:text-sm">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <span className="text-green-500 text-base sm:text-lg">&#10003;</span>
-                    <span className="text-slate-700">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex items-center justify-center gap-1 mt-4">
-                <span className="text-slate-700 font-medium text-xs sm:text-sm cursor-pointer select-none">
-                  See More Features
-                </span>
-                <IoMdArrowDropdown size={20} className="text-slate-700" />
-              </div>
+    <div className="w-full flex flex-col sm:flex-row gap-1 sm:gap-6 justify-center items-stretch relative z-10 overflow-hidden">
+      {cards.map((plan) => (
+        <div
+          key={plan.title}
+          className="relative w-full max-w-[400px] sm:max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col items-center px-3 sm:px-4 md:px-6 py-2.5 sm:py-6 md:py-8 border border-gray-200 mt-4 sm:mt-0 hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div className="flex flex-col items-center mb-2 sm:mb-4 mt-1 sm:mt-2 w-full">
+            <span className="text-[#232946] font-bold text-xl mb-2 text-center w-full">
+              {plan.title}
+            </span>
+            <div className="flex items-end justify-center mb-2 sm:mb-4 w-full">
+              <span className="text-pink-600 text-3xl sm:text-3xl md:text-4xl font-bold">
+                {plan.currency}{plan.price}
+              </span>
+              <span className="text-gray-500 text-sm sm:text-base font-medium ml-1 mb-1">
+                /mo
+              </span>
             </div>
-          ))}
+            <button className="w-full bg-[#0a1747] text-white font-semibold rounded py-2 mb-2 sm:mb-4 hover:bg-[#03206B] transition text-xs sm:text-base">
+              {plan.buttonText}
+            </button>
+          </div>
+          <ul className="w-full flex-1 mb-2 sm:mb-4 space-y-1 sm:space-y-2 text-sm sm:text-base">
+            {plan.features.map((feature, i) => (
+              <li key={i} className="flex items-center gap-2">
+                <div className="w-4 h-4 rounded-full bg-blue-400 flex items-center justify-center flex-shrink-0">
+                  <svg 
+                    width="8" 
+                    height="8" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="white" 
+                    strokeWidth="2.5" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="20,6 9,17 4,12"></polyline>
+                  </svg>
+                </div>
+                <span className="text-slate-700">{feature.text}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="items-start gap-1 mt-1 sm:mt-2 mb-1 w-full">
+            <span className="text-slate-700 font-bold text-[15px] sm:text-sm cursor-pointer select-none flex items-center hover:text-blue-600 transition-colors">
+              <svg 
+                width="12" 
+                height="12" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                className="mr-1"
+              >
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+              Expand Feature
+            </span>
+          </div>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 };
 

@@ -39,30 +39,26 @@ const PricingSection = () => {
   const plans = pricingPlans.filter((plan) => plan.billingPeriod === billing);
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-10 sm:py-14 lg:py-20 bg-[#f8f8f8] pt-[750px]   lg:pt-60 px-4">
+    <section className="w-full flex flex-col items-center justify-center py-6 sm:py-14 lg:py-20 bg-[#f8f8f8] pt-[750px] lg:pt-60 px-2 sm:px-4">
       <div className="w-full max-w-7xl">
-        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#232946] mb-6 sm:mb-10 text-center">
+        <h2 className="text-xl sm:text-4xl lg:text-5xl font-bold text-[#232946] mb-4 sm:mb-6 lg:mb-10 text-center">
           Choose Your Perfect Plan
         </h2>
 
-        <div className="flex flex-col sm:flex-row items-center gap-2 mb-4 justify-center">
+        <div className="flex flex-col sm:flex-row items-center gap-2 mb-2 sm:mb-4 justify-center">
           <div className="flex bg-[#2a3553] rounded-full p-1">
-            <button className={tabClass(billing === "monthly")} onClick={() => setBilling("monthly")}>
-              Monthly
-            </button>
-            <button className={tabClass(billing === "yearly")} onClick={() => setBilling("yearly")}>
-              Yearly
-            </button>
+            <button className={tabClass(billing === "monthly")} onClick={() => setBilling("monthly")}>Monthly</button>
+            <button className={tabClass(billing === "yearly")} onClick={() => setBilling("yearly")}>Yearly</button>
           </div>
 
           {/* Updated: SVG Arrow + Text – visible on all devices */}
-          <div className="relative flex items-center -ml-3 mt-3 sm:mt-0" style={{ minWidth: 120 }}>
+          <div className="relative flex items-center -ml-2 sm:-ml-3 mt-2 sm:mt-0" style={{ minWidth: 100 }}>
             <svg
-              width="90"
-              height="40"
+              width="60"
+              height="30"
               viewBox="0 0 90 40"
               fill="none"
-              className="absolute -top-6 left-0 sm:-top-6 lg:-top-8 lg:left-0"
+              className="absolute -top-4 left-0 sm:-top-6 lg:-top-8 lg:left-0"
               style={{ pointerEvents: "none" }}
             >
               <path
@@ -86,44 +82,44 @@ const PricingSection = () => {
                 </marker>
               </defs>
             </svg>
-            <span className="text-blue-400 font-medium text-sm inline ml-10">Upto 76% save</span>
+            <span className="text-blue-400 font-medium text-xs sm:text-sm inline ml-8 sm:ml-10">Upto 76% save</span>
           </div>
         </div>
 
-        <div className="w-full flex flex-col lg:flex-row gap-6 justify-center items-stretch mt-10">
+        <div className="w-full flex flex-col lg:flex-row gap-4 sm:gap-6 justify-center items-stretch mt-6 sm:mt-10">
           {plans.map((plan) => (
             <div
               key={plan.title}
-              className={`relative w-full max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col items-center px-4 sm:px-6 py-6 sm:py-8 transition-all duration-300 border-2 ${
+              className={`relative w-full max-w-xs sm:max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col items-center px-3 sm:px-6 py-4 sm:py-8 transition-all duration-300 border-2 ${
                 plan.highlight ? "border-blue-500 scale-[1.02] z-10 shadow-2xl" : "border-transparent"
               }`}
             >
               {plan.badge && (
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-red-400 text-white text-xs font-bold px-4 py-1 rounded-full shadow">
+                <div className="absolute -top-4 sm:-top-5 left-1/2 -translate-x-1/2 bg-red-400 text-white text-xs font-bold px-3 sm:px-4 py-1 rounded-full shadow">
                   {plan.badge}
                 </div>
               )}
 
-              <div className="flex flex-col items-center mb-4 mt-2">
-                <div className="flex items-center gap-2 mb-1">
+              <div className="flex flex-col items-center mb-2 sm:mb-4 mt-1 sm:mt-2">
+                <div className="flex items-center gap-1 sm:gap-2 mb-1">
                   {iconMap[plan.icon as string]}
-                  <span className="text-[#232946] font-bold text-base sm:text-lg">{plan.title}</span>
+                  <span className="text-[#232946] font-bold text-sm sm:text-lg">{plan.title}</span>
                 </div>
                 {plan.description && (
-                  <div className="text-gray-500 text-xs sm:text-sm text-center mb-1 min-h-[38px]">
+                  <div className="text-gray-500 text-xs sm:text-sm text-center mb-1 min-h-[24px] sm:min-h-[38px]">
                     {plan.description}
                   </div>
                 )}
                 {plan.savingsText && (
-                  <span className="inline-block bg-blue-50 text-gray-700 text-sm font-semibold px-4 py-1 rounded-full mb-2 mt-4 shadow-sm border border-blue-100">
+                  <span className="inline-block bg-blue-50 text-gray-700 text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1 rounded-full mb-2 mt-2 sm:mt-4 shadow-sm border border-blue-100">
                     {plan.savingsText}
                   </span>
                 )}
-                <div className="flex items-start justify-center gap-1 mb-2 mt-5">
-                  <span className="text-xs sm:text-sm font-bold text-[#232946] relative -mt-1">
+                <div className="flex items-start justify-center gap-1 mb-1 sm:mb-2 mt-2 sm:mt-5">
+                  <span className="text-xs font-bold text-[#232946] relative -mt-1">
                     {plan.currency}
                   </span>
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#232946]">
+                  <span className="text-xl sm:text-3xl lg:text-4xl font-semibold text-[#232946]">
                     {plan.price.toLocaleString()}
                   </span>
                   <span className="text-xs sm:text-sm lg:text-base font-medium text-gray-500 ml-1">
@@ -133,7 +129,7 @@ const PricingSection = () => {
               </div>
 
               <button
-                className={`w-full mt-2 mb-2 py-2 sm:py-3 rounded font-semibold text-base sm:text-lg transition ${
+                className={`w-full mt-1 sm:mt-2 mb-1 sm:mb-2 py-2 sm:py-3 rounded font-semibold text-sm sm:text-lg transition ${
                   plan.highlight
                     ? "bg-blue-600 text-white hover:bg-blue-700"
                     : "bg-black text-white hover:bg-blue-600"
@@ -143,23 +139,25 @@ const PricingSection = () => {
               </button>
 
               {plan.infoText && (
-                <div className="text-xs text-gray-500 text-center mb-4">{plan.infoText}</div>
+                <div className="text-xs text-gray-500 text-center mb-2 sm:mb-4">{plan.infoText}</div>
               )}
 
-              <ul className="w-full flex-1 mb-4 space-y-2 text-xs sm:text-sm">
+              <ul className="w-full flex-1 mb-2 sm:mb-4 space-y-1 sm:space-y-2 text-xs sm:text-sm">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2">
+                  <li key={i} className="flex items-center gap-1 sm:gap-2">
                     <span className="text-green-500 text-base sm:text-lg">&#10003;</span>
-                    <span className="text-slate-700">{feature}</span>
+                    <span className="text-slate-700">
+                      {typeof feature === 'string' ? feature : feature.text}
+                    </span>
                   </li>
                 ))}
               </ul>
 
-              <div className="flex items-center justify-center gap-1 mt-4">
+              <div className="flex items-center justify-center gap-1 mt-2 sm:mt-4">
                 <span className="text-slate-700 font-medium text-xs sm:text-sm cursor-pointer select-none">
                   See More Features
                 </span>
-                <IoMdArrowDropdown size={20} className="text-slate-700" />
+                <IoMdArrowDropdown size={18} className="text-slate-700" />
               </div>
             </div>
           ))}

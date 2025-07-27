@@ -20,6 +20,7 @@ export default function ResellerHosting() {
       <Navbar></Navbar>
       <HeroSection></HeroSection>
       <ResellerBenefitsSection></ResellerBenefitsSection>
+     
       <PerformanceAndSupportSection></PerformanceAndSupportSection>
        <ReviewSection></ReviewSection>
        <WebAppHostingSection></WebAppHostingSection>

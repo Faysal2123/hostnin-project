@@ -13,10 +13,10 @@ const HeroSection = () => {
     <section
       className="bg-[#03206B]  min-h-[700px] flex items-center justify-center px-2 sm:px-6 lg:px-10 relative"
       style={{
-        backgroundImage: "url('https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png')",
+        background: 'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 20, 120, 0.9) 16%, rgba(0, 8, 50, 0.9) 98%)',
         backgroundPosition: "left center",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "contain"
+        backgroundSize: "30% 100%, cover"
       }}
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">

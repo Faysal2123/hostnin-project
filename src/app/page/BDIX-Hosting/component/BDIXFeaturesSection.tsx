@@ -74,9 +74,9 @@ const BDIXFeaturesSection = () => {
               key={idx}
               className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-xl transition-shadow min-h-[200px] py-12"
             >
-              <div className="mb-4 text-4xl">{feature.icon}</div>
-              <h3 className="font-bold text-lg mb-2 text-[#232946]">{feature.title}</h3>
-              <p className="text-[#6b7280] text-sm">{feature.description}</p>
+              <div className="mb-4 text-5xl">{feature.icon}</div>
+              <h3 className="font-bold text-xl mb-2 text-[#232946]">{feature.title}</h3>
+              <p className="text-[#6b7280] text-base">{feature.description}</p>
             </div>
           ))}
         </div>

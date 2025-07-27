@@ -39,9 +39,9 @@ const PricingSection = () => {
   const plans = pricingPlans.filter((plan) => plan.billingPeriod === billing);
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-10 sm:py-14 lg:py-20 bg-[#f8f8f8] pt-[750px]   lg:pt-60 px-4">
+    <section className="w-full flex flex-col items-center justify-center py-10 xs:py-10 sm:py-14 lg:py-20 bg-[#f8f8f8] pt-[400px] xs:pt-[600px] sm:pt-[750px] lg:pt-60 px-2 xs:px-2 sm:px-4">
       <div className="w-full max-w-7xl">
-        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#232946] mb-6 sm:mb-10 text-center">
+        <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold text-[#232946] mb-6 sm:mb-10 text-center">
           Choose Your Perfect Plan
         </h2>
 
@@ -86,7 +86,7 @@ const PricingSection = () => {
                 </marker>
               </defs>
             </svg>
-            <span className="text-blue-400 font-medium text-sm inline ml-10">Upto 76% save</span>
+            <span className="text-blue-400 font-medium text-xs xs:text-sm inline ml-10">Upto 76% save</span>
           </div>
         </div>
 
@@ -94,7 +94,7 @@ const PricingSection = () => {
           {plans.map((plan) => (
             <div
               key={plan.title}
-              className={`relative w-full max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col items-center px-4 sm:px-6 py-6 sm:py-8 transition-all duration-300 border-2 ${
+              className={`relative w-full max-w-xs xs:max-w-xs sm:max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col items-center px-2 xs:px-4 sm:px-6 py-4 xs:py-6 sm:py-8 transition-all duration-300 border-2 ${
                 plan.highlight ? "border-blue-500 scale-[1.02] z-10 shadow-2xl" : "border-transparent"
               }`}
             >
@@ -150,7 +150,7 @@ const PricingSection = () => {
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="text-green-500 text-base sm:text-lg">&#10003;</span>
-                    <span className="text-slate-700">{feature}</span>
+                    <span className="text-slate-700">{feature.text}</span>
                   </li>
                 ))}
               </ul>

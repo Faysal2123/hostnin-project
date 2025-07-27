@@ -14,7 +14,7 @@ const HeroSection = () => {
         backgroundSize: "contain"
       }}
     >
-      <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+      <div className="w-full max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-0">
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
           <p className="text-white font-semibold mb-2 text-base sm:text-xl">
@@ -40,12 +40,12 @@ const HeroSection = () => {
               <span>Spin up your VPS in 50s</span>
             </li>
           </ul>
-          <button className="bg-[#1565c0] hover:bg-[#0d47a1] text-white font-semibold px-8 py-3 rounded-full transition text-base sm:text-lg shadow w-full sm:w-auto mb-6 sm:mb-10">
+          <button className="bg-[#1565c0] hover:bg-[#0d47a1] text-white font-semibold px-6 py-3 rounded-full transition text-base sm:text-lg shadow w-full xs:w-3/4 sm:w-1/2 md:w-auto mb-6 sm:mb-10">
             Buy VPS Hosting
           </button>
         </div>
         {/* Right Side */}
-        <div className="flex-1 flex justify-center items-center w-[400px] h-[400px] sm:w-[600px] sm:h-[500px] lg:w-[800px] lg:h-[600px]">
+        <div className="flex-1 flex justify-center items-center w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-48 xs:h-64 sm:h-80 md:h-96 lg:h-[600px]">
           <Image 
             src="https://hostnin.com/wp-content/uploads/2022/07/vps-header-1.png"
             alt="Server Illustration" 
@@ -56,7 +56,7 @@ const HeroSection = () => {
         </div>
       </div>
       {/* Overlapping Feature Cards Section */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 w-full max-w-7xl -bottom-[22rem] z-20">
+      <div className="absolute left-1/2 transform -translate-x-1/2 w-full max-w-7xl -bottom-[36rem] lg:-bottom-[22rem] z-20 px-2 sm:px-0">
         <FeatureCardsSection />
       </div>
     </section>

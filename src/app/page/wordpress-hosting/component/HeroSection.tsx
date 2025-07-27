@@ -13,12 +13,12 @@ const HeroSection = () => {
   
   return (
     <section className="bg-[#03206B] pt-8 pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
-      style={{
-        backgroundImage: "url('https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png')",
-        backgroundPosition: "left center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "contain"
-      }}
+    style={{
+      background: 'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 20, 120, 0.9) 16%, rgba(0, 8, 50, 0.9) 98%)',
+      backgroundPosition: "left center",
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "30% 100%, cover"
+    }}
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
         {/* Left Side */}

@@ -26,14 +26,14 @@ const FeatureBenefitSection: React.FC = () => {
                 className="bg-white dark:bg-[#0a1747] rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-lg transition-shadow min-h-[260px]"
               >
                 <div className="flex items-center mb-2 gap-2">
-                  <div className="text-3xl text-blue-700 dark:text-blue-400">
+                  <div className="text-5xl text-blue-700 dark:text-blue-400">
                     <Icon />
                   </div>
-                  <h3 className="font-semibold text-lg text-black dark:text-white">
+                  <h3 className="font-semibold text-xl text-black dark:text-white">
                     {benefit.title}
                   </h3>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                <p className="text-gray-600 dark:text-gray-300 text-base">
                   {benefit.description}
                 </p>
               </div>

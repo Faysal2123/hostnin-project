@@ -6,7 +6,7 @@ const FeatureCardsSection = () => {
   const plan = vpsPlans[0];
 
   return (
-    <section className="w-full bg-white py-12 flex flex-col items-center relative overflow-x-hidden">
+    <section className="w-full bg-white pt-20 sm:pt-32 md:pt-12 pb-12 flex flex-col items-center relative overflow-x-hidden">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#03206B]">
         Your High Speed Cloud VPS!
       </h2>
@@ -32,23 +32,23 @@ const FeatureCardsSection = () => {
       </div>
 
       {/* Feature Cards */}
-      <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+      <div className="w-full max-w-5xl grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-10">
         {plan.features.map((feature) => (
           <div
             key={feature.title}
-            className="bg-white rounded-2xl shadow p-5 flex flex-row items-center border border-gray-100 hover:shadow-lg transition-shadow min-h-[100px]"
+            className="bg-white rounded-2xl shadow p-4 sm:p-5 flex flex-row items-center border border-gray-100 hover:shadow-lg transition-shadow min-h-[80px] sm:min-h-[100px]"
           >
-            <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-[#f1f6ff] mr-4">
+            <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-[#f1f6ff] mr-3 sm:mr-4">
               <Image
                 src={feature.icon}
                 alt={feature.title}
-                width={28}
-                height={28}
+                width={24}
+                height={24}
                 className="object-contain"
               />
             </div>
             <div className="flex flex-col items-start">
-              <span className="font-semibold text-base text-[#03206B] mb-0.5">
+              <span className="font-semibold text-sm sm:text-base text-[#03206B] mb-0.5">
                 {feature.title.split(" ").map((word, i, arr) =>
                   i === arr.length - 1 ? (
                     <span key={i} className="text-[#158aff]">{word}</span>
@@ -57,7 +57,7 @@ const FeatureCardsSection = () => {
                   )
                 )}
               </span>
-              <span className="text-gray-500 text-sm font-medium">
+              <span className="text-gray-500 text-xs sm:text-sm font-medium">
                 {feature.value}
               </span>
             </div>

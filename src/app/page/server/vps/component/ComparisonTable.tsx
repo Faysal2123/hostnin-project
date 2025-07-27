@@ -7,17 +7,17 @@ interface ComparisonTableProps {
 }
 
 const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
-  <div className="bg-[#f8f8f8] py-8 pt-[500px]">
-    <div className="max-w-7xl mx-auto overflow-x-auto">
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold text-center text-[#06125a]">We Have the Perfect VPS Package</h1>
-        <p className="text-slate-800 text-center w-full md:w-6/12 mx-auto pt-4">
+  <div className="bg-[#f8f8f8] py-8 lg:pt-[500px] pt-[650px]">
+    <div className="max-w-7xl mx-auto overflow-x-auto scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-blue-50">
+      <div className="mb-8 px-2 sm:px-0">
+        <h1 className="text-2xl sm:text-4xl font-bold text-center text-[#06125a]">We Have the Perfect VPS Package</h1>
+        <p className="text-slate-800 text-center w-full sm:w-6/12 mx-auto pt-2 sm:pt-4 text-sm sm:text-base">
           Compare our plans according to your needs
         </p>
       </div>
       {data.sections.map((section, sectionIdx) => (
-        <div key={sectionIdx} className="mb-10">
-          <table className="w-full table-fixed border-collapse bg-white shadow-sm">
+        <div key={sectionIdx} className="mb-10 px-2 sm:px-0">
+          <table className="w-[700px] sm:w-full table-fixed border-collapse bg-white shadow-sm text-xs sm:text-base">
             <colgroup>
               <col className="w-1/5" />
               {data.plans.map(() => (

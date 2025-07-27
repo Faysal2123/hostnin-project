@@ -95,7 +95,7 @@ const Navbar = () => {
     {
       title: "Domain",
       hasDropdown: false,
-      link: "/domain",
+      link: "/page/domain",
     },
     {
       title: "Server",
@@ -216,7 +216,6 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center gap-3">
-            <FiSearch className="text-gray-700 dark:text-gray-300 text-xl cursor-pointer hover:text-blue-600 dark:hover:text-blue-400" />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2"

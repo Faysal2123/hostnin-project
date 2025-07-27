@@ -15,26 +15,26 @@ const VpsFeaturesSection: React.FC = () => {
             VPS Feature
           </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
           {vpsFeaturesData.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl shadow p-8 flex flex-col items-start border border-gray-100 min-h-[180px] hover:shadow-lg transition-shadow"
+              className="bg-white rounded-2xl shadow p-5 sm:p-8 flex flex-col items-start border border-gray-100 min-h-[140px] sm:min-h-[180px] hover:shadow-lg transition-shadow"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center bg-[#f1f6ff] mb-4 relative">
+              <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-[#f1f6ff] mb-3 sm:mb-4 relative">
                 <Image
                   src={feature.icon}
                   alt={feature.title}
-                  width={32}
-                  height={32}
+                  width={28}
+                  height={28}
                   className="object-contain"
-                  priority={true}  // optional: if you want to preload
+                  priority={true}
                 />
               </div>
-              <span className="font-bold text-lg text-[#03206B] mb-2">
+              <span className="font-bold text-base sm:text-lg text-[#03206B] mb-1 sm:mb-2">
                 {feature.title}
               </span>
-              <span className="text-gray-500 text-sm font-medium text-left">
+              <span className="text-gray-500 text-xs sm:text-sm font-medium text-left">
                 {feature.description}
               </span>
             </div>

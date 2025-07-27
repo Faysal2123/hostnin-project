@@ -23,7 +23,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
             </colgroup>
             <thead>
               <tr>
-                <th className="border border-gray-200 p-2 sm:p-3 bg-[#06125a] text-white text-sm sm:text-base font-semibold w-1/5">Features</th>
+                <th className="border border-gray-200 p-2 sm:p-3 bg-[#06125a] text-white text-sm sm:text-base font-semibold w-1/5">Detailed Comparison</th>
                 {data.plans.map(plan => (
                   <th key={plan.name} className="border border-blue-200 p-2 sm:p-3 bg-[#06125a] text-white w-1/5">
                     <div className="font-semibold text-sm sm:text-base">{plan.name}</div>

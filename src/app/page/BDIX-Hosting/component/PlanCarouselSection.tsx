@@ -106,12 +106,12 @@ export default function PlanCarouselSection() {
   };
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-16 bg-[#fafbfc] px-2">
+    <section className="w-full flex flex-col items-center justify-center py-10 sm:py-16 bg-[#fafbfc] px-1 sm:px-2">
       <div className="w-full max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-2 text-[#181c32]">
+        <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center mb-2 text-[#181c32]">
           Are You Looking For Something Else?
         </h2>
-        <p className="text-gray-500 text-center mb-10 text-base sm:text-lg">
+        <p className="text-gray-500 text-center mb-6 sm:mb-10 text-sm sm:text-lg">
           Get started with your desired plan!
         </p>
         <Slider
@@ -121,35 +121,35 @@ export default function PlanCarouselSection() {
         >
           {plans.map((plan, idx) => {
             let cardClass =
-              "bg-white rounded-2xl flex flex-col items-start px-8 py-8 min-h-[400px] h-full mx-auto max-w-md border-2 transition-all duration-300";
+              "bg-white rounded-2xl flex flex-col items-start px-4 sm:px-8 py-6 sm:py-8 min-h-[320px] sm:min-h-[400px] h-full mx-auto max-w-xs sm:max-w-md border-2 transition-all duration-300";
             if (idx === current) {
               cardClass +=
-                " scale-110 -translate-y-5 shadow-2xl z-10 border-blue-500";
+                " scale-105 sm:scale-110 -translate-y-2 sm:-translate-y-5 shadow-2xl z-10 border-blue-500";
             } else {
               cardClass += " shadow-lg border-transparent";
             }
             return (
-              <div key={idx} className="px-2 py-16 flex justify-center">
+              <div key={idx} className="px-1 sm:px-2 py-8 sm:py-16 flex justify-center">
                 <div className={cardClass}>
-                  <div className="mb-3">{plan.icon}</div>
-                  <h3 className="text-xl font-bold text-[#181c32] mb-2">
+                  <div className="mb-2 sm:mb-3">{plan.icon}</div>
+                  <h3 className="text-lg sm:text-xl font-bold text-[#181c32] mb-1 sm:mb-2">
                     {plan.title}
                   </h3>
-                  <p className="text-gray-500 text-sm mb-4 min-h-[48px]">
+                  <p className="text-gray-500 text-xs sm:text-sm mb-2 sm:mb-4 min-h-[32px] sm:min-h-[48px]">
                     {plan.description}
                   </p>
-                  <ul className="mb-6 space-y-2 w-full">
+                  <ul className="mb-4 sm:mb-6 space-y-1 sm:space-y-2 w-full">
                     {plan.features.map((feature, i) => (
                       <li
                         key={i}
-                        className="flex items-center text-sm gap-2"
+                        className="flex items-center text-xs sm:text-sm gap-1 sm:gap-2"
                       >
                         <FaCheck className="text-green-500" />
                         <span className="text-green-500">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded transition text-base w-full">
+                  <button className="mt-2 sm:mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 sm:px-6 py-2 rounded transition text-sm sm:text-base w-full">
                     {plan.button} <span className="ml-2">→</span>
                   </button>
                 </div>

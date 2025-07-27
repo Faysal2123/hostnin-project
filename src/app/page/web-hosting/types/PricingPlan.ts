@@ -3,7 +3,32 @@ export interface PricingPlan {
   price: number;
   currency: string;
   billingPeriod: "monthly" | "yearly";
-  features: string[];
+  features: Array<{
+    text: string;
+    tooltip?: string;
+  }>;
+  expandedFeatures?: {
+    general: Array<{
+      text: string;
+      included: boolean;
+      tooltip?: string;
+    }>;
+    server: Array<{
+      text: string;
+      included: boolean;
+      tooltip?: string;
+    }>;
+    security: Array<{
+      text: string;
+      included: boolean;
+      tooltip?: string;
+    }>;
+    support: Array<{
+      text: string;
+      included: boolean;
+      tooltip?: string;
+    }>;
+  };
   badge?: string;
   highlight?: boolean;
   savingsText?: string;

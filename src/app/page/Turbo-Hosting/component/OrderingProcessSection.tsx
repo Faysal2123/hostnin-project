@@ -41,14 +41,14 @@ const steps = [
 const OrderingProcessSection = () => {
   return (
     <div className="bg-[#fafbfc] py-10">
-      <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto ">
-        <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold mb-4">Ordering a turbo hosting is easier than ever!</h2>
-          <p className="text-gray-600">
+      <section className="py-10 xs:py-12 px-2 xs:px-2 md:px-8 max-w-7xl mx-auto ">
+        <div className="text-center mb-8 xs:mb-10">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold mb-2 xs:mb-4">Ordering a turbo hosting is easier than ever!</h2>
+          <p className="text-gray-600 text-sm xs:text-base">
             Choose your plan based on features and the detailes offering. Choosing a perfect plan is key to Build good website.
           </p>
         </div>
-        <div className="relative w-full flex flex-col md:flex-row items-center justify-between z-10" style={{minHeight: 220}}>
+        <div className="relative w-full flex flex-col md:flex-row items-center justify-between z-10 gap-8 md:gap-x-16" style={{minHeight: 220}}>
           {/* Curved dashed line */}
           <svg
             className="hidden md:block absolute left-0 right-0 mx-auto"
