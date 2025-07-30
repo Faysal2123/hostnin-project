@@ -55,7 +55,7 @@ const ReviewSection: React.FC = () => {
                     />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-[#1a2343]">
+                    <h3 className="font-bold text-lg text-[#1a2343]" style={{ fontFamily: 'var(--font-mulish)' }}>
                       {review.name}
                     </h3>
                     <div className="flex text-[#f7b500] mt-1 ">
@@ -70,6 +70,7 @@ const ReviewSection: React.FC = () => {
                   style={{
                     scrollbarWidth: 'none',
                     ['-ms-overflow-style' as string]: 'none',
+                    fontFamily: 'var(--font-mulish)',
                   } as React.CSSProperties}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.scrollbarWidth = 'auto';

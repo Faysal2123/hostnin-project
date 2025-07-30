@@ -22,7 +22,7 @@ const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true"></div>
       <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center justify-center text-center py-8 sm:py-12 md:py-16 px-4">
-        <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight mb-4 sm:mb-6">
+        <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
           KickStart Your Business
           <br className="hidden sm:block" />
           with Our Hosting Plans!

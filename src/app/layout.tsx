@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Urbanist, Mulish } from "next/font/google";
 import Navbar from './layout/Navbar'
 import "./globals.css";
 
 const geist = Geist({
   subsets: ["latin"],
+});
+
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  variable: "--font-urbanist",
+});
+
+const mulish = Mulish({
+  subsets: ["latin"],
+  variable: "--font-mulish",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${geist.className} antialiased`}>
+      <body className={`${geist.className} ${urbanist.variable} ${mulish.variable} antialiased`}>
         <Navbar />
         <main className="pt-20">
           {children}

@@ -38,18 +38,18 @@ const PricingCards = () => {
   const plans = pricingPlans.filter((plan) => plan.billingPeriod === billing);
 
   return (
-    <section id="pricing-section" className="pricing-scroll w-full flex flex-col items-center justify-center py-10 sm:py-14 lg:py-20 bg-[#f8f8f8]   lg:pt-44 px-4">
+    <section id="pricing-section" className="pricing-scroll w-full flex flex-col items-center justify-center py-10 sm:py-14 lg:py-20 bg-[#f8f8f8]   lg:pt-44 px-4" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
       <div className="w-full max-w-7xl">
-        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#232946] mb-6 sm:mb-10 text-center">
+        <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[#232946] mb-6 sm:mb-10 text-center" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
           Choose Your Perfect Plan
         </h2>
 
         <div className="flex flex-col sm:flex-row items-center gap-2 mb-4 justify-center">
           <div className="flex bg-[#2a3553] rounded-full p-1">
-            <button className={tabClass(billing === "monthly")} onClick={() => setBilling("monthly")}>
+            <button className={tabClass(billing === "monthly")} onClick={() => setBilling("monthly")} style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
               Monthly
             </button>
-            <button className={tabClass(billing === "yearly")} onClick={() => setBilling("yearly")}>
+            <button className={tabClass(billing === "yearly")} onClick={() => setBilling("yearly")} style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
               Yearly
             </button>
           </div>
@@ -85,7 +85,7 @@ const PricingCards = () => {
                 </marker>
               </defs>
             </svg>
-            <span className="text-blue-400 font-medium text-sm inline ml-10">Upto 76% save</span>
+            <span className="text-blue-400 font-medium text-sm inline ml-10" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>Upto 76% save</span>
           </div>
         </div>
 
@@ -96,9 +96,10 @@ const PricingCards = () => {
               className={`relative w-full max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col items-center px-4 sm:px-6 py-6 sm:py-8 transition-all duration-300 border-2 ${
                 plan.highlight ? "border-blue-500 scale-[1.02] z-10 shadow-2xl" : "border-transparent"
               }`}
+              style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
             >
               {plan.badge && (
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-red-400 text-white text-xs font-bold px-4 py-1 rounded-full shadow">
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-red-400 text-white text-xs font-bold px-4 py-1 rounded-full shadow" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
                   {plan.badge}
                 </div>
               )}
@@ -106,26 +107,26 @@ const PricingCards = () => {
               <div className="flex flex-col items-center mb-4 mt-2">
                 <div className="flex items-center gap-2 mb-1">
                   {iconMap[plan.icon as string]}
-                  <span className="text-[#232946] font-bold text-base sm:text-lg">{plan.title}</span>
+                  <span className="text-[#232946] font-bold text-base sm:text-lg" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>{plan.title}</span>
                 </div>
                 {plan.description && (
-                  <div className="text-gray-500 text-xs sm:text-sm text-center mb-1 min-h-[38px]">
+                  <div className="text-gray-500 text-xs sm:text-sm text-center mb-1 min-h-[38px]" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
                     {plan.description}
                   </div>
                 )}
                 {plan.savingsText && (
-                  <span className="inline-block bg-blue-50 text-gray-700 text-sm font-semibold px-4 py-1 rounded-full mb-2 mt-4 shadow-sm border border-blue-100">
+                  <span className="inline-block bg-blue-50 text-gray-700 text-sm font-semibold px-4 py-1 rounded-full mb-2 mt-4 shadow-sm border border-blue-100" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
                     {plan.savingsText}
                   </span>
                 )}
                 <div className="flex items-start justify-center gap-1 mb-2 mt-5">
-                  <span className="text-xs sm:text-sm font-bold text-[#232946] relative -mt-1">
+                  <span className="text-xs sm:text-sm font-bold text-[#232946] relative -mt-1" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
                     {plan.currency}
                   </span>
-                  <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#232946]">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#232946]" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
                     {plan.price.toLocaleString()}
                   </span>
-                  <span className="text-xs sm:text-sm lg:text-base font-medium text-gray-500 ml-1">
+                  <span className="text-xs sm:text-sm lg:text-base font-medium text-gray-500 ml-1" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
                     /Per {billing === "monthly" ? "Month" : "Year"}
                   </span>
                 </div>
@@ -137,25 +138,26 @@ const PricingCards = () => {
                     ? "bg-blue-600 text-white hover:bg-blue-700"
                     : "bg-black text-white hover:bg-blue-600"
                 }`}
+                style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
               >
                 {plan.buttonText || "Add to Cart"}
               </button>
 
               {plan.infoText && (
-                <div className="text-xs text-gray-500 text-center mb-4">{plan.infoText}</div>
+                <div className="text-xs text-gray-500 text-center mb-4" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>{plan.infoText}</div>
               )}
 
               <ul className="w-full flex-1 mb-4 space-y-2 text-xs sm:text-sm">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-2">
                     <span className="text-green-500 text-base sm:text-lg">&#10003;</span>
-                    <span className="text-slate-700">{feature.text}</span>
+                    <span className="text-slate-700" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>{feature.text}</span>
                   </li>
                 ))}
               </ul>
 
               <div className="flex items-center justify-center gap-1 mt-4">
-                <span className="text-slate-700 font-medium text-xs sm:text-sm cursor-pointer select-none">
+                <span className="text-slate-700 font-medium text-xs sm:text-sm cursor-pointer select-none" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
                   See More Features
                 </span>
                 <IoMdArrowDropdown size={20} className="text-slate-700" />

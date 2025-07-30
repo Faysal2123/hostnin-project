@@ -8,7 +8,7 @@ const BDIXHeroSection = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative">
         {/* Left Side */}
         <div className="flex-1 max-w-xl text-center lg:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#1a40c6] mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#1a40c6] mb-4" style={{ fontFamily: 'var(--font-urbanist)' }}>
             Affordable BDIX Hosting plan?
           </h1>
           <p className="text-[#232946] text-base  mb-4">

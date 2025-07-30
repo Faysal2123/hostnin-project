@@ -7,12 +7,12 @@ import FeatureCardsSection from "./FeatureCardsSection";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[#03206B] pt-8 pb-32 px-2 sm:pt-12 sm:pb-36 sm:px-6 lg:pt-28 lg:pb-44 lg:px-10 relative overflow-visible"
+    <section className="pt-8 pb-32 px-2 sm:pt-12 sm:pb-36 sm:px-6 lg:pt-28 lg:pb-44 lg:px-10 relative overflow-visible"
       style={{
-        backgroundImage: "url('https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png')",
-        backgroundPosition: "left center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "contain"
+        backgroundImage: 'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 40, 160, 0.9) 16%, rgba(0, 20, 80, 0.9) 98%)',
+        backgroundPosition: "left center, center",
+        backgroundRepeat: "no-repeat, no-repeat",
+        backgroundSize: "contain, cover"
       }}
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-0">
@@ -21,7 +21,7 @@ const HeroSection = () => {
           <p className="text-white font-semibold mb-2 text-base sm:text-xl">
             Lightning-fast with 100% NVMe storage
           </p>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
             We Provide High<br className="hidden sm:block" /> Performance VPS
           </h1>
           <p className="mb-2 my-2 sm:mb-3 text-base sm:text-xl text-white/90">

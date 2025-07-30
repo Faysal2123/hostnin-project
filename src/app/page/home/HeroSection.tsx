@@ -13,10 +13,10 @@ const HeroSection = () => {
     <section
       className="min-h-[620px] flex items-center justify-center px-2 sm:px-6 lg:px-10 relative "
       style={{
-        background: 'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 20, 120, 0.9) 16%, rgba(0, 8, 50, 0.9) 98%)',
-        backgroundPosition: "left center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "30% 100%, cover"
+        backgroundImage: 'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 40, 160, 0.9) 16%, rgba(0, 20, 80, 0.9) 98%)',
+        backgroundPosition: "left center, center",
+        backgroundRepeat: "no-repeat, no-repeat",
+        backgroundSize: "contain, cover"
       }}
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
@@ -30,7 +30,7 @@ const HeroSection = () => {
             </span>
           </div>
           {/* Headline */}
-          <h1 className="text-white font-bold text-3xl sm:text-5xl md:text-5xl leading-tight mb-4 relative inline-block">
+          <h1 className="text-white font-bold text-3xl sm:text-5xl md:text-5xl leading-tight mb-4 relative inline-block" style={{ fontFamily: 'var(--font-urbanist)' }}>
           Best Web Hosting Company<br />
             <span className="relative inline-block">
             in Bangladesh

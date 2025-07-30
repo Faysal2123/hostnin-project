@@ -31,7 +31,7 @@ export const comparisonTableData: ComparisonTableData = {
       ]
     },
     {
-      title: "Email Features",
+      title: "Mail Features",
       features: [
         { label: "Email Accounts", values: ["Unlimited", "Unlimited", "Unlimited", "Unlimited"] },
         { label: "Email Autoresponders", values: ["200", "500", "Unlimited", "Unlimited"] },
@@ -55,10 +55,13 @@ export const comparisonTableData: ComparisonTableData = {
         { label: "PhpPG Admin", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "MySQL Databases", values: ["Unlimited", "Unlimited", "Unlimited", "Unlimited"] },
         { label: "Remote MySQL", values: ["⭕", "⭕", "✔️", "✔️"] },
+        { label: "Database Backup", values: ["✔️", "✔️", "✔️", "✔️"] },
+        { label: "Database Optimization", values: ["⭕", "✔️", "✔️", "✔️"] },
+        { label: "Database Monitoring", values: ["⭕", "⭕", "✔️", "✔️"] },
       ]
     },
     {
-      title: "Server & Technology",
+      title: "Tech Features",
       features: [
         { label: "Web Server Type", values: ["Litespeed", "Litespeed", "Litespeed", "Litespeed"] },
         { label: "Storage Technology", values: ["NVMe SSD", "NVMe SSD", "NVMe SSD", "NVMe SSD"] },
@@ -69,6 +72,21 @@ export const comparisonTableData: ComparisonTableData = {
         { label: "Javascript", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "SSH Access", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "FTP Access", values: ["✔️", "✔️", "✔️", "✔️"] },
+        { label: "Git Integration", values: ["⭕", "✔️", "✔️", "✔️"] },
+        { label: "Node.js Support", values: ["⭕", "⭕", "✔️", "✔️"] },
+        { label: "Python Support", values: ["⭕", "⭕", "✔️", "✔️"] },
+      ]
+    },
+    {
+      title: "Bite Spaceifications",
+      features: [
+        { label: "Storage Type", values: ["SSD", "SSD", "NVMe SSD", "NVMe SSD"] },
+        { label: "Read/Write Speed", values: ["Standard", "Standard", "High", "Ultra High"] },
+        { label: "I/O Operations", values: ["1K IOPS", "5K IOPS", "10K IOPS", "Unlimited"] },
+        { label: "Data Transfer", values: ["1 Gbps", "2 Gbps", "5 Gbps", "10 Gbps"] },
+        { label: "Backup Storage", values: ["5 GB", "20 GB", "50 GB", "100 GB"] },
+        { label: "CDN Integration", values: ["⭕", "✔️", "✔️", "✔️"] },
+        { label: "Load Balancing", values: ["⭕", "⭕", "✔️", "✔️"] },
       ]
     },
     {
@@ -81,15 +99,23 @@ export const comparisonTableData: ComparisonTableData = {
         { label: "Redirect Manager", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "DNS Zone Editor", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "Auto SSL", values: ["✔️", "✔️", "✔️", "✔️"] },
+        { label: "DDoS Protection", values: ["⭕", "✔️", "✔️", "✔️"] },
+        { label: "Malware Scanning", values: ["⭕", "⭕", "✔️", "✔️"] },
+        { label: "Firewall Protection", values: ["Basic", "Advanced", "Premium", "Enterprise"] },
       ]
     },
     {
-      title: "Support & Assistance",
+      title: "Support Desk",
       features: [
         { label: "24/7 Call Support (What's App)", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "24/7 Chat Support", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "Anydesk/Teamviewer", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "Transfer Assistance", values: ["✔️", "✔️", "✔️", "✔️"] },
+        { label: "Priority Support", values: ["⭕", "⭕", "✔️", "✔️"] },
+        { label: "Dedicated Support Manager", values: ["⭕", "⭕", "⭕", "✔️"] },
+        { label: "Response Time", values: ["4 Hours", "2 Hours", "1 Hour", "30 Minutes"] },
+        { label: "Knowledge Base Access", values: ["✔️", "✔️", "✔️", "✔️"] },
+        { label: "Video Tutorials", values: ["✔️", "✔️", "✔️", "✔️"] },
       ]
     },
   ]

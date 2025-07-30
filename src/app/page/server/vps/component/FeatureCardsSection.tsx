@@ -87,8 +87,8 @@ const FeatureCardsSection = () => {
   }, [isDragging, selectedPlanIndex]);
 
   return (
-    <section className="w-full bg-white pt-20 sm:pt-32 md:pt-12 pb-12 flex flex-col items-center relative overflow-x-hidden">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#03206B]">
+    <section className="w-full bg-white pt-20 sm:pt-32 md:pt-12 pb-12 flex flex-col items-center relative overflow-x-hidden" style={{ fontFamily: '"Mulish", sans-serif' }}>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#03206B]" style={{ fontFamily: '"Mulish", sans-serif' }}>
         Your High Speed Cloud VPS!
       </h2>
 
@@ -111,7 +111,7 @@ const FeatureCardsSection = () => {
             }`}
             style={{ left: `${getSliderPosition()}%` }}
           >
-            <span className="relative bg-[#189bfa] text-white text-xs font-semibold px-4 py-1 rounded-t-lg mb-1 shadow-lg">
+            <span className="relative bg-[#189bfa] text-white text-xs font-semibold px-4 py-1 rounded-t-lg mb-1 shadow-lg" style={{ fontFamily: '"Mulish", sans-serif' }}>
               {plan.name}
               <span className="absolute left-1/2 -bottom-2 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-[#189bfa]" />
             </span>
@@ -148,6 +148,7 @@ const FeatureCardsSection = () => {
                   ? 'text-[#189bfa] bg-[#f1f6ff]' 
                   : 'text-gray-400 hover:text-gray-600 hover:bg-gray-50'
               }`}
+              style={{ fontFamily: '"Mulish", sans-serif' }}
             >
               {planItem.name}
             </button>
@@ -163,7 +164,8 @@ const FeatureCardsSection = () => {
             className="bg-white rounded-2xl shadow p-4 sm:p-5 flex flex-row items-center border border-gray-100 hover:shadow-lg transition-all duration-500 min-h-[80px] sm:min-h-[100px] transform hover:scale-105"
             style={{
               animationDelay: `${index * 100}ms`,
-              animation: 'fadeInUp 0.6s ease-out forwards'
+              animation: 'fadeInUp 0.6s ease-out forwards',
+              fontFamily: '"Mulish", sans-serif'
             }}
           >
             <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-[#f1f6ff] mr-3 sm:mr-4 hover:bg-[#e1f0ff] transition-colors duration-300">
@@ -176,7 +178,7 @@ const FeatureCardsSection = () => {
               />
             </div>
             <div className="flex flex-col items-start">
-              <span className="font-semibold text-sm sm:text-base text-[#03206B] mb-0.5">
+              <span className="font-semibold text-sm sm:text-base text-[#03206B] mb-0.5" style={{ fontFamily: '"Mulish", sans-serif' }}>
                 {feature.title.split(" ").map((word, i, arr) =>
                   i === arr.length - 1 ? (
                     <span key={i} className="text-[#158aff]">{word}</span>
@@ -185,7 +187,7 @@ const FeatureCardsSection = () => {
                   )
                 )}
               </span>
-              <span className="text-gray-500 text-xs sm:text-sm font-medium">
+              <span className="text-gray-500 text-xs sm:text-sm font-medium" style={{ fontFamily: '"Mulish", sans-serif' }}>
                 {feature.value}
               </span>
             </div>
@@ -195,10 +197,10 @@ const FeatureCardsSection = () => {
 
       {/* Price and CTA */}
       <div className="flex flex-row items-center gap-6 mt-2">
-        <span className="text-3xl font-bold text-[#03206B] transition-all duration-500">
-          {plan.price}৳<span className="text-lg font-medium text-gray-500">/mo</span>
+        <span className="text-3xl font-bold text-[#03206B] transition-all duration-500" style={{ fontFamily: '"Mulish", sans-serif' }}>
+          {plan.price}৳<span className="text-lg font-medium text-gray-500" style={{ fontFamily: '"Mulish", sans-serif' }}>/mo</span>
         </span>
-        <button className="bg-gradient-to-r from-[#158aff] to-[#005bea] hover:from-[#005bea] hover:to-[#158aff] text-white font-semibold px-10 py-3 rounded-full transition-all duration-300 text-base shadow hover:shadow-lg hover:scale-105 transform">
+        <button className="bg-gradient-to-r from-[#158aff] to-[#005bea] hover:from-[#005bea] hover:to-[#158aff] text-white font-semibold px-10 py-3 rounded-full transition-all duration-300 text-base shadow hover:shadow-lg hover:scale-105 transform" style={{ fontFamily: '"Mulish", sans-serif' }}>
           Purchase Plan
         </button>
       </div>

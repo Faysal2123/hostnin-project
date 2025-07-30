@@ -5,12 +5,12 @@ import { MdDone } from "react-icons/md";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[#03206B] pt-8 pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-16 lg:pb-10 lg:px-10 relative"
+    <section className="pt-8 pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-16 lg:pb-10 lg:px-10 relative"
       style={{
-        backgroundImage: "url('https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png')",
-        backgroundPosition: "left center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "contain"
+        backgroundImage: 'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 40, 160, 0.9) 16%, rgba(0, 20, 80, 0.9) 98%)',
+        backgroundPosition: "left center, center",
+        backgroundRepeat: "no-repeat, no-repeat",
+        backgroundSize: "contain, cover"
       }}
     >
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
@@ -19,7 +19,7 @@ const HeroSection = () => {
           <p className="text-white font-semibold mb-2 text-base sm:text-xl">
             Plans Starting at <span className="text-yellow-400">৳99999/mo</span>
           </p>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
             Managed Dedicated<br className="hidden sm:block" /> Server Hosting
           </h1>
           <p className="mb-6 my-5 sm:mb-8 text-sm sm:text-lg text-white/90">

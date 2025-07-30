@@ -25,7 +25,7 @@ const sliderSettings = {
 };
 
 const TestimonialSection = () => (
-  <section className="flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 py-8 sm:py-12 px-4 sm:px-6 bg-[#f8f8f8]">
+  <section className="flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 py-8 sm:py-12 px-4 sm:px-6 bg-[#f8f8f8]" style={{ fontFamily: '"Mulish", sans-serif' }}>
     {/* Left Side */}
     <div className="relative w-full lg:flex-1 max-w-lg flex flex-col items-start">
       {/* Background Circle */}
@@ -42,15 +42,15 @@ const TestimonialSection = () => (
             </span>
           ))}
         </div>
-        <div className="text-gray-700 mb-2 sm:mb-3 md:mb-4 font-medium sm:font-semibold text-sm sm:text-base md:text-lg">
+        <div className="text-gray-700 mb-2 sm:mb-3 md:mb-4 font-medium sm:font-semibold text-sm sm:text-base md:text-lg" style={{ fontFamily: '"Mulish", sans-serif' }}>
           4.8 out of 5 based on 147+ reviews.
         </div>
-        <h2 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#03206B] mb-2 leading-tight">
+        <h2 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#03206B] mb-2 leading-tight" style={{ fontFamily: '"Mulish", sans-serif' }}>
           Hear from our
           <br />
           happy customers
         </h2>
-        <p className="text-gray-500 mb-3 sm:mb-4 md:mb-6 max-w-md text-xs sm:text-sm md:text-base">
+        <p className="text-gray-500 mb-3 sm:mb-4 md:mb-6 max-w-md text-xs sm:text-sm md:text-base" style={{ fontFamily: '"Mulish", sans-serif' }}>
           Getting positive reviews from hundreds of clients means a lot to us. We care about every feedback and adjust our services accordingly.
         </p>
         <div className="flex items-center gap-2 mt-2">
@@ -77,7 +77,7 @@ const TestimonialSection = () => (
               className="rounded-full border-2 border-white z-8 object-cover aspect-square sm:w-[44px] sm:h-[44px]"
             />
           </div>
-          <span className="ml-2 sm:ml-4 text-[#2B4EFF] text-xs sm:text-sm md:text-base font-medium cursor-pointer flex items-center">
+          <span className="ml-2 sm:ml-4 text-[#2B4EFF] text-xs sm:text-sm md:text-base font-medium cursor-pointer flex items-center" style={{ fontFamily: '"Mulish", sans-serif' }}>
             <Image
               src={arrowDark}
               alt="Arrow"
@@ -105,7 +105,7 @@ const TestimonialSection = () => (
                 className="rounded-full sm:w-[80px] sm:h-[80px]"
               />
               <div className="ml-3 sm:ml-4 flex flex-col">
-                <span className="font-bold sm:font-extrabold text-base sm:text-lg md:text-xl text-[#03206B] leading-tight">
+                <span className="font-bold sm:font-extrabold text-base sm:text-lg md:text-xl text-[#03206B] leading-tight" style={{ fontFamily: '"Mulish", sans-serif' }}>
                   {testimonial.name}
                 </span>
                 <div className="flex items-center mt-1">
@@ -117,7 +117,7 @@ const TestimonialSection = () => (
                 </div>
               </div>
             </div>
-            <p className="text-gray-600 mt-3 sm:mt-4 mb-6 sm:mb-8 text-xs sm:text-sm md:text-base leading-relaxed max-w-3xl px-2 sm:px-5">
+            <p className="text-gray-600 mt-3 sm:mt-4 mb-6 sm:mb-8 text-xs sm:text-sm md:text-[17px] leading-relaxed max-w-3xl px-2 sm:px-5" style={{ fontFamily: '"Mulish", sans-serif' }}>
               {testimonial.text}
             </p>
             <Image src="https://hostnin.com/wp-content/uploads/2023/08/quote-icon.svg" alt={testimonial.name} width={50} height={50} className="text-start pl-2 sm:pl-4 sm:w-[70px] sm:h-[70px]" />

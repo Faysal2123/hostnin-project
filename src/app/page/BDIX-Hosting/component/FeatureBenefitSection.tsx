@@ -7,6 +7,7 @@ const FeatureBenefitSection: React.FC = () => {
       className="relative bg-[#f8f8f8] w-full flex flex-col items-center pb-24 pt-0 overflow-hidden bg-no-repeat bg-top bg-cover"
       style={{
         backgroundImage: `url('https://hostnin.com/wp-content/uploads/2022/09/bg-curve.png')`,
+        fontFamily: '"Roboto", sans-serif',
       }}
     > 
          

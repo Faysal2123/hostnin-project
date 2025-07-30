@@ -37,12 +37,12 @@ const HeroSection = () => {
   }, [targetDate]);
 
   return (
-    <section className="bg-[#03206B] pt-8 pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
+    <section className="pt-8 pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
     style={{
-      background: 'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 20, 120, 0.9) 16%, rgba(0, 8, 50, 0.9) 98%)',
-      backgroundPosition: "left center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "30% 100%, cover"
+      backgroundImage: 'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 40, 160, 0.9) 16%, rgba(0, 20, 80, 0.9) 98%)',
+      backgroundPosition: "left center, center",
+      backgroundRepeat: "no-repeat, no-repeat",
+      backgroundSize: "contain, cover"
     }}
     >
       
@@ -50,7 +50,7 @@ const HeroSection = () => {
         {/* Left Side */}
         <div className="flex-1 text-white lg:pr-12 text-center lg:text-left mb-8 lg:mb-0">
           <p className="text-yellow-400 font-semibold mb-2 text-base sm:text-xl">Expertly Crafted for Online Businesses</p>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6">
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
             Get Fastest Hosting<br className="hidden sm:block" />Upto 76% Discount
           </h1>
           <ul className="mb-6 my-5 sm:mb-8 space-y-2 text-sm sm:text-lg">

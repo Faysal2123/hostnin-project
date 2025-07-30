@@ -4,7 +4,7 @@ import { featureBenefits } from '../data/featureBenefits';
 const FeatureBenefitSection: React.FC = () => {
   return (
     <section
-      className="relative bg-[#f8f8f8] w-full flex flex-col items-center pb-12 sm:pb-16 md:pb-24 pt-0 overflow-hidden bg-no-repeat bg-top bg-cover px-4 sm:px-6"
+      className="relative bg-[#f8f8f8] w-full flex flex-col items-center pb-12 sm:pb-16 md:pb-24 pt-0 overflow-hidden bg-no-repeat bg-top bg-cover px-4 sm:px-6 font-roboto"
       style={{
         backgroundImage: `url('https://hostnin.com/wp-content/uploads/2022/09/bg-curve.png')`,
       }}
