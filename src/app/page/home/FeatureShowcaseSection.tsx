@@ -5,7 +5,7 @@ export default function FeatureShowcaseSection() {
     <div className="bg-[#f8f8f8]">
       <section className="w-full mx-auto flex flex-col md:flex-row justify-between items-stretch gap-6 py-8">
         {/* Left Section */}
-        <div className="flex-1 relative bg-white rounded-xl shadow overflow-hidden min-h-[700px] flex items-stretch">
+        <div className="flex-1 relative bg-white rounded-xl shadow overflow-hidden min-h-[620px] flex items-stretch">
           {/* Background Image */}
           <Image
             src="https://hostnin.com/wp-content/uploads/2023/03/hosting-1.png"
@@ -45,7 +45,7 @@ export default function FeatureShowcaseSection() {
             <h4 className="font-bold text-2xl md:text-4xl mb-6 text-white drop-shadow">
               Install over 150 CMS with one click.
             </h4>
-            <button className="w-fit px-6 py-3 bg-white text-[#0a174e] font-semibold rounded shadow hover:bg-gray-100 transition">
+            <button className="w-fit cursor-pointer px-6 py-3 bg-white text-[#0a174e] font-semibold rounded shadow hover:bg-gray-300 transitio hover:text-black">
               See More Now
             </button>
           </div>

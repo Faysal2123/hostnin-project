@@ -2,6 +2,26 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
+// Custom CSS for smooth animations
+const cardStyles = `
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+      max-height: 0;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      max-height: 200px;
+    }
+  }
+  
+  .animate-slide-down {
+    animation: slideDown 0.4s ease-out forwards;
+  }
+`;
+
 const features = [
   {
     title: 'Installing apps is easy with this!',
@@ -23,9 +43,11 @@ const ControlPanelSection = () => {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section className="relative w-full bg-[#03206B] overflow-hidden py-6 sm:py-10 lg:py-24 px-3 sm:px-6 lg:px-10 flex flex-col items-center ">
+    <>
+      <style jsx>{cardStyles}</style>
+      <section className="relative w-full bg-[#03206B] overflow-hidden py-6 sm:py-10 lg:py-10 px-3 sm:px-6 lg:px-20 flex flex-col items-center ">
       {/* Heading */}
-      <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 lg:mb-10 pt-6 sm:pt-8 lg:pt-10 z-10 px-3 sm:px-4">
+      <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 lg:mb-10 pt-6 sm:pt-8 lg:pt-5 z-10 px-3 sm:px-4">
         Most Secured & Advanced<br />
         Control Panel around
       </h2>
@@ -50,14 +72,14 @@ const ControlPanelSection = () => {
                 return (
                   <div
                     key={idx}
-                    className={`bg-[#061B5B] border border-blue-400 rounded-lg px-4 sm:px-6 py-3 sm:py-5 text-white transition shadow-lg flex flex-col justify-center cursor-pointer select-none ${isOpen ? 'ring-2 ring-blue-300' : 'hover:bg-[#0a256b]/80'} min-h-[50px] sm:min-h-[60px]`}
+                    className={`bg-[#061B5B] border border-blue-400 rounded-lg px-6 sm:px-8 py-4 sm:py-6 text-white transition-all duration-300 ease-in-out shadow-lg flex flex-col justify-center cursor-pointer select-none ${isOpen ? 'ring-2 ring-blue-300 scale-[1.02]' : 'hover:bg-[#0a256b]/80 hover:scale-[1.01]'} min-h-[60px] sm:min-h-[70px]`}
                     onClick={() => setOpenIdx(idx)}
                   >
-                    <div className="font-semibold text-sm sm:text-base lg:text-lg mb-1">
+                    <div className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
                       {feature.title}
                     </div>
                     {isOpen && feature.description && (
-                      <div className="text-xs sm:text-sm text-blue-100 leading-relaxed animate-fade-in">
+                      <div className="text-xs sm:text-sm text-blue-100 leading-relaxed overflow-hidden animate-slide-down">
                         {feature.description}
                       </div>
                     )}
@@ -69,9 +91,9 @@ const ControlPanelSection = () => {
         </div>
 
         {/* Right: Laptop Image */}
-        <div className="flex-1 flex justify-center items-center mt-8 sm:mt-12 lg:mt-0 w-full max-w-sm sm:max-w-md xl:max-w-xl">
+        <div className="flex-1 flex justify-center items-center mt-8 sm:mt-12 lg:mt-0 w-full max-w-sm sm:max-w-md xl:max-w-2xl">
           <Image
-            src="https://hostnin.com/wp-content/uploads/2022/09/security-machine.png"
+            src="https://hostnin.com/wp-content/uploads/2022/07/laptop-mockup-of-a-macbook-air-over-transparent-background-e1667973147100-2048x1193.png.webp"
             alt="Control Panel Laptop"
             width={600}
             height={400}
@@ -84,6 +106,7 @@ const ControlPanelSection = () => {
       {/* Decorative blob bottom right */}
       <div className="absolute bottom-0 right-0 w-32 h-32 sm:w-48 sm:h-48 bg-blue-400 opacity-30 rounded-full blur-2xl z-0" />
     </section>
+    </>
   );
 };
 

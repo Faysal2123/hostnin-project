@@ -13,14 +13,16 @@ const ContactSalesSection = () => {
               Contact one of our friendly technical advisors now. Our team is available 24×7 via live chat and is ready to answer any questions.
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-              <button className="bg-gradient-to-r from-[#009FFF] to-[#0057FF] text-white font-semibold px-8 py-4 rounded-lg shadow-md hover:scale-105 transition-transform">
-                Live Chat With Sales
-              </button>
-              <div className="flex items-center gap-3 mt-4 sm:mt-0">
+              <a href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6" target="_blank" rel="noopener noreferrer">
+                <button className="hover:scale-105 bg-gradient-to-r from-[#009FFF] to-[#0057FF] text-white font-semibold px-8 py-4 rounded-lg shadow-md hover:scale-105 transition-transform">
+                  Live Chat With Sales
+                </button>
+              </a>
+              <div className="flex items-center gap-3 mt-4 sm:mt-0 hover:scale-105">
                 <span className="flex items-center justify-center w-14 h-14 rounded-full bg-white text-[#001B8A] text-2xl shadow-md">
                   <HiPhone className="w-7 h-7" />
                 </span>
-                <span className="text-xl md:text-xl font-bold text-white select-all">+880 1325-875955</span>
+                <span className="text-xl md:text-xl font-bold text-white select-all  transition-transform">+880 1325-875955</span>
               </div>
             </div>
           </div>

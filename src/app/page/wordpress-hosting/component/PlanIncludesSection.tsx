@@ -52,9 +52,9 @@ const PlanIncludesSection = () => {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="flex items-center bg-white rounded-sm shadow-lg px-6 py-4 w-[400px]  mx-auto gap-4 hover:shadow-xl transition-all duration-200"
+              className="flex items-center bg-white rounded-sm shadow-lg px-6 py-5 w-[400px]  mx-auto gap-4 hover:shadow-xl hover:scale-105 transition-all duration-200"
             >
-              <span className="flex items-center justify-center w-12 h-12 rounded-full bg-[#f1f5ff] ">
+              <span className="flex items-center justify-center w-12 h-12 rounded-full bg-white ">
                 {feature.icon}
               </span>
               <span className="font-bold text-base text-[#03206B] text-left">

@@ -65,7 +65,7 @@ const WordpressHighlightsSection = () => {
           {highlights.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl shadow-lg p-8 flex flex-col min-h-[260px] relative overflow-hidden hover:shadow-xl transition"
+              className="bg-white rounded-2xl shadow-lg p-8 flex flex-col min-h-[260px] relative overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out"
             >
               <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-blue-50 text-blue-600 text-2xl shadow-sm relative">
                 {item.icon ? (

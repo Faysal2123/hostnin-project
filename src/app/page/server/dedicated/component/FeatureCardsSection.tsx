@@ -7,7 +7,7 @@ import { FeatureCard } from "../types/FeatureCard";
 
 const FeatureCardsSection: React.FC = () => {
   return (
-    <section className="py-12 bg-[#f8f8f8]">
+    <section className="py-5 bg-[#f8f8f8]">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-3 text-black">
           Core Features Available!
@@ -20,14 +20,15 @@ const FeatureCardsSection: React.FC = () => {
           {featureCards.map((card: FeatureCard, idx: number) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-start hover:shadow-md transition-shadow min-h-[220px]"
+              className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-start hover:shadow-lg hover:shadow-blue-200 hover:scale-105 transition-all duration-300 min-h-[220px]"
             >
-              <div className="w-10 h-10 mb-4 relative">
+              <div className="w-12 h-12 mb-4 relative">
                 <Image
                   src={card.icon}
                   alt={card.title}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  sizes="48px"
+                  className="object-contain"
                 />
               </div>
               <h3 className="font-bold text-lg mb-2 text-black">{card.title}</h3>

@@ -1,7 +1,8 @@
 "use client";
 
 import { IoIosStar } from "react-icons/io";
-import { FaGoogle, FaCheckCircle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
+import { MdOutlineStars } from "react-icons/md";
 
 const reviewData = [
   {
@@ -32,7 +33,7 @@ const reviewImages = [
 
 const BDIXReviewSection = () => {
   return (
-    <section className="relative pt-24 sm:pt-52 pb-10 sm:pb-20 px-2 sm:px-6 lg:px-8 overflow-hidden bg-[#f8f8f8] ">
+    <section className="relative pt-24 lg:pt-28 pb-10 sm:pb-20 px-2 sm:px-6 lg:px-8 overflow-hidden bg-[#f8f8f8] ">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"
@@ -79,19 +80,19 @@ const BDIXReviewSection = () => {
         </div>
 
         {/* Rating Summary */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto">
-          <div className="bg-white rounded-lg p-4 sm:p-6 flex items-center">
-            <FaGoogle className="text-2xl sm:text-4xl text-[#4285F4] mr-2 sm:mr-4" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg p-4 sm:p-6  flex ">
+            <FaGoogle className="text-2xl sm:text-5xl text-[#4285F4] mr-2 sm:mr-4" />
             <div>
               <p className="text-xs sm:text-sm text-gray-600">Hostnin is rated &ldquo;Excellent&rdquo; with 5/5 on</p>
-              <p className="font-semibold text-sm sm:text-base">Google Business Review</p>
+              <p className=" text-sm text-blue-500 ">Google Business Review</p>
             </div>
           </div>
-          <div className="bg-white rounded-lg p-4 sm:p-6 flex items-center">
-            <FaCheckCircle className="text-2xl sm:text-4xl text-[#00B67A] mr-2 sm:mr-4" />
+          <div className="bg-white rounded-lg p-4 sm:p-6 flex">
+            <MdOutlineStars className="text-2xl sm:text-6xl text-blue-800 mr-2 sm:mr-4" />
             <div>
-              <p className="text-xs sm:text-sm text-gray-600">Hostnin is rated &ldquo;Excellent&rdquo; with 4.9/5 on</p>
-              <p className="font-semibold text-sm sm:text-base">Trustpilot Business Review</p>
+              <p className="text-xs sm:text-sm text-gray-600">Hostnin is rated &ldquo;Excellent&rdquo; with 4.9/5 on</p><p className=" text-sm text-blue-500 ">Trustpilot Business Review</p>
+              
             </div>
           </div>
         </div>

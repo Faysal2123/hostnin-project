@@ -13,7 +13,7 @@ const CloudFeatureDifference = () => {
       }}
     >
 
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center px-3 sm:px-4 pt-32 sm:pt-48 lg:pt-64 pb-16 sm:pb-24 lg:pb-32 relative z-10" style={{ minHeight: '700px' }}>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-3 sm:px-4 pt-32 sm:pt-48 lg:pt-52 pb-16 sm:pb-24 lg:pb-24 relative z-10" style={{ minHeight: '700px' }}>
         {/* Left: Image */}
         <div className="flex-[1.2] justify-center items-center hidden lg:block w-full max-w-lg lg:max-w-xl xl:max-w-2xl h-auto">
           <Image
@@ -45,7 +45,7 @@ const CloudFeatureDifference = () => {
                 <span className="bg-[#eaf4fd] text-blue-700 rounded-full p-2 sm:p-3 lg:p-4 flex items-center justify-center text-lg sm:text-xl lg:text-2xl mb-3 sm:mb-4 lg:mb-5 shadow-sm">
                   {React.createElement(feature.icon, { size: 24 })}
                 </span>
-                <h3 className="font-bold text-base sm:text-lg text-black mb-1 sm:mb-2 text-left">{feature.title}</h3>
+                <h3 className="font-bold text-lg sm:text-lg text-black mb-1 sm:mb-2 text-left">{feature.title}</h3>
                 <p className="text-gray-700 text-sm sm:text-base text-left font-normal">{feature.description}</p>
               </div>
             ))}

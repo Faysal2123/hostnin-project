@@ -156,7 +156,7 @@ const Navbar = () => {
                 <li key={index} className="relative group">
                   {item.hasDropdown ? (
                     <>
-                      <button className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                      <button className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
                         {item.title} <IoMdArrowDropdown size={18} />
                       </button>
 
@@ -209,7 +209,7 @@ const Navbar = () => {
               ))}
             </ul>
 
-            <button className="bg-gradient-to-r from-blue-700 to-blue-600 dark:from-blue-600 dark:to-blue-500 text-white px-6 py-3 rounded font-semibold text-sm hover:from-blue-600 hover:to-blue-500 transition">
+            <button className="bg-gradient-to-r from-blue-700 to-blue-600 dark:from-blue-600 dark:to-blue-500 text-white px-6 py-3 rounded font-semibold text-sm hover:from-blue-600 hover:to-blue-500 transition cursor-pointer">
               Dashboard
             </button>
           </div>
@@ -218,7 +218,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center gap-3">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2 cursor-pointer"
             >
               {isMenuOpen ? <FiX className="text-2xl" /> : <FiMenu className="text-2xl" />}
             </button>
@@ -243,7 +243,7 @@ const Navbar = () => {
           </Link>
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2 transition-colors duration-200"
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2 transition-colors duration-200 cursor-pointer"
           >
             <FiX className="text-2xl" />
           </button>
@@ -257,7 +257,7 @@ const Navbar = () => {
                 {item.hasDropdown ? (
                   <div>
                     <button
-                      className="w-full flex justify-between items-center py-4 text-left hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                      className="w-full flex justify-between items-center py-4 text-left hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 cursor-pointer"
                       onClick={() =>
                         setActiveDropdown(activeDropdown === item.title ? null : item.title)
                       }
@@ -308,7 +308,7 @@ const Navbar = () => {
 
         {/* Dashboard Button - Fixed at Bottom */}
         <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-          <button className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]">
+          <button className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
             Dashboard
           </button>
         </div>

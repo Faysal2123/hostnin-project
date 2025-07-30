@@ -64,9 +64,15 @@ const WordpressReview: React.FC = () => {
         <Slider {...sliderSettings}>
           {reviews.map((review, idx) => (
             <div key={idx} className="px-2">
-              <div className="bg-white rounded-lg shadow-sm p-8 flex flex-col justify-between min-h-[340px] h-full">
+              <div 
+                className="bg-white rounded-lg shadow-sm p-8 flex flex-col justify-between h-[400px] group"
+                style={{
+                  '--scrollbar-width': 'none',
+                  '--ms-overflow-style': 'none',
+                } as React.CSSProperties}
+              >
                 <div className="flex items-center mb-4">
-                  <div className="w-16 h-16 aspect-square rounded-full overflow-hidden mr-4 border-4 border-white shadow flex-shrink-0">
+                  <div className="w-20 h-20 aspect-square rounded-full overflow-hidden mr-4 border-4 border-white shadow flex-shrink-0">
                     <Image
                       src={review.image}
                       alt={review.name}
@@ -91,7 +97,23 @@ const WordpressReview: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <p className="text-[#6b6b6b] text-base mb-8">{review.review}</p>
+                <p 
+                  className="text-[#6b6b6b] text-sm md:text-base mb-8 overflow-y-auto flex-1"
+                  style={{
+                    scrollbarWidth: 'none',
+                    ['-ms-overflow-style' as string]: 'none',
+                  } as React.CSSProperties}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.scrollbarWidth = 'auto';
+                    (e.currentTarget.style as any)['-ms-overflow-style'] = 'auto';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.scrollbarWidth = 'none';
+                    (e.currentTarget.style as any)['-ms-overflow-style'] = 'none';
+                  }}
+                >
+                  {review.review}
+                </p>
                 <FaQuoteLeft className="text-4xl text-[#f3f3f3]" />
               </div>
             </div>

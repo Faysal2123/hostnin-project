@@ -24,7 +24,13 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({ cards, bottom = "-180px" })
         {cards.map((card) => (
           <div
             key={card.title}
-            className="relative bg-white rounded-lg shadow-xl pt-12 sm:pt-10 pb-6 sm:pb-8 px-4 sm:px-8 lg:px-10 flex-1 min-w-0 flex flex-col justify-between items-start overflow-visible"
+            className={`relative bg-white rounded-lg shadow-xl pt-12 sm:pt-10 pb-6 sm:pb-8 min-w-0 flex flex-col justify-between items-start overflow-visible ${
+              card.title === "Hotline" 
+                ? "px-3 sm:px-6 lg:px-8 flex-[0.8]" 
+                : card.title === "Email Us"
+                ? "px-5 sm:px-10 lg:px-12 flex-[1.2]"
+                : "px-4 sm:px-8 lg:px-10 flex-1"
+            }`}
           >
             {/* Icon Overlapping Top Center */}
             <span className="absolute left-6 sm:left-10 -top-7 sm:-top-8 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-blue-600 shadow-[0_0_30px_8px_rgba(37,99,235,0.4)] flex items-center justify-center text-white text-2xl sm:text-3xl z-20 ">
@@ -35,8 +41,13 @@ const FeatureCards: React.FC<FeatureCardsProps> = ({ cards, bottom = "-180px" })
               {card.title}
             </span>
             {/* Description */}
-            <p className="text-gray-600 text-sm sm:text-base relative z-10 whitespace-pre-line text-start">
-              {card.desc}
+            <p className="text-gray-600 text-sm sm:text-base relative z-10 text-start leading-tight">
+              {card.desc.split('\n').map((line, index) => (
+                <span key={index}>
+                  {line}
+                  {index < card.desc.split('\n').length - 1 && <br />}
+                </span>
+              ))}
             </p>
           </div>
         ))}

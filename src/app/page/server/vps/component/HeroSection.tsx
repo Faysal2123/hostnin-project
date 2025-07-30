@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 import { MdDone } from "react-icons/md";
 import FeatureCardsSection from "./FeatureCardsSection";
@@ -45,7 +46,16 @@ const HeroSection = () => {
           </button>
         </div>
         {/* Right Side */}
-        <div className="flex-1 flex justify-center items-center w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-48 xs:h-64 sm:h-80 md:h-96 lg:h-[600px]">
+        <motion.div 
+          className="flex-1 flex justify-center items-center w-full max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-48 xs:h-64 sm:h-80 md:h-96 lg:h-[600px]"
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ 
+            duration: 1.2, 
+            ease: "easeOut",
+            delay: 0.3
+          }}
+        >
           <Image 
             src="https://hostnin.com/wp-content/uploads/2022/07/vps-header-1.png"
             alt="Server Illustration" 
@@ -53,7 +63,7 @@ const HeroSection = () => {
             height={600} 
             className="object-contain w-full h-full" 
           />
-        </div>
+        </motion.div>
       </div>
       {/* Overlapping Feature Cards Section */}
       <div className="absolute left-1/2 transform -translate-x-1/2 w-full max-w-7xl -bottom-[36rem] lg:-bottom-[22rem] z-20 px-2 sm:px-0">

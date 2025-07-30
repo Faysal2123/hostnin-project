@@ -9,17 +9,17 @@ const FeatureTabSection: React.FC = () => {
   const currentTab: FeatureTab = featureTabs.find(tab => tab.key === activeTab)!;
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 w-full flex justify-center bg-[#fcfcfc] px-4 sm:px-6">
-      <div className="flex flex-col lg:flex-row items-center max-w-7xl w-full gap-6 sm:gap-8 lg:gap-0">
+    <section className="py-8 sm:py-12 md:py-16 w-full flex justify-center bg-[#f8f8f8] px-4 sm:px-6">
+      <div className="flex flex-col lg:flex-row items-start max-w-7xl w-full gap-6 sm:gap-8 lg:gap-0">
         {/* Left: Illustration */}
-        <div className="flex-1 flex justify-center items-center w-full h-full order-2 lg:order-1">
-          <div className="w-[200px] sm:w-[260px] md:w-[320px] lg:w-[500px]">
+        <div className="flex-1 flex justify-center items-start w-full order-2 lg:order-1 lg:sticky lg:top-8">
+          <div className="w-[200px] sm:w-[260px] md:w-[320px] lg:w-[500px] h-[200px] sm:h-[260px] md:h-[320px] lg:h-[400px] flex items-center justify-center">
             <Image
               src="https://hostnin.com/wp-content/uploads/2022/09/laptop-man.png"
               alt={currentTab.title}
               width={400}
               height={400}
-              className="w-full h-auto max-w-[400px]"
+              className="w-full h-auto max-w-[400px] object-contain"
               priority
             />
           </div>

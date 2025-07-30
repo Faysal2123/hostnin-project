@@ -1,7 +1,21 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 
 const SignupHeroSection = () => {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing-section');
+    if (pricingSection) {
+      const offset = 80; // Header height offset
+      const elementPosition = pricingSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
   return (
     <section className="w-full bg-gradient-to-r from-[#0A2A6C] to-[#1746A2] flex items-center justify-center px-2  sm:px-8 relative overflow-hidden">
       <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
@@ -12,10 +26,13 @@ const SignupHeroSection = () => {
             With Hostnin Today!
           </h1>
           <p className="mt-6 mb-2 text-base sm:text-lg font-medium">
-            Get Started Plan Offer <span className="line-through text-gray-300">৳999</span> <span className="text-orange-400 font-semibold">per month.</span>
+            Get Started Plan Offer <span className=" text-gray-300">৳999</span> <span className="text-orange-400 font-semibold">per month.</span>
           </p>
           <div className="mt-8">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full transition text-base shadow">
+            <button 
+              onClick={scrollToPricing}
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded-full transition text-base shadow"
+            >
               Get Started
             </button>
           </div>

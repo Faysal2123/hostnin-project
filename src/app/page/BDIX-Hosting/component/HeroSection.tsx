@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useEffect, useState, useMemo } from "react";
 import { MdDone } from "react-icons/md";
 import FeatureCards from "./card/FeatureCards";
+import { FaBolt } from "react-icons/fa";
 
 function getTimeLeft(targetDate: Date) {
   const now = new Date();
@@ -77,8 +78,10 @@ const HeroSection = () => {
               </div>
             ))}
           </div>
-          <button className="bg-yellow-400 hover:bg-blue-500 hover:text-white text-[#03206B] font-semibold px-4 sm:px-8 lg:px-10 py-2 sm:py-3 rounded transition text-base sm:text-lg shadow w-full sm:w-auto mb-6 sm:mb-10">
-            Claim Offer
+          <button className="relative bg-gradient-to-r from-blue-500 via-blue-600 to-indigo-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-600 text-white font-bold px-6 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-xl transition-all duration-500 text-base sm:text-lg shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto mb-6 sm:mb-10 transform hover:-translate-y-1 border-2 border-blue-400 hover:border-indigo-500 flex items-center justify-center gap-2">
+            <FaBolt className="text-lg animate-pulse" />
+            <span className="relative z-10">Claim Offer Now</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
           </button>
         </div>
         {/* Right Side */}

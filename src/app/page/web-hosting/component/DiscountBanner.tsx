@@ -33,7 +33,7 @@ const DiscountBanner: React.FC = () => {
   if (!show) return null;
 
   return (
-    <div className="w-full bg-gradient-to-r from-[#ED5565] to-[#3A1CFF] text-white">
+    <div className="w-full bg-gradient-to-r from-blue-500 to-blue-800 text-white">
       <div className="max-w-7xl mx-auto py-2 px-4 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0">
         {/* Left: Black Friday Sale & Countdown */}
         <div className="flex items-center space-x-2 sm:space-x-4">
@@ -59,11 +59,11 @@ const DiscountBanner: React.FC = () => {
         </div>
         {/* Right: View Details & Close */}
         <div className="flex items-center space-x-3 sm:space-x-6 ml-0 sm:ml-4">
-          <button className="font-semibold flex items-center space-x-1 focus:outline-none text-sm sm:text-base">
+          <button className="font-semibold flex items-center space-x-1 focus:outline-none text-sm sm:text-base cursor-pointer">
             <span>View Details</span>
             <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
           </button>
-          <button className="text-lg sm:text-xl font-bold focus:outline-none" onClick={() => setShow(false)} aria-label="Close banner">
+          <button className="text-lg sm:text-xl font-bold focus:outline-none cursor-pointer" onClick={() => setShow(false)} aria-label="Close banner">
             <AiOutlineClose size={16} className="sm:w-[18px] sm:h-[18px]" />
           </button>
         </div>

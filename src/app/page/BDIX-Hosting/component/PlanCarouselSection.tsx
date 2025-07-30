@@ -79,12 +79,16 @@ const settings = {
   centerMode: true,
   centerPadding: "0px",
   initialSlide: 0, // Ensure first slide starts centered
+  autoplay: true,
+  autoplaySpeed: 3000,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
         slidesToShow: 1,
         centerMode: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
       },
     },
     {
@@ -92,6 +96,8 @@ const settings = {
       settings: {
         slidesToShow: 1,
         centerMode: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
       },
     },
   ],
@@ -124,7 +130,7 @@ export default function PlanCarouselSection() {
               "bg-white rounded-2xl flex flex-col items-start px-4 sm:px-8 py-6 sm:py-8 min-h-[320px] sm:min-h-[400px] h-full mx-auto max-w-xs sm:max-w-md border-2 transition-all duration-300";
             if (idx === current) {
               cardClass +=
-                " scale-105 sm:scale-110 -translate-y-2 sm:-translate-y-5 shadow-2xl z-10 border-blue-500";
+                " scale-105 sm:scale-110 -translate-y-2 sm:-translate-y-5 shadow-2xl z-10 border-blue-500 shadow-blue-300/70 ring-4 ring-blue-200/30";
             } else {
               cardClass += " shadow-lg border-transparent";
             }
@@ -135,7 +141,7 @@ export default function PlanCarouselSection() {
                   <h3 className="text-lg sm:text-xl font-bold text-[#181c32] mb-1 sm:mb-2">
                     {plan.title}
                   </h3>
-                  <p className="text-gray-500 text-xs sm:text-sm mb-2 sm:mb-4 min-h-[32px] sm:min-h-[48px]">
+                  <p className="text-gray-500 text-xs sm:text-sm mb-2 sm:mb-4 min-h-[32px] sm:min-h-[48px] text-justify">
                     {plan.description}
                   </p>
                   <ul className="mb-4 sm:mb-6 space-y-1 sm:space-y-2 w-full">
@@ -144,12 +150,12 @@ export default function PlanCarouselSection() {
                         key={i}
                         className="flex items-center text-xs sm:text-sm gap-1 sm:gap-2"
                       >
-                        <FaCheck className="text-green-500" />
-                        <span className="text-green-500">{feature}</span>
+                        <FaCheck className="text-blue-500" />
+                        <span className="text-black">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <button className="mt-2 sm:mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 sm:px-6 py-2 rounded transition text-sm sm:text-base w-full">
+                  <button className="mt-2 sm:mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 sm:px-6 py-2  transition text-sm sm:text-base w-full rounded-full">
                     {plan.button} <span className="ml-2">→</span>
                   </button>
                 </div>

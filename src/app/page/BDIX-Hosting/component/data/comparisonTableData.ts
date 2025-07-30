@@ -10,6 +10,7 @@ export const comparisonTableData: ComparisonTableData = {
   ],
   sections: [
     {
+      title: "Hosting Features",
       features: [
         { label: "Disk Space", values: ["10 GB", "50 GB", "100 GB", "Unlimited"] },
         { label: "Domain Hosted", values: ["2", "5", "10", "Unlimited"] },
@@ -30,6 +31,7 @@ export const comparisonTableData: ComparisonTableData = {
       ]
     },
     {
+      title: "Email Features",
       features: [
         { label: "Email Accounts", values: ["Unlimited", "Unlimited", "Unlimited", "Unlimited"] },
         { label: "Email Autoresponders", values: ["200", "500", "Unlimited", "Unlimited"] },
@@ -47,6 +49,7 @@ export const comparisonTableData: ComparisonTableData = {
       ]
     },
     {
+      title: "Database Features",
       features: [
         { label: "PHP Myadmin", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "PhpPG Admin", values: ["✔️", "✔️", "✔️", "✔️"] },
@@ -55,6 +58,7 @@ export const comparisonTableData: ComparisonTableData = {
       ]
     },
     {
+      title: "Server & Technology",
       features: [
         { label: "Web Server Type", values: ["Litespeed", "Litespeed", "Litespeed", "Litespeed"] },
         { label: "Storage Technology", values: ["NVMe SSD", "NVMe SSD", "NVMe SSD", "NVMe SSD"] },
@@ -68,6 +72,7 @@ export const comparisonTableData: ComparisonTableData = {
       ]
     },
     {
+      title: "Security & Management",
       features: [
         { label: "Backup Manager", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "Virus Scanner", values: ["⭕", "✔️", "✔️", "✔️"] },
@@ -79,6 +84,7 @@ export const comparisonTableData: ComparisonTableData = {
       ]
     },
     {
+      title: "Support & Assistance",
       features: [
         { label: "24/7 Call Support (What's App)", values: ["✔️", "✔️", "✔️", "✔️"] },
         { label: "24/7 Chat Support", values: ["✔️", "✔️", "✔️", "✔️"] },

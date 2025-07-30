@@ -42,11 +42,11 @@ const HeroSection = () => {
                 value={domainName}
                 onChange={(e) => setDomainName(e.target.value)}
                 placeholder="ilovehostnin.com"
-                className="w-full px-8 py-3 text-lg bg-gray-200 text-gray-800 rounded-l-base focus:outline-none focus:ring-2 focus:ring-blue-400 border-r-0"
+                className="w-full px-6 py-4 text-lg bg-gray-200 text-gray-800 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-400 border-r-0"
               />
               <button
                 onClick={handleSearch}
-                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-r-base font-semibold text-lg flex items-center gap-2 transition-all duration-200 border-l-0"
+                className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-4 rounded-r-lg font-semibold text-lg flex items-center gap-2 transition-all duration-200 border-l-0"
               >
                 <FaSearch className="text-white" />
                 Check

@@ -91,11 +91,11 @@ const ReviewSection = () => (
     </div>
 
     {/* Right Side - Slider */}
-    <div className="w-full lg:flex-1 bg-white rounded-xl shadow-lg max-w-3xl flex flex-col relative justify-center py-10 sm:py-6 px-5">
+    <div className="w-full lg:flex-1 bg-white rounded-xl shadow-lg max-w-3xl flex flex-col relative justify-center py-8 sm:py-6 px-5">
       <Slider {...sliderSettings}>
         {testimonials.map((testimonial, idx) => (
-          <div key={idx}>
-            <div className="flex items-center mb-1 px-5">
+          <div key={idx} className="min-h-[300px] flex flex-col justify-between">
+            <div className="flex items-center mb-4 px-5">
               <Image
                 src={testimonial.image}
                 alt={testimonial.name}
@@ -116,10 +116,14 @@ const ReviewSection = () => (
                 </div>
               </div>
             </div>
-            <p className="text-gray-600 mt-4 mb-8 text-sm sm:text-base leading-relaxed max-w-3xl px-5">
-              {testimonial.text}
-            </p>
-            <Image src="https://hostnin.com/wp-content/uploads/2023/08/quote-icon.svg" alt={testimonial.name} width={70} height={70} className="text-start pl-4" />
+            <div className="flex-1 flex flex-col justify-between">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-3xl px-5 mb-4">
+                {testimonial.text}
+              </p>
+              <div className="px-5">
+                <Image src="https://hostnin.com/wp-content/uploads/2023/08/quote-icon.svg" alt={testimonial.name} width={70} height={70} className="text-start" />
+              </div>
+            </div>
             
             <span
               className="absolute bottom-6 left-6 opacity-10 text-5xl sm:text-7xl select-none"

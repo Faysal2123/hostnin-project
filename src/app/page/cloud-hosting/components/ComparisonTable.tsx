@@ -11,8 +11,45 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
     <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-3 sm:mb-4">Compare Cloud Hosting Plans</h1>
     <p className="text-slate-800 text-center w-full max-w-2xl sm:max-w-3xl lg:max-w-4xl mx-auto pt-2 sm:pt-4 text-sm sm:text-base px-3 sm:px-4">In order to match your work, you can get the details of each plan and decide which one is suitable for you. Everything is written clearly without any hidden information. </p>
     </div>
+    
+    {/* Sticky Header Table - First Section */}
+    <div className="sticky top-0 z-10 bg-white shadow-md">
+      <div className="overflow-x-auto">
+        <table className="w-full table-fixed border-collapse bg-white min-w-[600px]">
+          <colgroup>
+            <col className="w-1/5" />
+            {data.plans.map((_, idx) => (
+              <col key={idx} className="w-1/5" />
+            ))}
+          </colgroup>
+          <thead>
+            <tr>
+              <th className="border border-gray-200 p-2 sm:p-3 bg-[#06125a] text-white text-sm sm:text-base font-semibold w-1/5">Detailed Comparison</th>
+              {data.plans.map(plan => (
+                <th key={plan.name} className="border border-blue-200 p-2 sm:p-3 bg-[#06125a] text-white w-1/5">
+                  <div className="font-semibold text-sm sm:text-base">{plan.name}</div>
+                  <div className="text-lg sm:text-xl lg:text-2xl font-semibold my-1 sm:my-2">
+                    <span className="text-yellow-400 ">৳{plan.price}</span><span className="text-xs sm:text-sm font-normal">{plan.priceUnit}</span>
+                  </div>
+                  <div>
+                    <button className=" bg-blue-700 px-2 sm:px-3 lg:px-4 py-2 sm:py-3 rounded-sm font-semibold text-xs sm:text-sm">Order Now</button>
+                  </div>
+                </th>
+              ))}
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+
+    {/* Feature Sections */}
     {data.sections.map((section, sectionIdx) => (
       <div key={sectionIdx} className="mb-6 sm:mb-8 lg:mb-10">
+        {/* Section Header */}
+        {sectionIdx > 0 && (
+          <div className="bg-[#06125a] h-12 sm:h-14 mb-4 rounded-t-lg"></div>
+        )}
+        
         <div className="overflow-x-auto">
           <table className="w-full table-fixed border-collapse bg-white shadow-sm min-w-[600px]">
             <colgroup>
@@ -21,22 +58,6 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
                 <col key={idx} className="w-1/5" />
               ))}
             </colgroup>
-            <thead>
-              <tr>
-                <th className="border border-gray-200 p-2 sm:p-3 bg-[#06125a] text-white text-sm sm:text-base font-semibold w-1/5">Detailed Comparison</th>
-                {data.plans.map(plan => (
-                  <th key={plan.name} className="border border-blue-200 p-2 sm:p-3 bg-[#06125a] text-white w-1/5">
-                    <div className="font-semibold text-sm sm:text-base">{plan.name}</div>
-                    <div className="text-lg sm:text-xl lg:text-2xl font-semibold my-1 sm:my-2">
-                      <span className="text-yellow-400 ">৳{plan.price}</span><span className="text-xs sm:text-sm font-normal">{plan.priceUnit}</span>
-                    </div>
-                    <div>
-                      <button className=" bg-blue-700 px-2 sm:px-3 lg:px-4 py-2 sm:py-3 rounded-sm font-semibold text-xs sm:text-sm">Order Now</button>
-                    </div>
-                  </th>
-                ))}
-              </tr>
-            </thead>
             <tbody>
               {section.features.map(feature => (
                 <tr key={feature.label} className="even:bg-gray-50">

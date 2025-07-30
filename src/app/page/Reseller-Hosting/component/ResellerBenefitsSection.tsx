@@ -28,56 +28,56 @@ const ResellerBenefitsSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#001858] mb-3 sm:mb-4 leading-tight">
             We Offers massive benefits with<br className="hidden sm:block" />our reseller hosting plans!
           </h2>
-          <p className="text-[#6b7280] text-base sm:text-lg mb-4 sm:mb-6 max-w-xl">
+          <p className="text-[#6b7280] text-base sm:text-lg mb-4 sm:mb-10 max-w-xl text-justify">
             Let your dreams become a reality with the most advanced tailored hosting. Traditional shared hosting is buggy, slow, and way more, but we&apos;re not. Our advanced technology makes your website fast and secure with no downtime.
           </p>
-          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 flex items-start gap-4 sm:gap-6 w-full">
-            <div>
-              <Image
-                src="https://hostnin.com/wp-content/uploads/2022/07/support.svg"
-                alt="Low Number of Clients per Server"
-                width={64}
-                height={64}
-               
-              />
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 pb-8 w-full transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+            <div className="flex items-center gap-4 sm:gap-6 mb-3">
+              <div className="flex-shrink-0">
+                <Image
+                  src="https://hostnin.com/wp-content/uploads/2022/07/happy-client.svg"
+                  alt="Low Number of Clients per Server"
+                  width={120}
+                  height={120}
+                  className="w-14 h-14"
+                />
+              </div>
+              <h3 className="text-lg sm:text-xl font-semibold text-[#001858]">{benefits[0].title}</h3>
             </div>
-            <div>
-              <h3 className="text-lg sm:text-xl font-semibold text-[#001858] mb-2">{benefits[0].title}</h3>
-              <p className="text-[#6b7280] text-sm sm:text-base">{benefits[0].description}</p>
-            </div>
+            <p className="text-[#6b7280] text-sm sm:text-base w-full text-justify">{benefits[0].description}</p>
           </div>
         </div>
         {/* Right: Two stacked cards */}
         <div className="flex flex-col gap-6 sm:gap-8">
-          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 flex items-start gap-4 sm:gap-6">
-            <div>
-              <Image
-                src="https://hostnin.com/wp-content/uploads/2022/07/support.svg"
-                alt="24x7 Technical Support"
-                width={64}
-                height={64}
-               
-              />
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+            <div className="flex items-center gap-4 sm:gap-6 mb-3">
+              <div className="flex-shrink-0">
+                <Image
+                  src="https://hostnin.com/wp-content/uploads/2022/07/support.svg"
+                  alt="24x7 Technical Support"
+                  width={120}
+                  height={120}
+                  className="w-14 h-14"
+                />
+              </div>
+              <h3 className="text-lg sm:text-xl font-semibold text-[#001858]">{benefits[1].title}</h3>
             </div>
-            <div>
-              <h3 className="text-lg sm:text-xl font-semibold text-[#001858] mb-2">{benefits[1].title}</h3>
-              <p className="text-[#6b7280] text-sm sm:text-base">{benefits[1].description}</p>
-            </div>
+            <p className="text-[#6b7280] text-sm sm:text-base w-full text-justify">{benefits[1].description}</p>
           </div>
-          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 flex items-start gap-4 sm:gap-6">
-            <div>
-              <Image
-                src="https://hostnin.com/wp-content/uploads/2022/07/ssd-storage.svg"
-                alt="Most Advanced SSD/NVMe Servers"
-                width={64}
-                height={64}
-              
-              />
+          <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+            <div className="flex items-center gap-4 sm:gap-6 mb-3 ">
+              <div className="flex-shrink-0">
+                <Image
+                  src="https://hostnin.com/wp-content/uploads/2022/07/ssd-storage.svg"
+                  alt="Most Advanced SSD/NVMe Servers"
+                  width={120}
+                  height={120}
+                  className="w-14 h-14"
+                />
+              </div>
+              <h3 className="text-lg sm:text-xl font-semibold text-[#001858]">{benefits[2].title}</h3>
             </div>
-            <div>
-              <h3 className="text-lg sm:text-xl font-semibold text-[#001858] mb-2">{benefits[2].title}</h3>
-              <p className="text-[#6b7280] text-sm sm:text-base">{benefits[2].description}</p>
-            </div>
+            <p className="text-[#6b7280] text-sm sm:text-base w-full text-justify">{benefits[2].description}</p>
           </div>
         </div>
       </div>

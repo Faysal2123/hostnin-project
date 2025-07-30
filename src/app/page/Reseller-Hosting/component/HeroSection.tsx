@@ -41,12 +41,12 @@ const HeroSection = () => {
             <span>Unlimited Features</span>
           </li>
         </ul>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded transition text-sm sm:text-base md:text-lg shadow mb-6 flex items-center justify-center">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 sm:px-8 py-2.5 sm:py-3 rounded transition text-sm sm:text-base md:text-lg shadow mb-6 flex items-center justify-center cursor-pointer">
           View Pricing <span className="ml-2">→</span>
         </button>
       </div>
       {/* Feature Cards at Bottom */}
-      <div className="absolute  left-0 right-0 bottom-[-1000px] sm:bottom-[-150px] md:bottom-[-180px] lg:bottom-[-240px] xl:bottom-[-300px] z-10 flex justify-center px-4">
+      <div id="feature-cards-section" className="absolute  left-0 right-0 bottom-[-1000px] sm:bottom-[-150px] md:bottom-[-180px] lg:bottom-[-240px] xl:bottom-[-300px] z-10 flex justify-center px-4">
         <div className="w-full max-w-7xl mx-auto">
           <FeatureCards cards={resellerPricingPlans} />
         </div>

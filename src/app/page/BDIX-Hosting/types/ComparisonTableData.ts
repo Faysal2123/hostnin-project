@@ -4,6 +4,7 @@ export interface Feature {
 }
 
 export interface Section {
+  title: string;
   features: Feature[];
 }
 

@@ -11,8 +11,8 @@ import { vpsComparisonTableData } from "./data/vpsComparisonTableData";
 import FeatureCards from "./component/FeatureCards";
 import VpsFeaturesSection from "./component/VpsFeaturesSection";
 import ContactSupportSection from "./component/ContactSupportSection";
-import SupportedScriptsCarousel from "./component/SupportedScriptsCarousel";
 import ReviewSection from "../../web-hosting/component/ReviewSection";
+import TestimonialSection from "../../web-hosting/component/TestimonialSection";
 
 export default function Vps() {
   return (
@@ -20,11 +20,11 @@ export default function Vps() {
       <Navbar></Navbar>
       <HeroSection></HeroSection>
       <ComparisonTable data={vpsComparisonTableData} />
+      <TestimonialSection></TestimonialSection>
       <FeatureCards />
       <VpsFeaturesSection />
       <ContactSupportSection />
-      <SupportedScriptsCarousel />
-      <ReviewSection></ReviewSection>
+      
       <FAQSection></FAQSection>
       <Footer></Footer>
     </>

@@ -8,7 +8,7 @@ export interface PricingPlan {
     tooltip?: string;
   }>;
   expandedFeatures?: {
-    general?: Array<{
+    general: Array<{
       text: string;
       included: boolean;
       tooltip?: string;

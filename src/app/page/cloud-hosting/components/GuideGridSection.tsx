@@ -52,11 +52,11 @@ const GuideGridSection = () => {
         <p className="text-center text-gray-500 mb-6 sm:mb-8 lg:mb-10 text-sm sm:text-base px-3 sm:px-4">
           Our detailed guides are ready with your journey, whenever you need them: just search.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 p-4">
           {guides.map((guide, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col"
+              className="group bg-white rounded-xl shadow-md overflow-hidden flex flex-col transform transition-all duration-300 ease-in-out hover:scale-110 hover:-translate-y-3 hover:shadow-2xl cursor-pointer"
             >
               <div className="relative w-full h-32 sm:h-36 lg:h-40">
                 <Image
@@ -75,9 +75,9 @@ const GuideGridSection = () => {
                 </h3>
                 <a
                   href={guide.link}
-                  className="mt-auto text-xs sm:text-sm text-gray-700 font-medium hover:underline flex items-center gap-1"
+                  className="mt-auto text-xs sm:text-sm text-gray-700 font-medium hover:text-orange-500 hover:underline flex items-center gap-1 transition-colors duration-200"
                 >
-                  বিস্তারিত পড়ুন <span aria-hidden>→</span>
+                  বিস্তারিত পড়ুন <span aria-hidden className="transition-transform duration-200 group-hover:translate-x-1">→</span>
                 </a>
               </div>
             </div>

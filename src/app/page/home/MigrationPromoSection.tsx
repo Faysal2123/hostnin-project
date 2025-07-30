@@ -1,9 +1,12 @@
 import Image from 'next/image';
 
+interface MigrationPromoSectionProps {
+  onViewPricingClick?: () => void;
+}
 
-export default function MigrationPromoSection() {
+export default function MigrationPromoSection({ onViewPricingClick }: MigrationPromoSectionProps) {
   return (
-    <section className="w-full bg-[#fafbfc] py-12 md:py-20">
+    <section className="w-full bg-[#fafbfc] py-12 ">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8 gap-8">
         {/* Left: Image and floating icons */}
         <div className="relative flex-1 flex items-center justify-center min-w-[320px]">
@@ -30,13 +33,14 @@ export default function MigrationPromoSection() {
             Moving From Another Host?
           </h2>
           <p className="text-lg font-semibold text-gray-800 mb-2">
-            We’ll Migrate your site for <span className="text-blue-600">FREE!</span>
+            We&apos;ll Migrate your site for <span className="text-blue-600">FREE!</span>
           </p>
           <p className="text-gray-600 mb-6">
-            Migrating one hosting to another is daunting this is why we have dedicated team for migration of your website. Let’s sit relax and look how your website migrate in a moment. We process this migration in 3 steps: Backup, transfer and restore.
+            Migrating one hosting to another is daunting this is why we have dedicated team for migration of your website. Let&apos;s sit relax and look how your website migrate in a moment. We process this migration in 3 steps: Backup, transfer and restore.
           </p>
           <button
-            className="px-6 py-3 bg-white border border-blue-600 text-blue-600 font-semibold rounded-lg shadow hover:bg-blue-700 hover:text-white transition"
+            onClick={onViewPricingClick}
+            className="px-6 py-3 cursor-pointer bg-white border border-blue-600 text-blue-600 font-semibold rounded-lg shadow hover:bg-blue-700 hover:text-white transition"
           >
             View Pricing Plan
           </button>

@@ -32,7 +32,7 @@ const SupportTeamSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               {/* Phone Button */}
               <a 
-                href="tel:01325875955"
+                href="https://wa.me/8801325875955"
                 className="inline-flex items-center gap-3 bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
               >
                 <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
@@ -45,7 +45,7 @@ const SupportTeamSection = () => {
 
               {/* Chat Button */}
               <a 
-                href="#"
+                href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6"
                 className="inline-flex items-center gap-3 bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
               >
                 <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">

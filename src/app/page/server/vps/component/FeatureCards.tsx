@@ -22,14 +22,14 @@ const FeatureCards: React.FC = () => {
           {featureCardsData.map((card, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl shadow p-6 sm:p-8 flex flex-col sm:flex-row items-center border border-gray-100 min-h-[160px]"
+              className="bg-white rounded-2xl shadow p-6 sm:p-8 flex flex-col sm:flex-row items-center border border-gray-100 min-h-[160px] transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
             >
-              <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center bg-[#f1f6ff] mb-4 sm:mb-0 sm:mr-8">
+              <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center bg-[#f1f6ff] mb-4 sm:mb-0 sm:mr-8">
                 <Image
                   src={card.icon}
                   alt={card.title}
-                  width={40}
-                  height={40}
+                  width={60}
+                  height={60}
                   className="object-contain"
                 />
               </div>

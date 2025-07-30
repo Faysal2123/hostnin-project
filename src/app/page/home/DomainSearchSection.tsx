@@ -6,7 +6,7 @@ import { domainPrices } from '@/app/page/web-hosting/data/domainPrices';
 
 export default function DomainSearchSection() {
   return (
-    <div className='bg-[#fafbfc] py-12 md:py-20'>
+    <div className='bg-[#fafbfc] py-12 '>
       <div className="bg-white rounded-2xl shadow-lg md:px-8 py-5 px-4  flex items-center justify-between gap-8 max-w-7xl mx-auto p">
         {/* Left: Search and Prices */}
         <div className="flex-1">
@@ -21,7 +21,7 @@ export default function DomainSearchSection() {
             />
             <button
               type="submit"
-              className="flex items-center gap-2 bg-gradient-to-r from-[#0A8AFF] to-[#3B82F6] text-white font-semibold text-base px-8 rounded-r-sm hover:opacity-90 transition"
+              className="flex items-center cursor-pointer gap-2 bg-gradient-to-r from-[#0A8AFF] to-[#3B82F6] text-white font-semibold text-base px-8 rounded-r-sm hover:opacity-90 transition"
             >
               <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               Search

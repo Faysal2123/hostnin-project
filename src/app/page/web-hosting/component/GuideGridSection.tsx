@@ -43,7 +43,7 @@ const guides = [
 
 const GuideGridSection = () => {
   return (
-    <section className="bg-gray-50 py-8 sm:py-12 px-4 sm:px-6">
+    <section className="bg-[#f8f8f8] py-8 sm:py-12 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-2 sm:mb-4">
           Comprehensive Guides: a Full Roadmap

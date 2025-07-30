@@ -17,7 +17,7 @@ const TermsCondition: React.FC = () => {
 
         {/* Section 1.0 */}
         <section className="mb-12 bg-white p-6 md:p-8 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
             Section 1.0: Business Relationship
           </h2>
           <p className="text-gray-700 mb-4">
@@ -55,7 +55,7 @@ const TermsCondition: React.FC = () => {
 
         {/* Section 2.0 */}
         <section className="mb-12 bg-white p-6 md:p-8 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold mb-4">Section 2.0: Usage Policy</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">Section 2.0: Usage Policy</h2>
           <p className="text-gray-700 mb-4">
             Hostnin provides various hosting plans with specific resource
             allocations. Clients must adhere to the following policies:
@@ -116,7 +116,7 @@ const TermsCondition: React.FC = () => {
 
         {/* Section 3.0 */}
         <section className="mb-12 bg-white p-6 md:p-8 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl font-bold mb-4 text-center">
             Section 3.0: Server and Data Policies
           </h2>
 
@@ -156,7 +156,7 @@ const TermsCondition: React.FC = () => {
 
         {/* Section 4.0 */}
         <section className="mb-12 bg-white p-6 md:p-8 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl font-bold mb-4 text-center">
             Section 4.0: Account Management and Responsibilities
           </h2>
 
@@ -195,7 +195,7 @@ const TermsCondition: React.FC = () => {
 
         {/* Section 5.0 */}
         <section className="mb-12 bg-white p-6 md:p-8 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold mb-4">Section 5.0: Refund Policy</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">Section 5.0: Refund Policy</h2>
           <ul className="list-disc list-inside text-gray-700">
             <li>
               <b>30-Day Refund Policy:</b> Hostnin offers a 30-day “No Questions
@@ -227,7 +227,7 @@ const TermsCondition: React.FC = () => {
 
         {/* Section 6.0 */}
         <section className="mb-12 bg-white p-6 md:p-8 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl font-bold mb-4 text-center">
             Section 6.0: Promotional Emails and Data Storage
           </h2>
           <ul className="list-disc list-inside text-gray-700">
@@ -249,7 +249,7 @@ const TermsCondition: React.FC = () => {
 
         {/* Section 7.0 */}
         <section className="mb-12 bg-white p-6 md:p-8 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold mb-4">Section 7.0: Affiliate Program</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">Section 7.0: Affiliate Program</h2>
 
           <h3 className="text-xl font-semibold mb-2">
             7.1: Commission Structure
@@ -328,7 +328,7 @@ const TermsCondition: React.FC = () => {
 
         {/* Section 8.0 */}
         <section className="mb-12 bg-white p-6 md:p-8 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl font-bold mb-4 text-center">
             Section 8.0: Free Domain Policy
           </h2>
 

@@ -27,7 +27,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 const DedicatedServerPlansSection: React.FC = () => {
   return (
-    <section className="w-full flex flex-col items-center justify-center py-12 bg-[#f8f8f8] px-4 pt-[200px]">
+    <section className="w-full flex flex-col items-center justify-center py-12 bg-[#f8f8f8] px-4 ">
       <div className="w-full max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-black">Dedicated CPU Hosting plans<br />and Pricing</h2>
         <div className="mb-10"></div>

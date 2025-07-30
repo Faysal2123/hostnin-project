@@ -43,7 +43,7 @@ const features = [
 
 const PlanIncludesSection = () => {
   return (
-    <section className="w-full bg-[#fafbfc] py-16">
+    <section className="w-full bg-[#f8f8f8] py-5 pb-10">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl sm:text-5xl font-semibold text-center text-[#03206B] mb-14 tracking-tight">
           All WordPress Hosting Plans Include
@@ -52,9 +52,9 @@ const PlanIncludesSection = () => {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="flex items-center bg-white rounded-sm shadow-lg px-4 xs:px-4 sm:px-6 py-3 xs:py-4 w-full max-w-xs sm:max-w-none mx-auto gap-3 xs:gap-4 hover:shadow-xl transition-all duration-200"
+              className="flex items-center bg-white rounded-sm shadow-lg px-4 md:px-8 md:py-6 w-full max-w-xs sm:max-w-none mx-auto gap-3 xs:gap-4 hover:shadow-xl hover:scale-105 hover:shadow-blue-200 transition-all duration-200"
             >
-              <span className="flex items-center justify-center w-10 h-10 xs:w-12 xs:h-12 rounded-full bg-[#f1f5ff] ">
+              <span className="flex items-center justify-center w-10 h-10 xs:w-12 xs:h-12 rounded-full ">
                 {feature.icon}
               </span>
               <span className="font-bold text-sm xs:text-base text-[#03206B] text-left">

@@ -14,23 +14,23 @@ export const faqData: FAQCategoryData[] = [
     faqs: [
       {
         question: 'What is Web Hosting?',
-        answer: `Web hosting is the service of storing data that keeps websites up and running for users.\n\nEvery website online has a host server, and almost all use a web host to manage that storage. However, not all web hosts provide the same level of quality.\n\nUptime, data speed, and transfer quantity are the most reliable measures of a host’s success. You can often pay more to get data transferred in higher quantities and at faster speeds. Most web hosts offer unlimited bandwidth and disk space at a speed suitable for small-to-moderate-sized businesses or individuals.\n\nCompanies with large websites may need to seek out a more advanced web host to meet their needs.`
+        answer: `Web hosting is the service of storing data that keeps websites up and running for users.\n\nEvery website online has a host server, and almost all use a web host to manage that storage. However, not all web hosts provide the same level of quality.\n\nUptime, data speed, and transfer quantity are the most reliable measures of a host's success. You can often pay more to get data transferred in higher quantities and at faster speeds. Most web hosts offer unlimited bandwidth and disk space at a speed suitable for small-to-moderate-sized businesses or individuals.\n\nCompanies with large websites may need to seek out a more advanced web host to meet their needs.`
       },
       {
         question: 'What is shared web hosting?',
-        answer: ''
+        answer: `Shared web hosting is a type of web hosting service where the server's capabilities are divided among multiple domains hosted on the same server. This means the server's resources, such as CPU, memory, and disk space, are shared among all the domains on the server.`
       },
       {
         question: 'What is a domain name?',
-        answer: ''
+        answer: `A domain name is a unique address used to access a website on the internet. It typically consists of a name followed by an extension, such as \`.com\`, \`.org\`, or \`.net\`. For example, in the domain name \`www.example.com\`, "example" is the name and ".com" is the extension. Domain names provide an easy-to-remember address for users to access websites, replacing the need to remember numerical IP addresses.`
       },
       {
         question: 'How can I trust you?',
-        answer: ''
+        answer: `There are many reasons to trust us, and most of them are simply undeniable. We have hundreds of online reviews, with 99.9% of them being positive. In Bangladesh, we are the only company that truly offers 24/7 service, not just as a promise, but as a reality.`
       },
       {
         question: "What's hostnin history?",
-        answer: ''
+        answer: `In November of 2022, we started our journey, and in a very short period of time, we got a tremendous response from the clients. As a sister company to Spotlight Creative Web Agency, we have over 4 years of experience providing the best to our clients.`
       }
     ]
   },
@@ -45,19 +45,19 @@ export const faqData: FAQCategoryData[] = [
       },
       {
         question: 'How to Pay?',
-        answer: ''
+        answer: `After providing the billing information, you'll be given the options for payment methods. You can continue and complete the payment by choosing the payment method. You will immediately receive the confirmation email in your inbox following the completion of your payment.`
       },
       {
         question: 'Which payment method you accept?',
-        answer: ''
+        answer: `Currently, you have three payment options: direct banking, credit or debit cards, and mobile banking. There is a way to use PayPal to pay if you reside abroad. For Mobile Banking, We receive the payment through Bkash, Rocket, Nagad, and Ucash are all supported.`
       },
       {
         question: 'What billing cycles do you offer?',
-        answer: ''
+        answer: `We provide monthly, quarterly, half-annually, annually, biennially, and triennially billing cycles that you can select. In addition to booking hosting for a custom number of years through our support chat, you can also book hosting for a custom number of months.`
       },
       {
         question: 'What is the refund policy?',
-        answer: ''
+        answer: `If you're unhappy with our hosting service, we have a 30-day refund policy. There are many options available for choosing a refund. For instance, a slow server, a problem with the hosting account, or a support issue. You'll find all the policies listed in detail on the service policy page.`
       }
     ]
   },
@@ -72,35 +72,35 @@ export const faqData: FAQCategoryData[] = [
       },
       {
         question: 'Is disk space matter for website speed?',
-        answer: ''
+        answer: `Your disk space will only slow down the speed at which your website loads, and usually not by much, if all of the following are true: There are no caches (for example, the server just restarted), and the server is actually using a HDD (and not, for example, an SSD).`
       },
       {
         question: 'What is SSL security?',
-        answer: ''
+        answer: `Transport Layer Security is a set of rules for using encryption to keep computer network communications safe. The protocol is used in many applications, like email, instant messaging, and voice over IP, but its most well-known use is to protect HTTPS.`
       },
       {
         question: 'How can I activate the SSL?',
-        answer: ''
+        answer: `You can activate an SSL certificate right from your control panel. You can find the option by searching for 'SSL' at the top of the bar.\n\nThere are many videos made by our expert that show how to enable and activate it.`
       },
       {
         question: 'What is bandwidth and how much do you need?',
-        answer: ''
+        answer: `Bandwidth is the maximum amount of data that can be transmitted over an Internet connection, measured in megabits per second (Mbps). Speed: the rate at which data can be downloaded (or uploaded) to a given device using that Internet connection; also measured in megabits per second. You'll need the bandwidth based on how many people visit your website and how big your files are that people download.`
       },
       {
         question: 'What servers do you run?',
-        answer: ''
+        answer: `We don't use Nginx or Apache as our main web server software. Instead, we use LiteSpeed Web Servers (LSWS). Litespeed servers make a website more fast and secure than Apache and NGIX can.`
       },
       {
         question: 'How secure are your servers?',
-        answer: ''
+        answer: `Hostnin has some decent security features and precautions in place, albeit they are on the simple side. Security experts take care of the servers, and free SSL keeps your data and that of your visitors safe.`
       },
       {
         question: 'Do you offer Shell Access?',
-        answer: ''
+        answer: `Absolutely. Depending on your hosting plan and features, you will get shell access.`
       },
       {
         question: 'Can I get root access?',
-        answer: ''
+        answer: `In the case of shared hosting, no company can grant access to the server's root directory.\n\nIf you require root access for your work, you can use our virtual private server or dedicated server.`
       }
     ]
   },
@@ -115,15 +115,15 @@ export const faqData: FAQCategoryData[] = [
       },
       {
         question: 'Is the control panel latest?',
-        answer: ''
+        answer: `Absolutely! All of our control panels are in the latest mode, and we don't provide any backdated system interfaces.`
       },
       {
         question: 'Can I get any demo of control panel?',
-        answer: ''
+        answer: `Yes, you can check out the demo of our control panels by clicking the button above.`
       },
       {
         question: 'Can I change the control panel by my own?',
-        answer: ''
+        answer: `You can alter the interface system, such as the design, or something associated with it, but you must either migrate to a different system or upgrade to a different plan if you want to alter the entire control panel.`
       }
     ]
   },
@@ -138,15 +138,15 @@ export const faqData: FAQCategoryData[] = [
       },
       {
         question: 'When I will get the support?',
-        answer: ''
+        answer: `We offer sales and technical support 24 hours a day, seven days a week, with immediate response. We have a team of support executives for each shift, so you'll always be able to get help. No matter it's government holiday or weekend.`
       },
       {
         question: 'How much I need to pay for the support?',
-        answer: ''
+        answer: `We offer some of the best support available, with 24-hour availability. Thankfully, it has always been and will continue to be offered at zero cost.`
       },
       {
         question: 'Do you have a team of executives behind you, or are you just one man?',
-        answer: ''
+        answer: `We have a team of expert support executives who have been able to provide appropriate assistance. As so many businesses now have a single owner who manages the business, it's been hard to provide on-time support for them, and ultimately the users of the company get a bad experience.`
       }
     ]
   }

@@ -11,7 +11,7 @@ const FeatureBenefitSection: React.FC = () => {
     > 
          
       <div className="relative z-10 flex flex-col items-center w-full pt-16 ">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-blue-600">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 text-black">
         Why Choose BDIX Hosting?
         </h2>
         <p className="text-center text-gray-700 max-w-2xl mb-10">
@@ -33,7 +33,7 @@ const FeatureBenefitSection: React.FC = () => {
                     {benefit.title}
                   </h3>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 text-base">
+                <p className="text-gray-600 dark:text-gray-300 text-base text-justify">
                   {benefit.description}
                 </p>
               </div>

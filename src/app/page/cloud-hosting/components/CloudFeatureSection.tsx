@@ -3,14 +3,14 @@ import { MdCheckCircle } from 'react-icons/md';
 
 const CloudFeatureSection = () => {
   return (
-    <div className='bg-[#f8f8f8] py-8 sm:py-12 lg:py-16 pb-12 sm:pb-16 lg:pb-20'>
-        <section className=" rounded-2xl shadow-xl px-4 sm:px-8 lg:px-12 py-8 sm:py-12 lg:py-16 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto ">
+    <div className='bg-[#f8f8f8] pb-12 sm:pb-16 lg:pb-20'>
+        <section className=" rounded-2xl shadow-xl bg-white px-4 sm:px-8 lg:px-12 py-8 sm:py-12 lg:py-16 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto ">
       {/* Left Side - Text Content */}
       <div className="flex-1 lg:pr-8 xl:pr-16">
         <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 mb-2 sm:mb-3">
           Our cloud plan includes
         </h2>
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-4 sm:mb-6">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-4 sm:mb-6 drop-shadow-lg">
           16+ CDN Locations Worldwide
         </h3>
         <p className="text-gray-600 text-xs sm:text-sm lg:text-base leading-relaxed mb-6 sm:mb-8 max-w-lg">

@@ -1,5 +1,20 @@
+"use client";
 import Image from 'next/image';
 import { MdCheckCircle } from 'react-icons/md';
+
+const scrollToPricing = () => {
+  const pricingSection = document.getElementById('pricing-section');
+  if (pricingSection) {
+    const offset = 80; // Header height offset
+    const elementPosition = pricingSection.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - offset;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+};
 
 const performanceFeatures = [
   '16+ CDN Included (Worthy as CloudFlare Premium Plan)',
@@ -16,13 +31,7 @@ const supportFeatures = [
   { text: 'Anydesk/TeamViewer Support'},
 ];
 
-const securityFeatures = [
-  'Advanced Firewall Protection',
-  'DDoS Attack Prevention',
-  'Regular Security Updates',
-  'SSL Certificate Included',
-  'Daily Malware Scanning',
-];
+
 
 const PerformanceAndSupportSection = () => {
   return (
@@ -36,20 +45,17 @@ const PerformanceAndSupportSection = () => {
               Enterprise-Grade Security<br />
               For Your Website
             </h2>
-            <p className="text-gray-600 mb-4 xs:mb-6 text-base">
-              We provide comprehensive security solutions to protect your website from all types of cyber threats. Our multi-layered security approach ensures your data and applications remain safe 24/7.
+            <p className="text-gray-600 mb-4  text-base">
+            In addition to our web hosting solution, Hostnin&apos;s also offers advanced anti-virus and spam protections, along with up to unlimited storage mailboxes. For any business to be successful, email correspondence needs to remain uninterrupted at all times.
+            <br />
+            <span>
+            In case you have any confusion regarding which Email Solution is best suited for your business, you can contact us for assistance. Live Chat is available 24 hours a day, 7 days a week.
+            </span>
             </p>
-            <ul className="mb-6 xs:mb-8 space-y-2 xs:space-y-3">
-              {securityFeatures.map((feature, idx) => (
-                <li key={idx} className="flex items-center gap-2 text-xs xs:text-sm text-[#0a174e]">
-                  <MdCheckCircle className="text-blue-600" size={18} />
-                  <span className='font-semibold text-base'>{feature}</span>
-                </li>
-              ))}
-            </ul>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 xs:px-8 py-2 xs:py-4 rounded-lg transition-colors text-sm xs:text-base">
-              See Pricing
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 md:px-8 py-2 md:py-4 rounded-full transition-colors text-sm xs:text-base">
+              Contact Us
             </button>
+           
           </div>
           {/* Image */}
           <div className="flex-1 flex justify-center w-full max-w-[220px] xs:max-w-xs sm:max-w-md md:max-w-lg">
@@ -67,27 +73,30 @@ const PerformanceAndSupportSection = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 xs:gap-12">
           {/* Text */}
           <div className="flex-1 max-w-xl">
-            <h2 className="text-2xl xs:text-3xl md:text-4xl font-bold text-[#0a174e] mb-2 xs:mb-4">
+            <h2 className="text-2xl xs:text-3xl md:text-5xl font-semibold text-[#0a174e] mb-2 xs:mb-4">
               We Offers Lighting Fast<br />
               Loading Speed
             </h2>
-            <p className="text-gray-600 mb-4 xs:mb-6 text-base">
+            <p className="text-gray-600 mb-4 xs:mb-6 text-[17px]">
               Speed is one of the most basic but powerful features that you will get instantly with your Shared hosting package. A fast loading website ensures that your competitor are not able to snatch your potential customers.
             </p>
             <ul className="mb-6 xs:mb-8 space-y-2 xs:space-y-3">
               {performanceFeatures.map((feature, idx) => (
-                <li key={idx} className="flex items-center gap-2 text-xs xs:text-sm text-[#0a174e]">
+                <li key={idx} className="flex items-center gap-2 text-xs md:text-base text-[#0a174e]">
                   <MdCheckCircle className="text-blue-600 " size={18} />
                   <span className='font-semibold text-base'>{feature}</span>
                 </li>
               ))}
             </ul>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 xs:px-8 py-2 xs:py-4 rounded-lg transition-colors text-sm xs:text-base">
+            <button 
+              onClick={scrollToPricing}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 md:px-8 py-2 md:py-4 rounded-full transition-colors text-sm xs:text-base"
+            >
               See Pricing
             </button>
           </div>
           {/* Image */}
-          <div className="flex-1 flex justify-center w-full max-w-[220px] xs:max-w-xs sm:max-w-md md:max-w-lg">
+          <div className="flex-[0.9] flex justify-center w-full max-w-[220px] xs:max-w-xs sm:max-w-md md:max-w-lg">
             <Image
               src="https://hostnin.com/wp-content/uploads/2023/03/features.png"
               alt="Lighting Fast Speed"
@@ -101,23 +110,26 @@ const PerformanceAndSupportSection = () => {
         {/* Support Section */}
         <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-8 xs:gap-12">
           {/* Text */}
-          <div className="flex-1 max-w-xl">
-            <h2 className="text-2xl xs:text-3xl md:text-4xl font-bold text-[#0a174e] mb-2 xs:mb-4">
+          <div className="flex-[1.2] max-w-3xl">
+            <h2 className="text-2xl xs:text-3xl md:text-5xl font-semibold text-[#0a174e] mb-2 xs:mb-4">
               Let us take worries away & put<br />
               time back in your day
             </h2>
-            <p className="text-gray-600 mb-4 xs:mb-6 text-base">
+            <p className="text-gray-600 mb-4 xs:mb-6 text-[17px]">
               We offer expert 24/7/365 problem-solving for everyone. For a closer partnership, choose the Advanced Support add-on that enhances your support experience or the Premium Support add-on where our Senior Support Engineers work as an extension of your in-house team.
             </p>
             <ul className="mb-6 xs:mb-8 space-y-2 xs:space-y-3">
               {supportFeatures.map((feature, idx) => (
-                <li key={idx} className="flex items-center gap-2 text-xs xs:text-sm text-[#0a174e]">
+                <li key={idx} className="flex items-center gap-2 text-xs md:text-base text-[#0a174e]">
                   <MdCheckCircle className="text-blue-600" size={18} />
                   <span className='font-semibold text-base'>{feature.text}</span>
                 </li>
               ))}
             </ul>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 xs:px-8 py-2 xs:py-4 rounded-lg transition-colors text-sm xs:text-base">
+            <button 
+              onClick={scrollToPricing}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 md:px-8 py-2 md:py-4 rounded-full transition-colors text-sm xs:text-base"
+            >
               See Pricing
             </button>
           </div>

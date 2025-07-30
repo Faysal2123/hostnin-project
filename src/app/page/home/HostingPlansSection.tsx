@@ -13,7 +13,7 @@ export default function HostingPlansSection() {
           {hostingPlans.map((plan) => (
             <div
               key={plan.title}
-              className="group relative bg-gray-100 border border-gray-200 rounded-2xl shadow-sm transition-all duration-300 p-8 flex flex-col items-center text-center hover:border-blue-200 hover:bg-blue-800 hover:text-white"
+              className="group relative bg-gray-100 border border-gray-200 rounded-2xl shadow-sm transition-all duration-300 p-8 flex flex-col items-center text-center hover:border-blue-200 hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-800 hover:text-white"
             >
               {plan.badge && plan.badge.type !== 'none' && (
                 <div
@@ -42,7 +42,7 @@ export default function HostingPlansSection() {
                 <span className="text-base group-hover:text-white transition-colors duration-200">{plan.duration}</span>
               </div>
               <button
-                className="w-full max-w-xs border border-blue-100 text-blue-600 bg-white py-2 rounded-xl font-semibold hover:bg-blue-50 hover:border-blue-400 hover:text-blue-700 group-hover:bg-blue-800 group-hover:text-white group-hover:border-white transition-all duration-200 flex items-center justify-center gap-2"
+                className="w-full max-w-xs border border-blue-100 text-blue-600 bg-white py-2 rounded-xl font-semibold hover:bg-blue-50 hover:border-blue-400 hover:text-blue-700 group-hover:bg-gradient-to-r group-hover:from-blue-700 group-hover:to-blue-900 group-hover:text-white group-hover:border-white transition-all duration-200 flex items-center justify-center gap-2"
               >
                 {plan.buttonText}
                 <span aria-hidden className="ml-1 group-hover:text-white transition-colors duration-200">&rarr;</span>

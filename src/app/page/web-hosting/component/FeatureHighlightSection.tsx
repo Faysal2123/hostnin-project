@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const FeatureHighlightSection = () => {
   return (
-    <section className="w-full bg-[#fcfcfc] py-8 sm:py-12 md:py-16 px-4 sm:px-6">
+    <section className="w-full bg-[#f8f8f8] py-8 sm:py-12 md:py-16 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-12 sm:gap-16 md:gap-24">
         {featureHighlights.map((feature, idx) => (
           <div

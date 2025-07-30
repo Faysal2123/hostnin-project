@@ -5,7 +5,7 @@ import { vpsFeaturesData } from "../data/vpsFeaturesData";
 
 const VpsFeaturesSection: React.FC = () => {
   return (
-    <section className="w-full bg-[#f7f8fa] py-16 flex flex-col items-center relative overflow-x-hidden">
+    <section className="w-full bg-[#f7f8fa] py-5 pb-10 flex flex-col items-center relative overflow-x-hidden">
       <div className="max-w-7xl w-full mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#03206B] mb-4 text-center">
           Hostnin Virtual Private Servers Include
@@ -19,15 +19,16 @@ const VpsFeaturesSection: React.FC = () => {
           {vpsFeaturesData.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl shadow p-5 sm:p-8 flex flex-col items-start border border-gray-100 min-h-[140px] sm:min-h-[180px] hover:shadow-lg transition-shadow"
+              className="bg-white rounded-2xl shadow-lg p-5 sm:p-8 flex flex-col items-start border border-gray-100 min-h-[140px] sm:min-h-[180px] hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-[#f1f6ff] mb-3 sm:mb-4 relative">
+              
+              <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center bg-[#f1f6ff] mb-3 sm:mb-4 relative">
                 <Image
                   src={feature.icon}
                   alt={feature.title}
-                  width={28}
-                  height={28}
-                  className="object-contain"
+                  width={36}
+                  height={36}
+                  className="object-contain group-hover:scale-110 transition-transform duration-300"
                   priority={true}
                 />
               </div>
@@ -40,14 +41,7 @@ const VpsFeaturesSection: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="mt-10 text-center">
-          <span className="text-sm text-[#03206B] font-medium">
-            Looking for more Technical Specs?{' '}
-            <a href="#" className="text-blue-600 underline hover:text-blue-800">
-              See our VPS knowledge Base
-            </a>
-          </span>
-        </div>
+        
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ import { domainPrices } from '@/app/page/web-hosting/data/domainPrices';
 
 export default function DomainSearchSection() {
   return (
-    <div className='bg-[#fafbfc] py-12 md:py-20'>
+    <div className='bg-[#f8f8f8] py-12 '>
       <div className="bg-white rounded-2xl shadow-lg md:px-8 py-5 px-4  flex items-center justify-between gap-8 max-w-7xl mx-auto p">
         {/* Left: Search and Prices */}
         <div className="flex-1">

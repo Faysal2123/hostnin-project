@@ -7,7 +7,7 @@ interface ComparisonTableProps {
 }
 
 const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
-  <div className="bg-[#f8f8f8] py-8 lg:pt-[500px] pt-[650px]">
+  <div className="bg-[#f8f8f8]  lg:pt-[430px] pt-[650px]">
     <div className="max-w-7xl mx-auto overflow-x-auto scrollbar-thin scrollbar-thumb-blue-200 scrollbar-track-blue-50">
       <div className="mb-8 px-2 sm:px-0">
         <h1 className="text-2xl sm:text-4xl font-bold text-center text-[#06125a]">We Have the Perfect VPS Package</h1>
@@ -26,16 +26,16 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
             </colgroup>
             <thead>
               <tr>
-                <th className="border border-gray-200 p-3 bg-[#06125a] text-white text-base font-semibold w-1/5">
+                <th className="border border-gray-200 p-3 bg-[#06125a] text-white text-base md:text-2xl font-semibold w-1/5">
                   Plan Features
                 </th>
                 {data.plans.map(plan => (
                   <th
                     key={plan.name}
-                    className={`border border-blue-200 p-3 text-white w-1/5 font-semibold bg-gradient-to-r from-[#0d6efd] to-[#2563eb]`}
+                    className={`border border-blue-200 p-3 text-white w-1/5 font-semibold bg-gradient-to-r from-[#1e3a8a] to-[#1e40af]`}
                   >
-                    <div className="font-semibold">
-                      {plan.name} <span className="text-xs font-normal">৳</span>
+                    <div className="font-semibold md:text-2xl">
+                      {plan.name} 
                     </div>
                     <div className="text-2xl font-semibold my-2">
                       <span className="text-yellow-400">৳{plan.price}</span>
@@ -66,7 +66,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ data }) => (
                 <td className="border border-blue-200 p-3"></td>
                 {data.plans.map(plan => (
                   <td key={plan.name} className="border border-blue-200 p-3 text-center">
-                    <button className="mt-2 bg-white border border-blue-700 text-blue-700 px-6 py-2 rounded-full font-semibold hover:bg-blue-700 hover:text-white transition">
+                    <button className="mt-2 bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-2 rounded-full font-semibold hover:from-blue-700 hover:to-blue-900 transition-all duration-300 shadow-md hover:shadow-lg">
                       Order
                     </button>
                   </td>

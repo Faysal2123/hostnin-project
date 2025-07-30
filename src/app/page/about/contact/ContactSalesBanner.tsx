@@ -20,11 +20,16 @@ const ContactSalesBanner = () => {
             About Our Hosting and Domain Service
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <button className="bg-[#0066FF] hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow transition-colors text-base flex items-center justify-center">
+            <a 
+              href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6" 
+              
+              rel="noopener noreferrer"
+              className="bg-[#0066FF] hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow transition-colors text-base flex items-center justify-center hover:scale-105"
+            >
               Live Chat With Sales
-            </button>
-            <span className="flex items-center gap-2 bg-opacity-10 px-4 py-2 rounded-lg text-white text-base font-medium">
-              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full shadow-sm text-black bg-white bg-opacity-20">
+            </a>
+            <span className="flex items-center gap-2 bg-opacity-10 px-4 py-2 rounded-lg text-white text-base font-medium hover:scale-105 cursor-pointer">
+              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full shadow-sm text-black bg-white bg-opacity-20 ">
                 {/* Phone SVG icon */}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

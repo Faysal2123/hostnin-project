@@ -13,7 +13,7 @@ const CloudFeatureDifference = () => {
       }}
     >
 
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center px-3 sm:px-4 pt-32 sm:pt-48 lg:pt-64 pb-16 sm:pb-24 lg:pb-32 relative z-10" style={{ minHeight: '700px' }}>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-3 sm:px-4 pt-32 sm:pt-48 lg:pt-52 pb-16 sm:pb-24 lg:pb-24 relative z-10" style={{ minHeight: '700px' }}>
         {/* Left: Image */}
         <div className="flex-[1.2] justify-center items-center hidden lg:block w-full max-w-lg lg:max-w-xl xl:max-w-2xl h-auto">
           <Image

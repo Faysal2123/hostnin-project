@@ -64,7 +64,7 @@ const BDIXFeaturesSection = () => {
   return (
     <section className="w-full flex flex-col items-center justify-center py-12 sm:py-20 lg:py-14 bg-[#f8f8f8] px-4">
       <div className="w-full max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#1a40c6] mb-4 text-start">BDIX Hosting Features</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4 text-start">BDIX Hosting Features</h2>
         <p className="text-[#232946] text-base mb-5 text-start max-w-2xl">
           Our BDIX hosting offers essential features for easier use and faster response times for your website.
         </p>
@@ -72,11 +72,11 @@ const BDIXFeaturesSection = () => {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-xl transition-shadow min-h-[200px] py-12"
+              className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start hover:shadow-xl hover:shadow-blue-500/25 hover:scale-110 transition-all duration-300 min-h-[200px] py-12"
             >
               <div className="mb-4 text-5xl">{feature.icon}</div>
               <h3 className="font-bold text-xl mb-2 text-[#232946]">{feature.title}</h3>
-              <p className="text-[#6b7280] text-base">{feature.description}</p>
+              <p className="text-[#6b7280] text-base ">{feature.description}</p>
             </div>
           ))}
         </div>

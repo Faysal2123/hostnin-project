@@ -1,23 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const scripts = [
   {
     name: "WordPress",
-    icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wordpress.svg",
+    icon: "https://hostim.themetags.com/wp-content/uploads/2022/07/wordpress-logo.svg",
   },
   {
     name: "Joomla",
-    icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/joomla.svg",
+    icon: "https://hostim.themetags.com/wp-content/uploads/2022/07/joomla-logo.svg",
   },
   {
     name: "Drupal",
-    icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/drupal.svg",
+    icon: "https://hostim.themetags.com/wp-content/uploads/2022/07/drupal-logo.svg",
   },
   {
     name: "Moodle",
-    icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/moodle.svg",
+    icon: "https://hostim.themetags.com/wp-content/uploads/2022/07/moodle-logo.svg",
   },
 ];
 
@@ -36,10 +36,19 @@ const SupportedScriptsCarousel: React.FC = () => {
     setStartIdx((prev) => (prev + 1) % scripts.length);
   };
 
+  // Auto-scroll functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStartIdx((prev) => (prev + 1) % scripts.length);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="bg-[#f8f8f8]">
+    <section className="bg-[#f8f8f8] ">
       <div
-        className="max-w-7xl mx-auto px-4 bg-no-repeat bg-center rounded-2xl"
+        className="max-w-7xl mx-auto  bg-no-repeat bg-center rounded-2xl"
         style={{
           backgroundImage:
             "url('https://hostnin.com/wp-content/uploads/2022/09/rs-award-bg.png')",
@@ -47,26 +56,26 @@ const SupportedScriptsCarousel: React.FC = () => {
           backgroundSize: "100% 100%",
         }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center text-[#06125a] pt-4">
+        <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center text-[#06125a] pt-10">
           Our Supported Scripts
         </h2>
         <p className="text-gray-700 font-medium mb-6 max-w-2xl mx-auto text-center">
           Our platform allows you to run almost any script you need to run,
           except for cryptocurrency mining scripts.
         </p>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-4 pb-16">
           <button
             aria-label="Previous"
             onClick={handlePrev}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-[#06125a] text-white text-2xl focus:outline-none hover:bg-[#0d47a1] transition"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-[#06125a] text-white text-xl focus:outline-none hover:bg-[#0d47a1] transition-colors duration-300 flex-shrink-0"
           >
             &#8592;
           </button>
-          <div className="flex gap-8 w-full max-w-4xl pb-8">
+          <div className="flex gap-8 w-full max-w-4xl justify-center">
             {visible.map((script) => (
               <div
                 key={script.name}
-                className="flex-1 bg-white rounded-xl py-8 px-10 flex flex-col items-center justify-center border border-gray-200"
+                className="flex-1 bg-white rounded-xl py-10 px-40 flex flex-col items-center justify-center border border-gray-200 min-w-[300px]"
               >
                 <div
                   className="w-16 h-16 flex items-center justify-center rounded-full mb-4"
@@ -89,7 +98,7 @@ const SupportedScriptsCarousel: React.FC = () => {
           <button
             aria-label="Next"
             onClick={handleNext}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-[#06125a] text-white text-2xl focus:outline-none hover:bg-[#0d47a1] transition"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-[#06125a] text-white text-xl focus:outline-none hover:bg-[#0d47a1] transition-colors duration-300 flex-shrink-0"
           >
             &#8594;
           </button>

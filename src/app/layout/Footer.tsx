@@ -38,7 +38,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="h-12 px-6 rounded-md bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold transition-colors text-base whitespace-nowrap"
+                className="h-12 px-6 rounded-md cursor-pointer bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold transition-colors text-base whitespace-nowrap"
               >
                 SUBSCRIBE
               </button>
@@ -55,11 +55,16 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* ✅ New Contact Button */}
+      
         <div className="flex justify-center">
-          <button className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold shadow-md hover:from-blue-600 hover:to-blue-800 transition-all duration-300">
+          <a 
+            href="https://wa.me/8801325875955" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold shadow-md hover:from-blue-600 hover:to-blue-800 transition-all duration-300 inline-block"
+          >
             Contact With Us (24/7 Hours)
-          </button>
+          </a>
         </div>
 
         {/* Payment/Partner Icons Banner */}

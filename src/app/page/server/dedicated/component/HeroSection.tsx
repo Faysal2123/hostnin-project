@@ -5,7 +5,7 @@ import { MdDone } from "react-icons/md";
 
 const HeroSection = () => {
   return (
-    <section className="bg-[#03206B] pt-8 pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-28 lg:pb-24 lg:px-10 relative"
+    <section className="bg-[#03206B] pt-8 pb-12 px-2 sm:pt-12 sm:pb-20 sm:px-6 lg:pt-16 lg:pb-10 lg:px-10 relative"
       style={{
         backgroundImage: "url('https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png')",
         backgroundPosition: "left center",
