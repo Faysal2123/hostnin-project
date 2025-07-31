@@ -1,4 +1,6 @@
-export const comparisonTableData = {
+import { ComparisonTableData } from "../types/ComparisonTableData";
+
+export const comparisonTableData: ComparisonTableData = {
   plans: [
     { name: "Basic", price: 832, priceUnit: "/mo" },
     { name: "Starter", price: 2350, priceUnit: "/mo" },

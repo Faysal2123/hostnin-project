@@ -13,7 +13,7 @@ import PlanCarouselSection from "./component/PlanCarouselSection";
 import BDIXReviewSection from "./component/BDIXReviewSection";
 import FeatureBenefitSection from "./component/FeatureBenefitSection";
 import ComparisonTable from "./component/ComparisonTable";
-import { comparisonTableData } from "./component/data/comparisonTableData";
+import { comparisonTableData } from "./data/comparisonTableData";
 
 
 

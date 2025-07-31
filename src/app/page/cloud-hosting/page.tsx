@@ -3,7 +3,7 @@ import Navbar from "@/app/layout/Navbar";
 import React from "react";
 import PricingSection from "./components/PricingSection";
 import TestimonialSection from "@/app/page/web-hosting/component/TestimonialSection";
-import { comparisonTableData } from "../BDIX-Hosting/component/data/comparisonTableData";
+import { comparisonTableData } from "./data/comparisonTableData";
 import ComparisonTable from "./components/ComparisonTable";
 import CloudFeatureSection from "./components/CloudFeatureSection";
 import FeatureCards from './components/FeatureCards';

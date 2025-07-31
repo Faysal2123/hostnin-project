@@ -136,7 +136,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 z-70">
+      <nav className="w-full fixed top-0 left-0 right-0 bg-white dark:bg-gray-800 z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4">
           {/* Logo */}
           <Link href="/" className="flex items-center">
@@ -308,7 +308,7 @@ const Navbar = () => {
 
         {/* Dashboard Button - Fixed at Bottom */}
         <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-          <button className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 px-6 py-3 rounded-lg font-semibold text-sm hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
+          <button className="w-full bg-gradient-to-r from-blue-700 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-sm hover:from-blue-600 hover:to-blue-500 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
             Dashboard
           </button>
         </div>
