@@ -45,7 +45,7 @@ const PerformanceAndSupportSection = () => {
               Enterprise-Grade Security<br />
               For Your Website
             </h2>
-            <p className="text-gray-600 mb-4  text-base">
+            <p className="text-gray-600 mb-4  text-[17px]">
             In addition to our web hosting solution, Hostnin&apos;s also offers advanced anti-virus and spam protections, along with up to unlimited storage mailboxes. For any business to be successful, email correspondence needs to remain uninterrupted at all times.
             <br />
             <span>

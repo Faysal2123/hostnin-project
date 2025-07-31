@@ -50,7 +50,7 @@ const PricingCards = () => {
   );
 
   return (
-    <section id="pricing-section" className="pricing-scroll w-full flex flex-col items-center justify-center py-8 sm:py-10 md:py-14 lg:py-20 bg-[#f8f8f8] pt-[400px] sm:pt-[500px] md:pt-[550px] lg:pt-60 px-4 sm:px-6" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+    <section id="pricing-section" className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8 md:py-14 lg:py-20 bg-[#f8f8f8] pt-[400px] sm:pt-[500px] md:pt-[550px] lg:pt-60 px-3 sm:px-6" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
       <div className="w-full max-w-7xl">
         <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#232946] mb-4 sm:mb-6 md:mb-10 text-center" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
           Choose Your Perfect Plan
@@ -101,13 +101,13 @@ const PricingCards = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col lg:flex-row gap-8 sm:gap-10 justify-center items-stretch mt-12 sm:mt-16">
+        <div className="w-full flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 justify-center items-stretch mt-8 sm:mt-12 md:mt-16">
           {plans.map((plan) => (
             <div
               key={plan.title}
               className={`relative w-full max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col items-center transition-all duration-300 border-2 ${
                 plan.highlight 
-                  ? "border-blue-500 scale-[1.05] z-10 shadow-2xl max-w-md" 
+                  ? "border-blue-500 scale-[1.02] sm:scale-[1.05] z-10 shadow-2xl max-w-md" 
                   : "border-transparent"
               }`}
               style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}
@@ -126,7 +126,7 @@ const PricingCards = () => {
                 </div>
               )}
 
-              <div className="flex flex-col items-center px-6 py-6 w-full">
+              <div className="flex flex-col items-center px-4 sm:px-6 py-4 sm:py-6 w-full">
                 {/* Plan title and description */}
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-3 mb-4">

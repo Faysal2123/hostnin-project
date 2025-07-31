@@ -28,16 +28,16 @@ const PricingSection = () => {
 
 
   return (
-    <section id="pricing-section" className="pricing-scroll w-full flex flex-col items-center justify-center py-8 sm:py-10 md:py-14 lg:py-20 bg-[#f8f8f8] pt-[400px] sm:pt-[500px] md:pt-[550px] lg:pt-60 px-4 sm:px-6" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+    <section id="pricing-section" className="pricing-scroll w-full flex flex-col items-center justify-center py-6 sm:py-8 md:py-14 lg:py-20 bg-[#f8f8f8] pt-[720px] md:pt-[550px] lg:pt-60 px-3 sm:px-6" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
       <div className="w-full max-w-7xl">
-        <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#232946] mb-4 sm:mb-6 md:mb-10 text-center" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
+        <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#232946] mb-4 md:mb-4 text-center" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
           Choose Your Perfect Plan
         </h2>
         <p className="text-gray-600 text-center text-sm md:text-base mb-8 max-w-2xl mx-auto" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
           Select the hosting plan that best fits your needs. All plans include our premium features and 24/7 support.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-8 justify-center">
+        <div className="flex flex-col sm:flex-row items-center gap-4 mb-4 justify-center">
           <div className="flex bg-[#2a3553] rounded-full p-1">
             <button className={tabClass(billing === "monthly")} onClick={() => setBilling("monthly")} style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
               Monthly
@@ -81,16 +81,16 @@ const PricingSection = () => {
           </div>
         </div>
 
-        <div className="w-full flex flex-col lg:flex-row gap-8 sm:gap-10 justify-center items-start mt-12 sm:mt-16">
+        <div className="w-full flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 justify-center items-start mt-8 sm:mt-12 md:mt-16">
           {plans.map((plan) => (
             <div
               key={plan.title}
               className={`relative w-full max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col transition-all duration-300 border-2 hover:shadow-2xl hover:-translate-y-2 ${
                 plan.highlight
-                  ? "border-blue-500 -translate-y-4 z-10 shadow-2xl max-w-md hover:-translate-y-6"
-                  : "translate-y-6 border-transparent hover:border-blue-200"
+                  ? "border-blue-500 -translate-y-2 sm:-translate-y-4 z-10 shadow-2xl max-w-md hover:-translate-y-4 sm:hover:-translate-y-6"
+                  : "translate-y-2 sm:translate-y-6 border-transparent hover:border-blue-200"
               }`}
-              style={{ minHeight: "820px", fontFamily: '"Plus Jakarta Sans", sans-serif' }}
+              style={{ minHeight: "auto", fontFamily: '"Plus Jakarta Sans", sans-serif' }}
             >
               {plan.highlight && (
                 <div className="w-full bg-blue-600 text-white text-center py-2 px-4 rounded-t-2xl" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
@@ -106,7 +106,7 @@ const PricingSection = () => {
                 </div>
               )}
 
-              <div className="flex flex-col justify-between px-6 py-6 w-full h-full">
+              <div className="flex flex-col justify-between px-4 sm:px-6 py-4 sm:py-6 w-full h-full">
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-3 mb-4">
                     {iconMap[plan.icon as string]}
