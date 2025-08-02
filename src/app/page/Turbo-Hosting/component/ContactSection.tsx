@@ -21,19 +21,19 @@ const ContactSection = ({
         ))}
       </div>
       <div className="container mx-auto px-2 xs:px-4">
-        <div className="text-center text-white space-y-2 xs:space-y-4">
-          <h2 className="text-2xl xs:text-3xl md:text-4xl font-bold">{title}</h2>
-          <p className="text-lg xs:text-xl md:text-2xl">{subtitle}</p>
+        <div className="text-center text-white space-y-2 xs:space-y-4" style={{ fontFamily: 'var(--font-urbanist)' }}>
+          <h2 className="text-3xl md:text-5xl font-bold">{title}</h2>
+          <p className="text-xl md:text-2xl">{subtitle}</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 xs:gap-6 mt-6 xs:mt-8">
             <Link 
               href="https://wa.me/8801325875955"
-              className="bg-[#0066FF] text-white px-6  py-2 md:px-8 md:py-4 rounded-lg hover:bg-blue-600 transition-colors text-sm xs:text-base hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25  duration-300"
+              className="bg-[#0066FF] text-white px-6  py-2 md:px-8 md:py-4 rounded-lg hover:bg-blue-600 transition-colors text-sm md:text-base hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25  duration-300"
             >
               Live Chat With Sales
             </Link>
             <Link 
               href="tel:01325875955"
-              className="flex items-center gap-3 text-white hover:text-blue-300 hover:scale-105 transition-all duration-300 text-sm xs:text-base"
+              className="flex items-center gap-3 text-white hover:text-blue-300 hover:scale-105 transition-all duration-300 text-sm md:text-base"
             >
               <div className="bg-white rounded-full p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 xs:h-6 w-5 xs:w-6 text-[#00052E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -98,18 +98,18 @@ const WordpressReview: React.FC = () => {
                   </div>
                 </div>
                 <p 
-                  className="text-[#6b6b6b] text-sm md:text-base mb-8 overflow-y-auto flex-1"
+                  className="text-[#6b6b6b] text-sm md:text-base mb-8 overflow-y-auto flex-1 font-['Mulish',sans-serif]"
                   style={{
                     scrollbarWidth: 'none',
                     ['-ms-overflow-style' as string]: 'none',
                   } as React.CSSProperties}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.scrollbarWidth = 'auto';
-                    (e.currentTarget.style as any)['-ms-overflow-style'] = 'auto';
+                    (e.currentTarget.style as any).msOverflowStyle = 'auto';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.scrollbarWidth = 'none';
-                    (e.currentTarget.style as any)['-ms-overflow-style'] = 'none';
+                    (e.currentTarget.style as any).msOverflowStyle = 'none';
                   }}
                 >
                   {review.review}

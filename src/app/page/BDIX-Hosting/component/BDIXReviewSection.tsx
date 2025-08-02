@@ -33,7 +33,7 @@ const reviewImages = [
 
 const BDIXReviewSection = () => {
   return (
-    <section className="relative pt-24 lg:pt-28 pb-10 sm:pb-20 px-2 sm:px-6 lg:px-8 overflow-hidden bg-[#f8f8f8] ">
+    <section className="relative pt-10 lg:pt-28 pb-10 sm:pb-20 px-2 sm:px-6 lg:px-8 overflow-hidden bg-[#f8f8f8] ">
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"
@@ -74,7 +74,7 @@ const BDIXReviewSection = () => {
                   <IoIosStar key={i} className="text-yellow-400 text-lg sm:text-xl" />
                 ))}
               </div>
-              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">{review.text}</p>
+              <p className="text-gray-700 text-sm sm:text-sm leading-relaxed">{review.text}</p>
             </div>
           ))}
         </div>

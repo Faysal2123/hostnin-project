@@ -1,6 +1,6 @@
 import React from "react";
-import { FaLock,  FaCloudUploadAlt, FaDatabase, FaRocket, FaFingerprint, FaPhp, FaDumpsterFire, FaFolderOpen } from "react-icons/fa";
-import {MdCloud } from "react-icons/md";
+import { FaLock,FaTachometerAlt,  FaCloudUploadAlt, FaDatabase,FaCrosshairs, FaFingerprint, FaPhp, FaDumpsterFire, FaFolderOpen } from "react-icons/fa";
+
 
 const features = [
   {
@@ -32,11 +32,11 @@ const features = [
     title:"DDoS Protection"
   },
   {
-    icon: <FaRocket size={28} className="text-[#2250fc]" />,
+    icon: <FaCrosshairs size={28} className="text-[#2250fc]" />,
     title:"Auto Stagging System," 
   },
   {
-    icon: <MdCloud size={28} className="text-[#2250fc]" />, 
+    icon: <FaTachometerAlt size={28} className="text-[#2250fc]" />, 
     title: "Autoscaling Cloud Technology",
   },
 ];
@@ -52,12 +52,12 @@ const PlanIncludesSection = () => {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="flex items-center bg-white rounded-sm shadow-lg px-6 py-5 w-[400px]  mx-auto gap-4 hover:shadow-xl hover:scale-105 transition-all duration-200"
+              className="flex items-center bg-white rounded-sm shadow-lg px-6 py-5 md:w-[400px]  mx-auto gap-4 hover:shadow-xl hover:scale-105 transition-all duration-200 w-[350px]"
             >
               <span className="flex items-center justify-center w-12 h-12 rounded-full bg-white ">
                 {feature.icon}
               </span>
-              <span className="font-bold text-base text-[#03206B] text-left">
+              <span className="font-bold text-lg md:text-xl text-[#03206B] text-left font-['Urbanist',sans-serif]">
                 {feature.title}
               </span>
             </div>

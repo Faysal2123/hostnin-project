@@ -71,7 +71,7 @@ const FAQSection: React.FC = () => {
                 >
                   <Icon className={`text-xl ${isActive ? "text-[#2250F4]" : "text-[#2250F4]"}`} />
                 </span>
-                <span>{cat.title}</span>
+                <span className="text-sm md:text-lg font-bold" style={{ fontFamily: '"Urbanist", sans-serif' }}>{cat.title}</span>
               </button>
             );
           })}
@@ -95,7 +95,7 @@ const FAQSection: React.FC = () => {
                       className="flex items-center justify-between cursor-pointer py-4"
                       onClick={() => handleToggle(idx)}
                     >
-                      <h4 className="text-sm sm:text-base font-bold text-[#222]">
+                      <h4 className="text-sm sm:text-base font-bold text-[#222]" style={{ fontFamily: '"Urbanist", sans-serif' }}>
                         {faq.question}
                       </h4>
                       <span className="text-xl sm:text-2xl text-[#2250F4]">
@@ -107,7 +107,7 @@ const FAQSection: React.FC = () => {
                         className="transition-all duration-300 ease-in-out overflow-hidden"
                         style={{ maxHeight: isOpen ? 500 : 0 }}
                       >
-                        <p className="mb-4 text-gray-600 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                        <p className="mb-4 text-gray-600 text-sm sm:text-base leading-relaxed whitespace-pre-line" style={{ fontFamily: '"Mulish", sans-serif' }}>
                           {faq.answer}
                         </p>
                       </div>

@@ -46,10 +46,10 @@ const WhyChooseDedicatedSection: React.FC = () => {
         }}
       >
         <div className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: '"Urbanist", sans-serif' }}>
             Why choose Hostnin for Dedicated Servers?
           </h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto" style={{ fontFamily: '"Mulish", sans-serif' }}>
             You should choose a dedicated server based on the applications you use for your business
           </p>
         </div>
@@ -57,20 +57,22 @@ const WhyChooseDedicatedSection: React.FC = () => {
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-lg p-5 flex flex-col items-start min-h-[150px] text-left hover:shadow-2xl transition-shadow"
+              className="bg-white rounded-xl shadow-lg p-5 md:p-8 flex flex-col items-start min-h-[150px] text-left hover:shadow-2xl transition-shadow"
             >
-              <div className="relative w-16 h-16 mb-4">
-                <Image
-                  src={card.icon}
-                  alt={card.title}
-                  fill
-                  style={{ objectFit: 'contain' }}
-                  sizes="64px"
-                  priority={idx === 0} // optionally prioritize first image
-                />
+              <div className="flex items-center mb-3">
+                <div className="relative w-12 h-12 mr-3">
+                  <Image
+                    src={card.icon}
+                    alt={card.title}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    sizes="48px"
+                    priority={idx === 0} // optionally prioritize first image
+                  />
+                </div>
+                <h3 className="font-bold text-lg md:text-xl lg:text-[22px] text-black" style={{ fontFamily: '"Urbanist", sans-serif' }}>{card.title}</h3>
               </div>
-              <h3 className="font-bold text-xl mb-1 text-black">{card.title}</h3>
-              <p className="text-gray-700 text-sm">{card.description}</p>
+              <p className="text-gray-700 text-sm md:text-base " style={{ fontFamily: '"Mulish", sans-serif' }}>{card.description}</p>
             </div>
           ))}
         </div>

@@ -19,27 +19,27 @@ const HeroSection = () => {
           <p className="text-white font-semibold mb-2 text-base sm:text-xl">
             Plans Starting at <span className="text-yellow-400">৳99999/mo</span>
           </p>
-          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-urbanist)' }}>
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4 sm:mb-6" style={{ fontFamily: '"Urbanist", sans-serif' }}>
             Managed Dedicated<br className="hidden sm:block" /> Server Hosting
           </h1>
-          <p className="mb-6 my-5 sm:mb-8 text-sm sm:text-lg text-white/90">
+          <p className="mb-6 my-5 sm:mb-8 text-sm sm:text-lg text-white/90" style={{ fontFamily: '"Mulish", sans-serif' }}>
             Hostnin specializes in bare-metal technology. You can host your website, set up your high-resilience infrastructure, or customize your machine with just a few clicks.
           </p>
           <ul className="flex flex-wrap gap-x-8 gap-y-2 justify-center lg:justify-start mb-6 sm:mb-8">
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2" style={{ fontFamily: '"Mulish", sans-serif' }}>
               <span className="text-lg sm:text-xl"><MdDone /></span>
               <span className="font-semibold text-base sm:text-lg">Performance</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2" style={{ fontFamily: '"Mulish", sans-serif' }}>
               <span className="text-lg sm:text-xl"><MdDone /></span>
               <span className="font-semibold text-base sm:text-lg">SSD24x7 Support</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2" style={{ fontFamily: '"Mulish", sans-serif' }}>
               <span className="text-lg sm:text-xl"><MdDone /></span>
               <span className="font-semibold text-base sm:text-lg">Gbit Port Speed</span>
             </li>
           </ul>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-3 rounded transition text-base sm:text-lg shadow w-full sm:w-auto mb-6 sm:mb-10">
+          <button className="text-white font-semibold px-8 py-3 rounded transition text-base sm:text-lg shadow w-full sm:w-auto mb-6 sm:mb-10 hover:shadow-lg" style={{ fontFamily: '"Urbanist", sans-serif', background: 'linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)' }}>
             Custom Quote <span className="ml-2">→</span>
           </button>
         </div>

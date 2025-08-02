@@ -11,7 +11,7 @@ const Arrow = () => (
 const HeroSection = () => {
   return (
     <section
-      className="min-h-[620px] flex items-center justify-center px-2 sm:px-6 lg:px-10 relative "
+      className="min-h-[620px] flex items-center justify-center px-2 pt-5 sm:px-6 lg:px-10 relative "
       style={{
         backgroundImage: 'url("https://hostnin.com/wp-content/uploads/2022/08/sh-hero-bg.png"), linear-gradient(278deg, rgba(0, 40, 160, 0.9) 16%, rgba(0, 20, 80, 0.9) 98%)',
         backgroundPosition: "left center, center",

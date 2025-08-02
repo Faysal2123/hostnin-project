@@ -1,13 +1,18 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 const steps = [
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-      </svg>
+      <Image
+        src="https://hostnin.com/wp-content/uploads/2022/09/icon-pricing.png"
+        alt="Pricing icon"
+        width={48}
+        height={48}
+        className="text-white"
+      />
     ),
     title: 'Purchase the perfect plan',
     description: 'Depending on your budget and needs, purchasing the plan is half the battle. Choose what you need and place your order. You may also contact us for custom quotation.',
@@ -16,9 +21,13 @@ const steps = [
   },
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
-      </svg>
+      <Image
+        src="https://hostnin.com/wp-content/uploads/2022/09/icon-checkout.png"
+        alt="Checkout icon"
+        width={48}
+        height={48}
+        className="text-white"
+      />
     ),
     title: 'Get your credentials to enter',
     description: 'After a successful transaction, you will get the login details in your email. By doing this, you can start your email management journey with us.',
@@ -27,9 +36,13 @@ const steps = [
   },
   {
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
+      <Image
+        src="https://hostnin.com/wp-content/uploads/2022/09/icon-email-.png"
+        alt="Email icon"
+        width={48}
+        height={48}
+        className="text-white"
+      />
     ),
     title: 'Send and Recieve emails',
     description: 'There you go; all the processes are ready for you now. You can send and recieve mails directly to your mailbox. You can also forward the emails to your favorite Gmail interface.',
@@ -40,11 +53,11 @@ const steps = [
 
 const OrderingProcessSection = () => {
   return (
-    <div className="bg-[#fafbfc] py-10">
-      <section className="py-10 xs:py-12 px-2 xs:px-2 md:px-8 max-w-7xl mx-auto ">
+    <div className="bg-[#fafbfc] md:pb-10">
+      <section className="py-5 md:py-12 px-2 md:px-0 max-w-7xl mx-auto ">
         <div className="text-center mb-8 xs:mb-10">
           <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold mb-2 xs:mb-4">Ordering a turbo hosting is easier than ever!</h2>
-          <p className="text-gray-600 text-sm xs:text-base">
+          <p className="text-gray-600 text-sm md:text-base">
             Choose your plan based on features and the detailes offering. Choosing a perfect plan is key to Build good website.
           </p>
         </div>
@@ -107,19 +120,18 @@ const OrderingProcessSection = () => {
                   />
                   {/* Main icon */}
                   <div
-                    className="flex items-center justify-center rounded-full shadow-xl relative z-10"
+                    className="flex items-center justify-center rounded-full shadow-xl relative z-10 bg-white"
                     style={{
                       width: 64,
                       height: 64,
-                      background: step.bg,
                       border: '4px solid #fff',
                     }}
                   >
                     {step.icon}
                   </div>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold mb-2 text-black mt-2">{step.title}</h3>
-                <p className="text-gray-600 max-w-xs text-base md:text-sm">{step.description}</p>
+                <h3 className="text-lg md:text-2xl font-bold mb-2 text-black mt-2" style={{ fontFamily: '"Urbanist", sans-serif' }}>{step.title}</h3>
+                <p className="text-gray-600 max-w-sm text-base md:text-base text-center" style={{ fontFamily: '"Mulish", sans-serif' }}>{step.description}</p>
               </div>
             ))}
           </div>

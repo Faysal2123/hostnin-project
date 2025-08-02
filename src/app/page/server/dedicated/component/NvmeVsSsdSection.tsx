@@ -8,11 +8,11 @@ const NvmeVsSsdSection = () => {
       <div className="max-w-7xl mx-auto flex flex-wrap gap-12 items-center justify-center px-4">
         {/* Left Content */}
         <div className="flex-1 min-w-[320px]">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-6">Enterprise NVMe vs SSD</h2>
-          <p className="text-lg text-gray-600 mb-9 max-w-xl">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-6 font-['Urbanist',sans-serif]">Enterprise NVMe vs SSD</h2>
+          <p className="text-lg text-gray-600 mb-9 max-w-xl font-['Mulish',sans-serif]">
             Choose an NVMe-based dedicated server and eradicate IO bottlenecks. Your website will load faster, backups will be performed quicker and your server will respond more rapidly. With no moving parts, NVMe is also more reliable, meaning you are far less likely to suffer downtime due to drive failure.
           </p>
-          <button className="contact-sales-btn min-w-[160px]">Get In Touch</button>
+          <button className="contact-sales-btn min-w-[160px] font-['Urbanist',sans-serif]">Get In Touch</button>
         </div>
         {/* Right Illustration - Image only */}
         <div className="flex-1 min-w-[320px] flex justify-center">

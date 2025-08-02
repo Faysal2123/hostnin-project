@@ -13,12 +13,12 @@ const ContactSalesBanner = () => {
           ))}
         </div>
         <div className="relative z-10 flex flex-col items-center text-center">
-          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-2 font-['Urbanist',sans-serif]">
             Do You Have Questions?
           </h2>
-          <p className="text-white text-lg sm:text-xl mb-8">
+          <h2 className="text-white text-lg md:text-3xl lg:text-4xl font-bold mb-8 font-['Urbanist',sans-serif]">
             About Our Hosting and Domain Service
-          </p>
+          </h2>
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <a 
               href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6" 

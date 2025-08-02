@@ -40,7 +40,7 @@ const FeatureListSection = () => {
   return (
     <section className="w-full bg-[#f8f8f8] pb-12 pt-8">
       <div className="max-w-7xl mx-auto px-3 sm:px-4">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center text-black mb-3 sm:mb-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold md:font-bold text-center text-black mb-3 sm:mb-4 font-['Urbanist',sans-serif]">
           Cloud Hosting all Plans
           <br />
           <span className="block">Include Features</span>
@@ -53,7 +53,7 @@ const FeatureListSection = () => {
                   <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 mr-2">
                     <FaCheck className="w-2 h-2 text-white" />
                   </div>
-                  <span className="font-semibold text-xs sm:text-sm lg:text-base">{feature}</span>
+                  <span className="font-semibold text-xs sm:text-sm lg:text-base font-['Urbanist',sans-serif]">{feature}</span>
                 </li>
               ))}
             </ul>

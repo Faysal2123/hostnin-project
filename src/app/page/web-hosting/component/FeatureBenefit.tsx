@@ -30,11 +30,11 @@ const FeatureBenefitSection: React.FC = () => {
                   <div className="text-4xl sm:text-4xl md:text-5xl text-blue-700 dark:text-blue-400">
                     <Icon />
                   </div>
-                  <h3 className="font-semibold text-base sm:text-xl text-black dark:text-white">
+                  <h3 className="font-semibold text-base sm:text-xl text-black dark:text-white" style={{ fontFamily: '"Urbanist", sans-serif' }}>
                     {benefit.title}
                   </h3>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base">
+                <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base" style={{ fontFamily: '"Mulish", sans-serif' }}>
                   {benefit.description}
                 </p>
               </div>

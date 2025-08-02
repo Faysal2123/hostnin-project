@@ -73,10 +73,10 @@ const DomainSearchSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: '"Urbanist", sans-serif' }}>
             Search & Register Your Domains
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: '"Mulish", sans-serif' }}>
             Register your domains at competitive prices, complete with advanced features.
           </p>
         </div>
@@ -108,12 +108,12 @@ const DomainSearchSection: React.FC = () => {
                 </div>
 
                 {/* Current Price */}
-                <div className="text-2xl font-bold text-gray-900 group-hover:text-white transition-colors duration-300 mb-2">
+                <div className="text-2xl font-bold text-gray-900 group-hover:text-white transition-colors duration-300 mb-2" style={{ fontFamily: '"Urbanist", sans-serif' }}>
                   {domain.currentPrice}/yr
                 </div>
 
                 {/* Original Price */}
-                <div className="text-sm text-gray-500 group-hover:text-white group-hover:opacity-80 transition-all duration-300 mb-4">
+                <div className="text-sm text-gray-500 group-hover:text-white group-hover:opacity-80 transition-all duration-300 mb-4" style={{ fontFamily: '"Mulish", sans-serif' }}>
                   Instead of {domain.originalPrice}/yr
                 </div>
 
@@ -121,7 +121,8 @@ const DomainSearchSection: React.FC = () => {
                 <div className="mt-auto">
                   <a 
                     href="https://my.hostnin.com/cart.php?a=add&domain=register&currency=1&_gl=1*1j0682o*_ga*MTQ5Mzg1MjA3Mi4xNzUyOTE1MTAw*_ga_8HH0WPJEP1*czE3NTM4MTIyNjEkbzMxJGcxJHQxNzUzODE0MTU4JGo1OCRsMCRoNjA5NDMxNjY2*_fplc*QWJYT3k5d0lEVTU5cTFYV3dFZ0ZLRElidmVocEc3S1dpVkxHTEpsSlElMkY2alRiUDRyazZFUDYwVHY0OUdnQ2tGTUg4b3pNM3ptWHAxSDVJZE8xenhyVyUyQmZuJTJCOHRtQjc4UHZsOGhoaXkwY1JuS1Z3cVNCN2ZPWUJmZTlSSnFnJTNEJTNE*_gcl_aw*R0NMLjE3NTM4MTIyNjUuQ2owS0NRanc0cUhFQmhDREFSSXNBTFlLRk5ObFhYTWZ3RVNVRU1wZURNSjhaZWxyTUZvamw2bWJ3aG9Ed1RwNE9lSGJZX0ZPZ2VXa2pyY2FBaDNzRUFMd193Y0I.*_gcl_au*MTE4MDYxMDg5MC4xNzUyOTE1MTAw*_ga_T6J46ZTKYW*czE3NTM4MTIyNjEkbzM5JGcxJHQxNzUzODE0MTU2JGo2MCRsMCRoNjg1MDg4ODU." 
-                    className="inline-flex items-center text-blue-600 group-hover:text-white font-medium transition-colors duration-300 "
+                    className="inline-flex items-center text-blue-600 group-hover:text-white font-medium transition-colors duration-300"
+                    style={{ fontFamily: '"Urbanist", sans-serif' }}
                   >
                     Register Now 
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -66,12 +66,12 @@ const FeatureCards = () => {
                     className="text-blue-600 w-8 h-8 sm:w-10 sm:h-12"
                   />
                 </div>
-                <h3 className="font-bold text-lg sm:text-xl text-gray-900" style={{ fontFamily: '"Mulish", sans-serif' }}>
+                <h3 className="font-bold text-lg md:text-[22px] text-gray-900" style={{ fontFamily: '"Urbanist", sans-serif' }}>
                   
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed" style={{ fontFamily: '"Mulish", sans-serif' }}>{feature.desc}</p>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed font-semibold" style={{ fontFamily: '"Mulish", sans-serif' }}>{feature.desc}</p>
             </div>
           ))}
         </div>

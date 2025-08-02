@@ -207,8 +207,8 @@ const FAQComponent: React.FC = () => {
               onClick={() => handleTabClick(idx)}
             >
               <span className="text-sm sm:text-base lg:text-xl">{tab.icon}</span>
-              <span className="hidden sm:inline">{tab.category}</span>
-              <span className="sm:hidden">{tab.category.split(' ')[0]}</span>
+              <span className="hidden sm:inline" style={{ fontFamily: '"Urbanist", sans-serif' }}>{tab.category}</span>
+              <span className="sm:hidden" style={{ fontFamily: '"Urbanist", sans-serif' }}>{tab.category.split(' ')[0]}</span>
             </button>
           ))}
         </div>
@@ -224,7 +224,7 @@ const FAQComponent: React.FC = () => {
                 className="w-full flex justify-between items-center py-3 sm:py-4 lg:py-5 text-left focus:outline-none"
                 onClick={() => handleAccordionClick(idx)}
               >
-                <span className="font-semibold text-sm sm:text-base lg:text-lg text-gray-900 pr-2 sm:pr-4">
+                <span className="font-bold text-sm md:text-base   text-gray-900 pr-2 sm:pr-4 font-sans">
                   {faq.question}
                 </span>
                 <span className="text-xl sm:text-2xl text-blue-700 flex-shrink-0">
@@ -232,7 +232,7 @@ const FAQComponent: React.FC = () => {
                 </span>
               </button>
               {openIndexes[selectedTab] === idx && (
-                <div className="pb-3 sm:pb-4 lg:pb-5 text-gray-700 text-sm sm:text-base animate-fade-in">
+                <div className="pb-3 sm:pb-4 lg:pb-5 text-gray-700 text-sm sm:text-base animate-fade-in" style={{ fontFamily: '"Mulish", sans-serif' }}>
                   {faq.answer}
                 </div>
               )}

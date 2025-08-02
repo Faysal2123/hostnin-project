@@ -22,10 +22,10 @@ const MigrationPromoSection = () => {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#071952] mb-3 sm:mb-4 leading-snug">
             Migrate Your Site Instantly without any<br className="hidden sm:inline" /> single hour downtime
           </h2>
-          <p className="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0">
+          <p className="text-sm sm:text-base text-gray-500 mb-4 sm:mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0" style={{ fontFamily: '"Mulish", sans-serif' }}>
             Migrating a website can be daunting, which is why we have team of experts who are always ready to migrate your website smoothly.
           </p>
-          <button className="bg-[#0057ff] hover:bg-blue-700 text-white px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 font-semibold text-sm sm:text-base shadow-md transition-colors duration-200 w-full sm:w-auto">
+          <button className="bg-[#0057ff] hover:bg-blue-700 text-white px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 font-semibold text-sm sm:text-base shadow-md transition-colors duration-200 w-full sm:w-auto" style={{ fontFamily: '"Urbanist", sans-serif' }}>
             Request free Migration
           </button>
         </div>

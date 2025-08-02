@@ -138,10 +138,10 @@ export default function PlanCarouselSection() {
               <div key={idx} className="px-1 sm:px-2 py-8 sm:py-16 flex justify-center">
                 <div className={cardClass}>
                   <div className="mb-2 sm:mb-3">{plan.icon}</div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#181c32] mb-1 sm:mb-2">
+                  <h3 className="text-lg md:text-xl font-bold text-[#181c32] mb-1 sm:mb-2 font-['Urbanist',sans-serif]">
                     {plan.title}
                   </h3>
-                  <p className="text-gray-500 text-xs sm:text-sm mb-2 sm:mb-4 min-h-[32px] sm:min-h-[48px] text-justify">
+                  <p className="text-gray-500 text-xs md:text-base mb-2 sm:mb-4 min-h-[32px] sm:min-h-[48px] text-justify font-['Mulish',sans-serif]">
                     {plan.description}
                   </p>
                   <ul className="mb-4 sm:mb-6 space-y-1 sm:space-y-2 w-full">
@@ -151,7 +151,7 @@ export default function PlanCarouselSection() {
                         className="flex items-center text-xs sm:text-sm gap-1 sm:gap-2"
                       >
                         <FaCheck className="text-blue-500" />
-                        <span className="text-black">{feature}</span>
+                        <span className="text-black font-semibold font-['Mulish',sans-serif]">{feature}</span>
                       </li>
                     ))}
                   </ul>

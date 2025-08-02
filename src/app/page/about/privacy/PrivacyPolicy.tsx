@@ -1,15 +1,19 @@
 import React from "react";
+import { Urbanist, Mulish } from "next/font/google";
+
+const urbanist = Urbanist({ subsets: ["latin"] });
+const mulish = Mulish({ subsets: ["latin"] });
 
 const PrivacyPolicy = () => {
   return (
     <div className="bg-gray-50 min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-10">
+      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-md p-10">
         {/* Header */}
         <header className="text-center mb-14">
-          <h1 className="text-5xl font-extrabold text-blue-700 tracking-tight">
+          <h1 className={`text-5xl font-extrabold text-blue-700 tracking-tight ${urbanist.className}`}>
             Privacy Policy
           </h1>
-          <p className="mt-4 text-gray-500 text-lg max-w-xl mx-auto">
+          <p className={`mt-4 text-gray-500 text-lg max-w-xl mx-auto ${mulish.className}`}>
             Your privacy matters to us. Below, we explain how we collect, use,
             and protect your information.
           </p>
@@ -40,7 +44,7 @@ const PrivacyPolicy = () => {
               content: (
                 <>
                   When visitors leave comments on the site, we collect the data
-                  shown in the comments form, along with the visitor’s IP address
+                  shown in the comments form, along with the visitor&apos;s IP address
                   and browser user agent string to help with spam detection.
                   <br />
                   An anonymized string (hash) created from your email address may
@@ -74,7 +78,7 @@ const PrivacyPolicy = () => {
                   <br />
                   When you log in, we set cookies to save login information and
                   screen preferences. Login cookies last two days, and screen
-                  preference cookies last one year. If you choose “Remember Me,”
+                  preference cookies last one year. If you choose &quot;Remember Me,&quot;
                   your login will persist for two weeks. Logging out removes these
                   cookies.
                 </>
@@ -118,8 +122,8 @@ const PrivacyPolicy = () => {
             },
           ].map(({ title, content }, idx) => (
             <section key={idx} className="border-l-4 border-blue-600 pl-6">
-              <h2 className="text-3xl font-semibold text-gray-800 mb-4">{title}</h2>
-              <p className="text-gray-600 leading-relaxed">{content}</p>
+              <h2 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 ${urbanist.className}`}>{title}</h2>
+              <p className={`text-gray-600 leading-relaxed ${mulish.className}`}>{content}</p>
             </section>
           ))}
         </div>

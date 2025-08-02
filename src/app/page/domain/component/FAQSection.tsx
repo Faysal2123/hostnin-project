@@ -55,10 +55,10 @@ const FAQSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-4" style={{ fontFamily: '"Urbanist", sans-serif' }}>
             Why use Hostnin for domains?
           </h2>
-          <p className="text-base text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto" style={{ fontFamily: '"Mulish", sans-serif' }}>
             Focus on your business and let us handle all the web domain hassles for you. With 24/7 support, our managed services act as your extended team.
           </p>
         </div>
@@ -76,7 +76,7 @@ const FAQSection = () => {
                   onClick={() => toggleFAQ(item.id)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                 >
-                  <span className="font-semibold text-gray-800 text-base">
+                  <span className="font-semibold text-gray-800 text-base" style={{ fontFamily: '"Urbanist", sans-serif' }}>
                     {item.question}
                   </span>
                   {expandedId === item.id ? (
@@ -87,7 +87,7 @@ const FAQSection = () => {
                 </button>
                 {expandedId === item.id && (
                   <div className="px-6 pb-4">
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-[15px] leading-relaxed" style={{ fontFamily: '"Mulish", sans-serif' }}>
                       {item.answer}
                     </p>
                   </div>

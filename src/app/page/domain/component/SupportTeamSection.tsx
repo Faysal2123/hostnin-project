@@ -10,19 +10,19 @@ const SupportTeamSection = () => {
           <div className="text-white space-y-6">
             {/* Headline */}
             <div className="space-y-2">
-              <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+              <h2 className="text-2xl lg:text-4xl font-bold leading-tight font-['Urbanist',sans-serif]">
                 Need Some Help?
               </h2>
-              <h3 className="text-2xl lg:text-3xl font-semibold">
+              <h3 className="text-2xl lg:text-4xl font-bold font-['Urbanist',sans-serif]">
                 Call to get assist with
               </h3>
-              <h4 className="text-2xl lg:text-3xl font-semibold">
+              <h4 className="text-2xl lg:text-4xl font-bold font-['Urbanist',sans-serif]">
                 Registering your Domains
               </h4>
             </div>
 
             {/* Body Text */}
-            <p className="text-lg leading-relaxed max-w-lg">
+            <p className="text-lg leading-relaxed max-w-xl text-justify font-['Mulish',sans-serif]">
               Our team of experts is always available to assist you with registering
               your desired domains with Hostnin. For live 24/7 assistance, call us on
               WhatsApp. We&apos;re here to help you every step of the way.
@@ -33,7 +33,7 @@ const SupportTeamSection = () => {
               {/* Phone Button */}
               <a 
                 href="https://wa.me/8801325875955"
-                className="inline-flex items-center gap-3 bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+                className="inline-flex items-center font-bold gap-3 bg-white text-blue-900 px-6 py-3 rounded-lg  hover:bg-gray-100 transition-colors duration-200 font-['Urbanist',sans-serif]"
               >
                 <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
                   <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -46,7 +46,7 @@ const SupportTeamSection = () => {
               {/* Chat Button */}
               <a 
                 href="https://tawk.to/chat/64e3c190cc26a871b0308e91/1h8cqo8b6"
-                className="inline-flex items-center gap-3 bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+                className="inline-flex items-center gap-3 bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-200 font-['Urbanist',sans-serif]"
               >
                 <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
                   <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -66,7 +66,7 @@ const SupportTeamSection = () => {
                 alt="Support Team - Hostnin Customer Service Representatives"
                 width={700}
                 height={560}
-                className="w-full max-w-xl lg:max-w-3xl h-auto rounded-lg shadow-lg"
+                className="w-full max-w-xl lg:max-w-3xl h-auto "
               />
             </div>
           </div>

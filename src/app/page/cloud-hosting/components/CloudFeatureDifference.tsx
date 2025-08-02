@@ -28,25 +28,25 @@ const CloudFeatureDifference = () => {
 
         {/* Right: Content */}
         <div className="flex-1 flex flex-col items-start justify-center w-full md:pl-2 md:mt-6 lg:mt-10">
-          <h2 className="text-2xl sm:text-3xl md:text-[2.8rem] leading-[1.1] font-semibold text-black mb-3 sm:mb-4 text-left">
+          <h2 className="text-2xl md:text-3xl lg:text-5xl  leading-[1.1] font-bold text-black mb-3 sm:mb-4 text-left" style={{ fontFamily: '"Urbanist", sans-serif' }}>
             What makes Hostnin <br />
             different from others?
           </h2>
-          <p className="mb-6 sm:mb-8 lg:mb-10 text-gray-700 max-w-2xl text-left text-sm sm:text-base lg:text-lg font-normal">
+          <p className="mb-6 sm:mb-8 lg:mb-10 text-gray-700 max-w-2xl text-left text-sm sm:text-base lg:text-lg font-normal" style={{ fontFamily: '"Mulish", sans-serif' }}>
             Using our incredible technology, we will help you improve your website&apos;s accessibility. With LiteSpeed Server and CloudLinux OS, you can speed up loading times, enhance security, and make your site faster and more reliable.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 w-full">
             {featureDifferenceData.map((feature, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-start bg-white rounded-2xl p-3 sm:p-4 lg:p-5 h-full min-h-[140px] sm:min-h-[160px] lg:min-h-[180px] border border-[#eaf4fd] shadow-xl"
+                className="flex flex-col items-start bg-white rounded-2xl p-3 md:p-4 lg:p-5 h-full min-h-[140px] md:min-h-[160px] lg:min-h-[180px] border border-[#eaf4fd] shadow-xl"
                 style={{ boxShadow: '0 8px 32px 0 rgba(80, 143, 255, 0.13)' }}
               >
                 <span className="bg-[#eaf4fd] text-blue-700 rounded-full p-2 sm:p-3 lg:p-4 flex items-center justify-center text-lg sm:text-xl lg:text-2xl mb-3 sm:mb-4 lg:mb-5 shadow-sm">
-                  {React.createElement(feature.icon, { size: 24 })}
+                  {React.createElement(feature.icon, { size: 32 })}
                 </span>
-                <h3 className="font-bold text-lg sm:text-lg text-black mb-1 sm:mb-2 text-left">{feature.title}</h3>
-                <p className="text-gray-700 text-sm sm:text-base text-left font-normal">{feature.description}</p>
+                <h3 className="font-bold text-lg md:text-lg text-black mb-1 sm:mb-2 text-left" style={{ fontFamily: '"Urbanist", sans-serif' }}>{feature.title}</h3>
+                <p className="text-gray-700 text-sm sm:text-base text-left font-normal" style={{ fontFamily: '"Mulish", sans-serif' }}>{feature.description}</p>
               </div>
             ))}
           </div>

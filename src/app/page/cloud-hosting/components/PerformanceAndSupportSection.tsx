@@ -39,11 +39,11 @@ const PerformanceAndSupportSection = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 lg:gap-12">
           {/* Text */}
           <div className="flex-1 max-w-xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0a174e] mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0a174e] mb-3 sm:mb-4 font-['Urbanist',sans-serif]">
               We Offers Lighting Fast<br />
               Loading Speed
             </h2>
-            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-[17px]">
+            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-[17px] font-['Mulish',sans-serif]">
               Speed is one of the most basic but powerful features that you will get instantly with your Shared hosting package. A fast loading website ensures that your competitor are not able to snatch your potential customers.
             </p>
             <ul className="mb-6 sm:mb-8 space-y-2 sm:space-y-3">
@@ -52,7 +52,7 @@ const PerformanceAndSupportSection = () => {
                   <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                     <FaCheck className="w-2 h-2 text-white" />
                   </div>
-                  <span className='font-semibold text-base'>{feature}</span>
+                  <span className='font-bold text-base font-["Mulish",sans-serif]'>{feature}</span>
                 </li>
               ))}
             </ul>
@@ -80,11 +80,11 @@ const PerformanceAndSupportSection = () => {
         <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-8 sm:gap-10 lg:gap-12">
           {/* Text */}
           <div className="flex-1 max-w-xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#0a174e] mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0a174e] mb-3 sm:mb-4 font-['Urbanist',sans-serif]">
               Let us take worries away & put<br />
               time back in your day
             </h2>
-            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-[17px]">
+            <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-[17px] font-['Mulish',sans-serif]">
               We offer expert 24/7/365 problem-solving for everyone. For a closer partnership, choose the Advanced Support add-on that enhances your support experience or the Premium Support add-on where our Senior Support Engineers work as an extension of your in-house team.
             </p>
             <ul className="mb-6 sm:mb-8 space-y-2 sm:space-y-3">
@@ -93,7 +93,7 @@ const PerformanceAndSupportSection = () => {
                   <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                     <FaCheck className="w-2 h-2 text-white" />
                   </div>
-                  <span className='font-semibold text-base'>{feature.text}</span>
+                  <span className='font-bold text-base font-["Mulish",sans-serif]'>{feature.text}</span>
                 </li>
               ))}
             </ul>

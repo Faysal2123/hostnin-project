@@ -26,7 +26,7 @@ const FeatureTabSection: React.FC = () => {
         </div>
         {/* Right: Tab Content */}
         <div className="flex-[1.5] flex flex-col justify-center items-start lg:pl-10 w-full order-1 lg:order-2">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#06113C] mb-3 sm:mb-4 leading-tight px-2 text-center lg:text-left">
+          <h2 className="text-2xl md:text-3xl lg:text-[40px] font-bold text-[#06113C] mb-3 sm:mb-4 leading-tight px-2 text-center lg:text-left font-['Urbanist',sans-serif]">
             Advance features for the <br className="hidden sm:block" /> advanced user
           </h2>
           {/* Tabs */}
@@ -34,7 +34,7 @@ const FeatureTabSection: React.FC = () => {
             {featureTabs.map(tab => (
               <button
                 key={tab.key}
-                className={`px-2 sm:px-3 md:px-4 py-2 text-sm sm:text-base font-semibold border-b-2 transition-colors duration-200 focus:outline-none whitespace-nowrap ${
+                className={`px-2 sm:px-3 md:px-4 py-2 text-sm sm:text-base font-bold border-b-2 transition-colors duration-200 focus:outline-none whitespace-nowrap font-['Urbanist',sans-serif] ${
                   activeTab === tab.key
                     ? "border-blue-800 text-blue-900"
                     : "border-transparent text-gray-700 hover:text-blue-700"
@@ -46,16 +46,16 @@ const FeatureTabSection: React.FC = () => {
             ))}
           </div>
           {/* Tab Content */}
-          <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base md:text-base max-w-xl px-2 text-center lg:text-left">
+          <p className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base md:text-base max-w-2xl px-2 text-center lg:text-left font-['Mulish',sans-serif]">
             {currentTab.description}
           </p>
           <ul className="mb-4 sm:mb-6 space-y-2 sm:space-y-3 px-2 w-full">
             {currentTab.features.map((feature, idx) => (
-              <li key={idx} className="flex items-start gap-2 text-sm sm:text-base md:text-lg text-[#1DBF73] font-medium">
+              <li key={idx} className="flex items-start gap-2 text-sm sm:text-base md:text-lg text-[#1DBF73] font-medium font-['Mulish',sans-serif]">
                 <span className="w-5 h-5 sm:w-6 sm:h-6 mr-2 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <MdDone className="text-white" size={16} />
                 </span>
-                <span className="text-gray-800 font-normal">{feature}</span>
+                <span className="text-gray-800 font-normal text-sm md:text-[17px] font-['Mulish',sans-serif]">{feature}</span>
               </li>
             ))}
           </ul>

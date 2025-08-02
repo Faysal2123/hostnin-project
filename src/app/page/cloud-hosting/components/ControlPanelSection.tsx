@@ -47,7 +47,7 @@ const ControlPanelSection = () => {
       <style jsx>{cardStyles}</style>
       <section className="relative w-full bg-[#03206B] overflow-hidden py-6 sm:py-10 lg:py-10 px-3 sm:px-6 lg:px-20 flex flex-col items-center ">
       {/* Heading */}
-      <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 lg:mb-10 pt-6 sm:pt-8 lg:pt-5 z-10 px-3 sm:px-4">
+      <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 lg:mb-10 pt-6 sm:pt-8 lg:pt-5 z-10 px-3 sm:px-4" style={{ fontFamily: '"Urbanist", sans-serif' }}>
         Most Secured & Advanced<br />
         Control Panel around
       </h2>
@@ -75,11 +75,11 @@ const ControlPanelSection = () => {
                     className={`bg-[#061B5B] border border-blue-400 rounded-lg px-6 sm:px-8 py-4 sm:py-6 text-white transition-all duration-300 ease-in-out shadow-lg flex flex-col justify-center cursor-pointer select-none ${isOpen ? 'ring-2 ring-blue-300 scale-[1.02]' : 'hover:bg-[#0a256b]/80 hover:scale-[1.01]'} min-h-[60px] sm:min-h-[70px]`}
                     onClick={() => setOpenIdx(idx)}
                   >
-                    <div className="font-semibold text-sm sm:text-base lg:text-lg mb-2">
+                    <div className="font-semibold text-sm sm:text-base lg:text-lg mb-2" style={{ fontFamily: '"Mulish", sans-serif' }}>
                       {feature.title}
                     </div>
                     {isOpen && feature.description && (
-                      <div className="text-xs sm:text-sm text-blue-100 leading-relaxed overflow-hidden animate-slide-down">
+                      <div className="text-xs sm:text-sm text-blue-100 leading-relaxed overflow-hidden animate-slide-down" style={{ fontFamily: '"Mulish", sans-serif' }}>
                         {feature.description}
                       </div>
                     )}

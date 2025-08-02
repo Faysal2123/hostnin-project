@@ -74,11 +74,11 @@ const ReviewSection: React.FC = () => {
                   } as React.CSSProperties}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.scrollbarWidth = 'auto';
-                    (e.currentTarget.style as any)['-ms-overflow-style'] = 'auto';
+                    (e.currentTarget.style as any).msOverflowStyle = 'auto';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.scrollbarWidth = 'none';
-                    (e.currentTarget.style as any)['-ms-overflow-style'] = 'none';
+                    (e.currentTarget.style as any).msOverflowStyle = 'none';
                   }}
                 >
                   {review.review}
