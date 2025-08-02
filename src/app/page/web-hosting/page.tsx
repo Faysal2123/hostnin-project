@@ -15,8 +15,11 @@ import FAQSection from "./component/FAQSection";
 import Footer from "@/app/layout/Footer";
 import CloudFeatureDifference from "./component/FeatureDifferenceSection";
 import HeroSection from "./component/HeroSection";
+import { Metadata } from "next";
 
-
+export const metadata: Metadata = {
+  title: "Web Hosting",
+};
 
 export default function Home() {
   return (

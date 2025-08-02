@@ -12,8 +12,11 @@ import StatsSection from "./component/StatsSection";
 import PlanIncludesSection from "./component/PlanIncludesSection";
 import SignupHeroSection from "./component/SignupHeroSection";
 import WordpressReview from "./component/WordpressReview";
+import { Metadata } from "next";
 
-
+export const metadata: Metadata = {
+  title: "WordPress Hosting",
+};
 
 export default function WordpressHosting() {
   return (

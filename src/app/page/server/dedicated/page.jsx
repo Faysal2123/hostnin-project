@@ -12,6 +12,10 @@ import HeroSection from "./component/HeroSection";
 import WhyChooseDedicatedSection from "./component/WhyChooseDedicatedSection";
 import ReviewSection from "../../web-hosting/component/ReviewSection";
 
+export const metadata = {
+  title: "Dedicated Server",
+};
+
 export default function Vps() {
   return (
     <>

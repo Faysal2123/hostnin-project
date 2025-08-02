@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { FaCheck, FaTimes } from "react-icons/fa";
+;
+import { PricingPlan } from "../types/PricingPlan";
 import pricingPlans from "../data/pricingPlans";
 
 
@@ -22,7 +24,7 @@ const PricingSection = () => {
   const [showExpandedFeatures, setShowExpandedFeatures] = useState(false);
 
   const plans = pricingPlans.filter(
-    (plan) => plan.billingPeriod === billing && plan.title !== "Basic"
+    (plan: PricingPlan) => plan.billingPeriod === billing && plan.title !== "Basic"
   );
 
 
@@ -82,7 +84,7 @@ const PricingSection = () => {
         </div>
 
         <div className="w-full flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 justify-center items-start mt-8 sm:mt-12 md:mt-16">
-          {plans.map((plan) => (
+          {plans.map((plan: PricingPlan) => (
             <div
               key={plan.title}
               className={`relative w-full max-w-sm mx-auto bg-white rounded-2xl shadow-xl flex flex-col transition-all duration-300 border-2 hover:shadow-2xl hover:-translate-y-2 ${
@@ -174,7 +176,7 @@ const PricingSection = () => {
 
                   <h4 className="font-bold text-gray-800 mb-4 text-sm md:text-xl" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>Features</h4>
                   <div className="space-y-3">
-                    {plan.features.map((feature, i) => (
+                    {plan.features.map((feature: { text: string; tooltip?: string }, i: number) => (
                       <div key={i} className="flex items-center gap-3 group relative">
                         <div className="flex-shrink-0 w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center">
                           <FaCheck className="text-xs text-blue-600 font-bold" />
@@ -195,7 +197,7 @@ const PricingSection = () => {
                         {(["general", "server", "security", "support"] as const).map((category) => (
                           <div key={category} className="mt-6">
                             <h5 className="font-bold text-gray-800 mb-3 lg:text-lg capitalize bg-gray-50 px-3 py-2 rounded-lg" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif' }}>{category}</h5>
-                            {plan.expandedFeatures && plan.expandedFeatures[category] && plan.expandedFeatures[category].map((feature, i: number) => (
+                            {plan.expandedFeatures && plan.expandedFeatures[category] && plan.expandedFeatures[category].map((feature: { text: string; included: boolean; tooltip?: string }, i: number) => (
                               <div key={`${category}-${i}`} className="flex items-center gap-3 group relative mb-2">
                                 {feature.included ? (
                                   <div className="flex-shrink-0 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">

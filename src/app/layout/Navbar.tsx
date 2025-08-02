@@ -73,21 +73,21 @@ const Navbar = () => {
           title: "Reseller Hosting",
           description: "Start your Business",
           icon: <FaBriefcase />,
-          link: "/page/Reseller-Hosting",
+          link: "/page/reseller-hosting",
           bgColor: "bg-green-600",
         },
         {
           title: "BDIX Hosting",
           description: "Lowest Network Latency",
           icon: <FaNetworkWired />,
-          link: "/page/BDIX-Hosting",
+          link: "/page/bdix-hosting",
           bgColor: "bg-teal-700",
         },
         {
           title: "Turbo Hosting",
           description: "Fast Speed Guaranteed",
           icon: <FaBolt />,
-          link: "/page/Turbo-Hosting",
+          link: "/page/turbo-hosting",
           bgColor: "bg-purple-800",
         },
       ],
@@ -151,7 +151,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-4">
-            <ul className="flex items-center gap-4 text-sm font-medium text-gray-700 dark:text-gray-200">
+            <ul className="flex items-center gap-4 text-sm font-semibold text-gray-700 dark:text-gray-200">
               {menuItems.map((item, index) => (
                 <li key={index} className="relative group">
                   {item.hasDropdown ? (
@@ -251,7 +251,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Items */}
         <div className="flex-1 p-4 overflow-y-auto">
-          <ul className="flex flex-col gap-0 text-sm font-medium text-gray-700 dark:text-gray-200">
+          <ul className="flex flex-col gap-0 text-sm font-semibold text-gray-700 dark:text-gray-200">
             {menuItems.map((item, index) => (
               <li key={index} className="border-b border-gray-100 dark:border-gray-700">
                 {item.hasDropdown ? (

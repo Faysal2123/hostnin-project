@@ -16,7 +16,11 @@ import ControlPanelSection from "./components/ControlPanelSection";
 import PerformanceAndSupportSection from "./components/PerformanceAndSupportSection";
 import GuideGridSection from "./components/GuideGridSection";
 import HeroSection from "./components/HeroSection";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Cloud Hosting",
+};
 
 export default function CloudHostingPage() {
   return (
